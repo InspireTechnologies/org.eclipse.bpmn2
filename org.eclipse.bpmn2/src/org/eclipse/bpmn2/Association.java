@@ -35,6 +35,7 @@ package org.eclipse.bpmn2;
 public interface Association extends Artifact {
     /**
      * Returns the value of the '<em><b>Association Direction</b></em>' attribute.
+     * The default value is <code>"None"</code>.
      * The literals are from the enumeration {@link org.eclipse.bpmn2.AssociationDirection}.
      * <!-- begin-user-doc -->
      * <p>
@@ -46,7 +47,7 @@ public interface Association extends Artifact {
      * @see org.eclipse.bpmn2.AssociationDirection
      * @see #setAssociationDirection(AssociationDirection)
      * @see org.eclipse.bpmn2.Bpmn2Package#getAssociation_AssociationDirection()
-     * @model required="true" ordered="false"
+     * @model default="None" required="true" ordered="false"
      *        extendedMetaData="kind='attribute' name='associationDirection'"
      * @generated
      */

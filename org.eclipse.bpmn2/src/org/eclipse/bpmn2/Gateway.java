@@ -34,7 +34,7 @@ package org.eclipse.bpmn2;
 public interface Gateway extends FlowNode {
     /**
      * Returns the value of the '<em><b>Gateway Direction</b></em>' attribute.
-     * The default value is <code>"unspecified"</code>.
+     * The default value is <code>"Unspecified"</code>.
      * The literals are from the enumeration {@link org.eclipse.bpmn2.GatewayDirection}.
      * <!-- begin-user-doc -->
      * <p>
@@ -46,7 +46,7 @@ public interface Gateway extends FlowNode {
      * @see org.eclipse.bpmn2.GatewayDirection
      * @see #setGatewayDirection(GatewayDirection)
      * @see org.eclipse.bpmn2.Bpmn2Package#getGateway_GatewayDirection()
-     * @model default="unspecified" required="true" ordered="false"
+     * @model default="Unspecified" required="true" ordered="false"
      *        extendedMetaData="kind='attribute' name='gatewayDirection'"
      * @generated
      */

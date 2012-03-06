@@ -265,6 +265,7 @@ public interface Process extends CallableElement, FlowElementsContainer {
 
     /**
      * Returns the value of the '<em><b>Process Type</b></em>' attribute.
+     * The default value is <code>"None"</code>.
      * The literals are from the enumeration {@link org.eclipse.bpmn2.ProcessType}.
      * <!-- begin-user-doc -->
      * <p>
@@ -276,7 +277,7 @@ public interface Process extends CallableElement, FlowElementsContainer {
      * @see org.eclipse.bpmn2.ProcessType
      * @see #setProcessType(ProcessType)
      * @see org.eclipse.bpmn2.Bpmn2Package#getProcess_ProcessType()
-     * @model required="true" ordered="false"
+     * @model default="None" required="true" ordered="false"
      *        extendedMetaData="kind='attribute' name='processType'"
      * @generated
      */

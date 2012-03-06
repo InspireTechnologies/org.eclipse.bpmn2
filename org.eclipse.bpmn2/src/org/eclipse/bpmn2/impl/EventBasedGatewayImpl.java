@@ -44,7 +44,7 @@ public class EventBasedGatewayImpl extends GatewayImpl implements EventBasedGate
      * @generated
      * @ordered
      */
-    protected static final EventBasedGatewayType EVENT_GATEWAY_TYPE_EDEFAULT = EventBasedGatewayType.PARALLEL;
+    protected static final EventBasedGatewayType EVENT_GATEWAY_TYPE_EDEFAULT = EventBasedGatewayType.EXCLUSIVE;
 
     /**
      * The cached value of the '{@link #getEventGatewayType() <em>Event Gateway Type</em>}' attribute.

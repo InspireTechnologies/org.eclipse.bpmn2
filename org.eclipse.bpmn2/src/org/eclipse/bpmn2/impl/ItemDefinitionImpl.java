@@ -79,7 +79,7 @@ public class ItemDefinitionImpl extends RootElementImpl implements ItemDefinitio
      * @generated
      * @ordered
      */
-    protected static final ItemKind ITEM_KIND_EDEFAULT = ItemKind.PHYSICAL;
+    protected static final ItemKind ITEM_KIND_EDEFAULT = ItemKind.INFORMATION;
 
     /**
      * The cached value of the '{@link #getItemKind() <em>Item Kind</em>}' attribute.

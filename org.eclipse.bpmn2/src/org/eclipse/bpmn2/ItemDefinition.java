@@ -90,6 +90,7 @@ public interface ItemDefinition extends RootElement {
 
     /**
      * Returns the value of the '<em><b>Item Kind</b></em>' attribute.
+     * The default value is <code>"Information"</code>.
      * The literals are from the enumeration {@link org.eclipse.bpmn2.ItemKind}.
      * <!-- begin-user-doc -->
      * <p>
@@ -101,7 +102,7 @@ public interface ItemDefinition extends RootElement {
      * @see org.eclipse.bpmn2.ItemKind
      * @see #setItemKind(ItemKind)
      * @see org.eclipse.bpmn2.Bpmn2Package#getItemDefinition_ItemKind()
-     * @model required="true" ordered="false"
+     * @model default="Information" required="true" ordered="false"
      *        extendedMetaData="kind='attribute' name='itemKind'"
      * @generated
      */

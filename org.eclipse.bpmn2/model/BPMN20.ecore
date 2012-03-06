@@ -1483,7 +1483,7 @@
       <details key="kind" value="elementOnly"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="associationDirection" ordered="false"
-        lowerBound="1" eType="#//AssociationDirection">
+        lowerBound="1" eType="#//AssociationDirection" defaultValueLiteral="None">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="attribute"/>
         <details key="name" value="associationDirection"/>
@@ -2646,7 +2646,7 @@
       <details key="kind" value="elementOnly"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="eventGatewayType" ordered="false"
-        lowerBound="1" eType="#//EventBasedGatewayType">
+        lowerBound="1" eType="#//EventBasedGatewayType" defaultValueLiteral="Exclusive">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="attribute"/>
         <details key="name" value="eventGatewayType"/>
@@ -2873,7 +2873,7 @@
       <details key="kind" value="elementOnly"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="gatewayDirection" ordered="false"
-        lowerBound="1" eType="#//GatewayDirection" defaultValueLiteral="unspecified">
+        lowerBound="1" eType="#//GatewayDirection" defaultValueLiteral="Unspecified">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="attribute"/>
         <details key="name" value="gatewayDirection"/>
@@ -3244,7 +3244,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="import" ordered="false"
         eType="#//Import" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="itemKind" ordered="false"
-        lowerBound="1" eType="#//ItemKind">
+        lowerBound="1" eType="#//ItemKind" defaultValueLiteral="Information">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="attribute"/>
         <details key="name" value="itemKind"/>
@@ -3894,7 +3894,7 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="processType" ordered="false"
-        lowerBound="1" eType="#//ProcessType">
+        lowerBound="1" eType="#//ProcessType" defaultValueLiteral="None">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="kind" value="attribute"/>
         <details key="name" value="processType"/>

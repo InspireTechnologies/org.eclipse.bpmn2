@@ -5164,7 +5164,7 @@ public interface Bpmn2Package extends EPackage {
     int COLLABORATION__CONVERSATIONS = ROOT_ELEMENT_FEATURE_COUNT + 3;
 
     /**
-     * The feature id for the '<em><b>Conversation Associations</b></em>' containment reference.
+     * The feature id for the '<em><b>Conversation Associations</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -5336,7 +5336,7 @@ public interface Bpmn2Package extends EPackage {
     int CHOREOGRAPHY__CONVERSATIONS = COLLABORATION__CONVERSATIONS;
 
     /**
-     * The feature id for the '<em><b>Conversation Associations</b></em>' containment reference.
+     * The feature id for the '<em><b>Conversation Associations</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -10134,7 +10134,7 @@ public interface Bpmn2Package extends EPackage {
     int GLOBAL_CHOREOGRAPHY_TASK__CONVERSATIONS = CHOREOGRAPHY__CONVERSATIONS;
 
     /**
-     * The feature id for the '<em><b>Conversation Associations</b></em>' containment reference.
+     * The feature id for the '<em><b>Conversation Associations</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -10333,7 +10333,7 @@ public interface Bpmn2Package extends EPackage {
     int GLOBAL_CONVERSATION__CONVERSATIONS = COLLABORATION__CONVERSATIONS;
 
     /**
-     * The feature id for the '<em><b>Conversation Associations</b></em>' containment reference.
+     * The feature id for the '<em><b>Conversation Associations</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -20550,10 +20550,10 @@ public interface Bpmn2Package extends EPackage {
     EReference getCollaboration_Conversations();
 
     /**
-     * Returns the meta object for the containment reference '{@link org.eclipse.bpmn2.Collaboration#getConversationAssociations <em>Conversation Associations</em>}'.
+     * Returns the meta object for the containment reference list '{@link org.eclipse.bpmn2.Collaboration#getConversationAssociations <em>Conversation Associations</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the containment reference '<em>Conversation Associations</em>'.
+     * @return the meta object for the containment reference list '<em>Conversation Associations</em>'.
      * @see org.eclipse.bpmn2.Collaboration#getConversationAssociations()
      * @see #getCollaboration()
      * @generated
@@ -26561,7 +26561,7 @@ public interface Bpmn2Package extends EPackage {
         EReference COLLABORATION__CONVERSATIONS = eINSTANCE.getCollaboration_Conversations();
 
         /**
-         * The meta object literal for the '<em><b>Conversation Associations</b></em>' containment reference feature.
+         * The meta object literal for the '<em><b>Conversation Associations</b></em>' containment reference list feature.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @generated

@@ -113,31 +113,21 @@ public interface Collaboration extends RootElement {
     List<ConversationNode> getConversations();
 
     /**
-     * Returns the value of the '<em><b>Conversation Associations</b></em>' containment reference.
+     * Returns the value of the '<em><b>Conversation Associations</b></em>' containment reference list.
+     * The list contents are of type {@link org.eclipse.bpmn2.ConversationAssociation}.
      * <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Conversation Associations</em>' containment reference isn't clear,
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Conversation Associations</em>' containment reference.
-     * @see #setConversationAssociations(ConversationAssociation)
+     * @return the value of the '<em>Conversation Associations</em>' containment reference list.
      * @see org.eclipse.bpmn2.Bpmn2Package#getCollaboration_ConversationAssociations()
-     * @model containment="true" required="true" ordered="false"
+     * @model containment="true" ordered="false"
      *        extendedMetaData="kind='element' name='conversationAssociation' namespace='http://www.omg.org/spec/BPMN/20100524/MODEL'"
      * @generated
      */
-    ConversationAssociation getConversationAssociations();
-
-    /**
-     * Sets the value of the '{@link org.eclipse.bpmn2.Collaboration#getConversationAssociations <em>Conversation Associations</em>}' containment reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Conversation Associations</em>' containment reference.
-     * @see #getConversationAssociations()
-     * @generated
-     */
-    void setConversationAssociations(ConversationAssociation value);
+    List<ConversationAssociation> getConversationAssociations();
 
     /**
      * Returns the value of the '<em><b>Participant Associations</b></em>' containment reference list.

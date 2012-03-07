@@ -105,14 +105,14 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
     protected EList<ConversationNode> conversations;
 
     /**
-     * The cached value of the '{@link #getConversationAssociations() <em>Conversation Associations</em>}' containment reference.
+     * The cached value of the '{@link #getConversationAssociations() <em>Conversation Associations</em>}' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see #getConversationAssociations()
      * @generated
      * @ordered
      */
-    protected ConversationAssociation conversationAssociations;
+    protected EList<ConversationAssociation> conversationAssociations;
 
     /**
      * The cached value of the '{@link #getParticipantAssociations() <em>Participant Associations</em>}' containment reference list.
@@ -280,54 +280,13 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
      * <!-- end-user-doc -->
      * @generated
      */
-    public ConversationAssociation getConversationAssociations() {
-        return conversationAssociations;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public NotificationChain basicSetConversationAssociations(
-            ConversationAssociation newConversationAssociations, NotificationChain msgs) {
-        ConversationAssociation oldConversationAssociations = conversationAssociations;
-        conversationAssociations = newConversationAssociations;
-        if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-                    Bpmn2Package.COLLABORATION__CONVERSATION_ASSOCIATIONS,
-                    oldConversationAssociations, newConversationAssociations);
-            if (msgs == null)
-                msgs = notification;
-            else
-                msgs.add(notification);
+    public List<ConversationAssociation> getConversationAssociations() {
+        if (conversationAssociations == null) {
+            conversationAssociations = new EObjectContainmentEList<ConversationAssociation>(
+                    ConversationAssociation.class, this,
+                    Bpmn2Package.COLLABORATION__CONVERSATION_ASSOCIATIONS);
         }
-        return msgs;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setConversationAssociations(ConversationAssociation newConversationAssociations) {
-        if (newConversationAssociations != conversationAssociations) {
-            NotificationChain msgs = null;
-            if (conversationAssociations != null)
-                msgs = ((InternalEObject) conversationAssociations)
-                        .eInverseRemove(this, EOPPOSITE_FEATURE_BASE
-                                - Bpmn2Package.COLLABORATION__CONVERSATION_ASSOCIATIONS, null, msgs);
-            if (newConversationAssociations != null)
-                msgs = ((InternalEObject) newConversationAssociations)
-                        .eInverseAdd(this, EOPPOSITE_FEATURE_BASE
-                                - Bpmn2Package.COLLABORATION__CONVERSATION_ASSOCIATIONS, null, msgs);
-            msgs = basicSetConversationAssociations(newConversationAssociations, msgs);
-            if (msgs != null)
-                msgs.dispatch();
-        } else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                    Bpmn2Package.COLLABORATION__CONVERSATION_ASSOCIATIONS,
-                    newConversationAssociations, newConversationAssociations));
+        return conversationAssociations;
     }
 
     /**
@@ -459,7 +418,7 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
         case Bpmn2Package.COLLABORATION__CONVERSATIONS:
             return ((InternalEList<?>) getConversations()).basicRemove(otherEnd, msgs);
         case Bpmn2Package.COLLABORATION__CONVERSATION_ASSOCIATIONS:
-            return basicSetConversationAssociations(null, msgs);
+            return ((InternalEList<?>) getConversationAssociations()).basicRemove(otherEnd, msgs);
         case Bpmn2Package.COLLABORATION__PARTICIPANT_ASSOCIATIONS:
             return ((InternalEList<?>) getParticipantAssociations()).basicRemove(otherEnd, msgs);
         case Bpmn2Package.COLLABORATION__MESSAGE_FLOW_ASSOCIATIONS:
@@ -534,7 +493,9 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
             getConversations().addAll((Collection<? extends ConversationNode>) newValue);
             return;
         case Bpmn2Package.COLLABORATION__CONVERSATION_ASSOCIATIONS:
-            setConversationAssociations((ConversationAssociation) newValue);
+            getConversationAssociations().clear();
+            getConversationAssociations().addAll(
+                    (Collection<? extends ConversationAssociation>) newValue);
             return;
         case Bpmn2Package.COLLABORATION__PARTICIPANT_ASSOCIATIONS:
             getParticipantAssociations().clear();
@@ -589,7 +550,7 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
             getConversations().clear();
             return;
         case Bpmn2Package.COLLABORATION__CONVERSATION_ASSOCIATIONS:
-            setConversationAssociations((ConversationAssociation) null);
+            getConversationAssociations().clear();
             return;
         case Bpmn2Package.COLLABORATION__PARTICIPANT_ASSOCIATIONS:
             getParticipantAssociations().clear();
@@ -633,7 +594,7 @@ public class CollaborationImpl extends RootElementImpl implements Collaboration 
         case Bpmn2Package.COLLABORATION__CONVERSATIONS:
             return conversations != null && !conversations.isEmpty();
         case Bpmn2Package.COLLABORATION__CONVERSATION_ASSOCIATIONS:
-            return conversationAssociations != null;
+            return conversationAssociations != null && !conversationAssociations.isEmpty();
         case Bpmn2Package.COLLABORATION__PARTICIPANT_ASSOCIATIONS:
             return participantAssociations != null && !participantAssociations.isEmpty();
         case Bpmn2Package.COLLABORATION__MESSAGE_FLOW_ASSOCIATIONS:

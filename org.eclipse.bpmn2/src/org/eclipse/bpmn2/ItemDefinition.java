@@ -130,7 +130,7 @@ public interface ItemDefinition extends RootElement {
      * @return the value of the '<em>Structure Ref</em>' reference.
      * @see #setStructureRef(Object)
      * @see org.eclipse.bpmn2.Bpmn2Package#getItemDefinition_StructureRef()
-     * @model required="true" ordered="false"
+     * @model ordered="false"
      *        extendedMetaData="kind='attribute' name='structureRef'"
      * @generated
      */

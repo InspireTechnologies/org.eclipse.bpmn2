@@ -195,7 +195,7 @@ public interface Activity extends FlowNode {
      * @return the value of the '<em>Completion Quantity</em>' attribute.
      * @see #setCompletionQuantity(int)
      * @see org.eclipse.bpmn2.Bpmn2Package#getActivity_CompletionQuantity()
-     * @model default="1" required="true" ordered="false"
+     * @model default="1" ordered="false"
      *        extendedMetaData="kind='attribute' name='completionQuantity'"
      * @generated
      */
@@ -250,7 +250,7 @@ public interface Activity extends FlowNode {
      * @return the value of the '<em>Is For Compensation</em>' attribute.
      * @see #setIsForCompensation(boolean)
      * @see org.eclipse.bpmn2.Bpmn2Package#getActivity_IsForCompensation()
-     * @model default="false" required="true" ordered="false"
+     * @model default="false" ordered="false"
      *        extendedMetaData="kind='attribute' name='isForCompensation'"
      * @generated
      */
@@ -278,7 +278,7 @@ public interface Activity extends FlowNode {
      * @return the value of the '<em>Start Quantity</em>' attribute.
      * @see #setStartQuantity(int)
      * @see org.eclipse.bpmn2.Bpmn2Package#getActivity_StartQuantity()
-     * @model default="1" required="true" ordered="false"
+     * @model default="1" ordered="false"
      *        extendedMetaData="kind='attribute' name='startQuantity'"
      * @generated
      */

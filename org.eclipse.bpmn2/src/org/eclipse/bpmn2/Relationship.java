@@ -85,7 +85,7 @@ public interface Relationship extends BaseElement {
      * @see org.eclipse.bpmn2.RelationshipDirection
      * @see #setDirection(RelationshipDirection)
      * @see org.eclipse.bpmn2.Bpmn2Package#getRelationship_Direction()
-     * @model required="true" ordered="false"
+     * @model ordered="false"
      *        extendedMetaData="kind='attribute' name='direction'"
      * @generated
      */

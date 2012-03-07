@@ -74,7 +74,7 @@ public interface Extension extends EObject {
      * @return the value of the '<em>Must Understand</em>' attribute.
      * @see #setMustUnderstand(boolean)
      * @see org.eclipse.bpmn2.Bpmn2Package#getExtension_MustUnderstand()
-     * @model default="false" required="true" ordered="false"
+     * @model default="false" ordered="false"
      *        extendedMetaData="kind='attribute' name='mustUnderstand'"
      * @generated
      */

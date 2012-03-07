@@ -43,7 +43,7 @@ public interface StartEvent extends CatchEvent {
      * @return the value of the '<em>Is Interrupting</em>' attribute.
      * @see #setIsInterrupting(boolean)
      * @see org.eclipse.bpmn2.Bpmn2Package#getStartEvent_IsInterrupting()
-     * @model default="true" required="true" ordered="false"
+     * @model default="true" ordered="false"
      *        extendedMetaData="kind='attribute' name='isInterrupting'"
      * @generated
      */

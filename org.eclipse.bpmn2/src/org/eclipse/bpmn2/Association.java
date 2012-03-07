@@ -47,7 +47,7 @@ public interface Association extends Artifact {
      * @see org.eclipse.bpmn2.AssociationDirection
      * @see #setAssociationDirection(AssociationDirection)
      * @see org.eclipse.bpmn2.Bpmn2Package#getAssociation_AssociationDirection()
-     * @model default="None" required="true" ordered="false"
+     * @model default="None" ordered="false"
      *        extendedMetaData="kind='attribute' name='associationDirection'"
      * @generated
      */

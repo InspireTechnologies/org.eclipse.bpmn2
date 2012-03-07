@@ -46,7 +46,7 @@ public interface ItemDefinition extends RootElement {
      * @return the value of the '<em>Is Collection</em>' attribute.
      * @see #setIsCollection(boolean)
      * @see org.eclipse.bpmn2.Bpmn2Package#getItemDefinition_IsCollection()
-     * @model default="false" required="true" ordered="false"
+     * @model default="false" ordered="false"
      *        extendedMetaData="kind='attribute' name='isCollection'"
      * @generated
      */
@@ -102,7 +102,7 @@ public interface ItemDefinition extends RootElement {
      * @see org.eclipse.bpmn2.ItemKind
      * @see #setItemKind(ItemKind)
      * @see org.eclipse.bpmn2.Bpmn2Package#getItemDefinition_ItemKind()
-     * @model default="Information" required="true" ordered="false"
+     * @model default="Information" ordered="false"
      *        extendedMetaData="kind='attribute' name='itemKind'"
      * @generated
      */

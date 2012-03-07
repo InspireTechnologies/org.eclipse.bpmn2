@@ -45,7 +45,7 @@ public interface CategoryValue extends BaseElement {
      * @return the value of the '<em>Value</em>' attribute.
      * @see #setValue(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getCategoryValue_Value()
-     * @model required="true" ordered="false"
+     * @model ordered="false"
      *        extendedMetaData="kind='attribute' name='value'"
      * @generated
      */

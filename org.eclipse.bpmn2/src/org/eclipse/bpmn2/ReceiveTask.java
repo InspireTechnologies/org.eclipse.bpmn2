@@ -45,7 +45,7 @@ public interface ReceiveTask extends Task {
      * @return the value of the '<em>Implementation</em>' attribute.
      * @see #setImplementation(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getReceiveTask_Implementation()
-     * @model required="true" ordered="false"
+     * @model ordered="false"
      *        extendedMetaData="kind='attribute' name='implementation'"
      * @generated
      */
@@ -73,7 +73,7 @@ public interface ReceiveTask extends Task {
      * @return the value of the '<em>Instantiate</em>' attribute.
      * @see #setInstantiate(boolean)
      * @see org.eclipse.bpmn2.Bpmn2Package#getReceiveTask_Instantiate()
-     * @model default="false" required="true" ordered="false"
+     * @model default="false" ordered="false"
      *        extendedMetaData="kind='attribute' name='instantiate'"
      * @generated
      */

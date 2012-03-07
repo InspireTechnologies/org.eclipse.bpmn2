@@ -46,7 +46,7 @@ public interface EventBasedGateway extends Gateway {
      * @see org.eclipse.bpmn2.EventBasedGatewayType
      * @see #setEventGatewayType(EventBasedGatewayType)
      * @see org.eclipse.bpmn2.Bpmn2Package#getEventBasedGateway_EventGatewayType()
-     * @model default="Exclusive" required="true" ordered="false"
+     * @model default="Exclusive" ordered="false"
      *        extendedMetaData="kind='attribute' name='eventGatewayType'"
      * @generated
      */
@@ -75,7 +75,7 @@ public interface EventBasedGateway extends Gateway {
      * @return the value of the '<em>Instantiate</em>' attribute.
      * @see #setInstantiate(boolean)
      * @see org.eclipse.bpmn2.Bpmn2Package#getEventBasedGateway_Instantiate()
-     * @model default="false" required="true" ordered="false"
+     * @model default="false" ordered="false"
      *        extendedMetaData="kind='attribute' name='instantiate'"
      * @generated
      */

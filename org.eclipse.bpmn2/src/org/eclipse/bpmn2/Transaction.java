@@ -69,7 +69,7 @@ public interface Transaction extends SubProcess {
      * @return the value of the '<em>Method</em>' attribute.
      * @see #setMethod(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getTransaction_Method()
-     * @model required="true" ordered="false"
+     * @model ordered="false"
      *        extendedMetaData="kind='attribute' name='method'"
      * @generated
      */

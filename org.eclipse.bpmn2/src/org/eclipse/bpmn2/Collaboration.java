@@ -235,7 +235,7 @@ public interface Collaboration extends RootElement {
      * @return the value of the '<em>Is Closed</em>' attribute.
      * @see #setIsClosed(boolean)
      * @see org.eclipse.bpmn2.Bpmn2Package#getCollaboration_IsClosed()
-     * @model required="true" ordered="false"
+     * @model ordered="false"
      *        extendedMetaData="kind='attribute' name='isClosed'"
      * @generated
      */
@@ -262,7 +262,7 @@ public interface Collaboration extends RootElement {
      * @return the value of the '<em>Name</em>' attribute.
      * @see #setName(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getCollaboration_Name()
-     * @model required="true" ordered="false"
+     * @model ordered="false"
      *        extendedMetaData="kind='attribute' name='name'"
      * @generated
      */

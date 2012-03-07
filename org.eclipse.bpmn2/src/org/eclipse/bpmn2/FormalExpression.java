@@ -117,7 +117,7 @@ public interface FormalExpression extends Expression {
      * @return the value of the '<em>Language</em>' attribute.
      * @see #setLanguage(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getFormalExpression_Language()
-     * @model required="true" ordered="false"
+     * @model ordered="false"
      *        extendedMetaData="kind='attribute' name='language'"
      * @generated
      */

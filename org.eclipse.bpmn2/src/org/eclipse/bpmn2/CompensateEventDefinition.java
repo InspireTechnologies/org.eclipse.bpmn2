@@ -70,7 +70,7 @@ public interface CompensateEventDefinition extends EventDefinition {
      * @return the value of the '<em>Wait For Completion</em>' attribute.
      * @see #setWaitForCompletion(boolean)
      * @see org.eclipse.bpmn2.Bpmn2Package#getCompensateEventDefinition_WaitForCompletion()
-     * @model required="true" ordered="false"
+     * @model ordered="false"
      *        extendedMetaData="kind='attribute' name='waitForCompletion'"
      * @generated
      */

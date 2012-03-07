@@ -70,7 +70,7 @@ public interface ScriptTask extends Task {
      * @return the value of the '<em>Script Format</em>' attribute.
      * @see #setScriptFormat(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getScriptTask_ScriptFormat()
-     * @model required="true" ordered="false"
+     * @model ordered="false"
      *        extendedMetaData="kind='attribute' name='scriptFormat'"
      * @generated
      */

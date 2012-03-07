@@ -145,7 +145,7 @@ public interface CatchEvent extends Event {
      * @return the value of the '<em>Parallel Multiple</em>' attribute.
      * @see #setParallelMultiple(boolean)
      * @see org.eclipse.bpmn2.Bpmn2Package#getCatchEvent_ParallelMultiple()
-     * @model required="true" ordered="false"
+     * @model ordered="false"
      *        extendedMetaData="kind='attribute' name='parallelMultiple'"
      * @generated
      */

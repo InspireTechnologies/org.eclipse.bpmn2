@@ -73,7 +73,7 @@ public interface BoundaryEvent extends CatchEvent {
      * @return the value of the '<em>Cancel Activity</em>' attribute.
      * @see #setCancelActivity(boolean)
      * @see org.eclipse.bpmn2.Bpmn2Package#getBoundaryEvent_CancelActivity()
-     * @model default="true" required="true" ordered="false"
+     * @model default="true" ordered="false"
      *        extendedMetaData="kind='attribute' name='cancelActivity'"
      * @generated
      */

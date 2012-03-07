@@ -46,7 +46,7 @@ public interface Gateway extends FlowNode {
      * @see org.eclipse.bpmn2.GatewayDirection
      * @see #setGatewayDirection(GatewayDirection)
      * @see org.eclipse.bpmn2.Bpmn2Package#getGateway_GatewayDirection()
-     * @model default="Unspecified" required="true" ordered="false"
+     * @model default="Unspecified" ordered="false"
      *        extendedMetaData="kind='attribute' name='gatewayDirection'"
      * @generated
      */

@@ -99,7 +99,7 @@ public interface StandardLoopCharacteristics extends LoopCharacteristics {
      * @return the value of the '<em>Test Before</em>' attribute.
      * @see #setTestBefore(boolean)
      * @see org.eclipse.bpmn2.Bpmn2Package#getStandardLoopCharacteristics_TestBefore()
-     * @model default="false" required="true" ordered="false"
+     * @model default="false" ordered="false"
      *        extendedMetaData="kind='attribute' name='testBefore'"
      * @generated
      */

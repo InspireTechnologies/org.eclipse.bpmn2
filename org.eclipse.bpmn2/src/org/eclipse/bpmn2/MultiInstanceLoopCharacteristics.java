@@ -236,7 +236,7 @@ public interface MultiInstanceLoopCharacteristics extends LoopCharacteristics {
      * @see org.eclipse.bpmn2.MultiInstanceBehavior
      * @see #setBehavior(MultiInstanceBehavior)
      * @see org.eclipse.bpmn2.Bpmn2Package#getMultiInstanceLoopCharacteristics_Behavior()
-     * @model default="All" required="true" ordered="false"
+     * @model default="All" ordered="false"
      *        extendedMetaData="kind='attribute' name='behavior'"
      * @generated
      */
@@ -265,7 +265,7 @@ public interface MultiInstanceLoopCharacteristics extends LoopCharacteristics {
      * @return the value of the '<em>Is Sequential</em>' attribute.
      * @see #setIsSequential(boolean)
      * @see org.eclipse.bpmn2.Bpmn2Package#getMultiInstanceLoopCharacteristics_IsSequential()
-     * @model default="false" required="true" ordered="false"
+     * @model default="false" ordered="false"
      *        extendedMetaData="kind='attribute' name='isSequential'"
      * @generated
      */

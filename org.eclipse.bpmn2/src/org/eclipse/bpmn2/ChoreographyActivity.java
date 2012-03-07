@@ -112,7 +112,7 @@ public interface ChoreographyActivity extends FlowNode {
      * @see org.eclipse.bpmn2.ChoreographyLoopType
      * @see #setLoopType(ChoreographyLoopType)
      * @see org.eclipse.bpmn2.Bpmn2Package#getChoreographyActivity_LoopType()
-     * @model default="None" required="true" ordered="false"
+     * @model default="None" ordered="false"
      *        extendedMetaData="kind='attribute' name='loopType'"
      * @generated
      */

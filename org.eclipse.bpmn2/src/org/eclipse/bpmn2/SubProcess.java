@@ -63,7 +63,7 @@ public interface SubProcess extends Activity, FlowElementsContainer {
      * @return the value of the '<em>Triggered By Event</em>' attribute.
      * @see #setTriggeredByEvent(boolean)
      * @see org.eclipse.bpmn2.Bpmn2Package#getSubProcess_TriggeredByEvent()
-     * @model default="false" required="true" ordered="false"
+     * @model default="false" ordered="false"
      *        extendedMetaData="kind='attribute' name='triggeredByEvent'"
      * @generated
      */

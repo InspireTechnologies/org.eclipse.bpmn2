@@ -70,7 +70,7 @@ public interface Message extends RootElement {
      * @return the value of the '<em>Name</em>' attribute.
      * @see #setName(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getMessage_Name()
-     * @model required="true" ordered="false"
+     * @model ordered="false"
      *        extendedMetaData="kind='attribute' name='name'"
      * @generated
      */

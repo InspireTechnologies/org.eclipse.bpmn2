@@ -141,7 +141,7 @@ public interface Definitions extends BaseElement {
      * @return the value of the '<em>Exporter</em>' attribute.
      * @see #setExporter(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getDefinitions_Exporter()
-     * @model required="true" ordered="false"
+     * @model ordered="false"
      *        extendedMetaData="kind='attribute' name='exporter'"
      * @generated
      */
@@ -168,7 +168,7 @@ public interface Definitions extends BaseElement {
      * @return the value of the '<em>Exporter Version</em>' attribute.
      * @see #setExporterVersion(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getDefinitions_ExporterVersion()
-     * @model required="true" ordered="false"
+     * @model ordered="false"
      *        extendedMetaData="kind='attribute' name='exporterVersion'"
      * @generated
      */
@@ -196,7 +196,7 @@ public interface Definitions extends BaseElement {
      * @return the value of the '<em>Expression Language</em>' attribute.
      * @see #setExpressionLanguage(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getDefinitions_ExpressionLanguage()
-     * @model default="http://www.w3.org/1999/XPath" required="true" ordered="false"
+     * @model default="http://www.w3.org/1999/XPath" ordered="false"
      *        extendedMetaData="kind='attribute' name='expressionLanguage'"
      * @generated
      */
@@ -223,7 +223,7 @@ public interface Definitions extends BaseElement {
      * @return the value of the '<em>Name</em>' attribute.
      * @see #setName(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getDefinitions_Name()
-     * @model required="true" ordered="false"
+     * @model ordered="false"
      *        extendedMetaData="kind='attribute' name='name'"
      * @generated
      */
@@ -278,7 +278,7 @@ public interface Definitions extends BaseElement {
      * @return the value of the '<em>Type Language</em>' attribute.
      * @see #setTypeLanguage(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getDefinitions_TypeLanguage()
-     * @model default="http://www.w3.org/2001/XMLSchema" required="true" ordered="false"
+     * @model default="http://www.w3.org/2001/XMLSchema" ordered="false"
      *        extendedMetaData="kind='attribute' name='typeLanguage'"
      * @generated
      */

@@ -220,7 +220,7 @@ public interface Process extends CallableElement, FlowElementsContainer {
      * @return the value of the '<em>Is Closed</em>' attribute.
      * @see #setIsClosed(boolean)
      * @see org.eclipse.bpmn2.Bpmn2Package#getProcess_IsClosed()
-     * @model required="true" ordered="false"
+     * @model ordered="false"
      *        extendedMetaData="kind='attribute' name='isClosed'"
      * @generated
      */
@@ -247,7 +247,7 @@ public interface Process extends CallableElement, FlowElementsContainer {
      * @return the value of the '<em>Is Executable</em>' attribute.
      * @see #setIsExecutable(boolean)
      * @see org.eclipse.bpmn2.Bpmn2Package#getProcess_IsExecutable()
-     * @model required="true" ordered="false"
+     * @model ordered="false"
      *        extendedMetaData="kind='attribute' name='isExecutable'"
      * @generated
      */
@@ -277,7 +277,7 @@ public interface Process extends CallableElement, FlowElementsContainer {
      * @see org.eclipse.bpmn2.ProcessType
      * @see #setProcessType(ProcessType)
      * @see org.eclipse.bpmn2.Bpmn2Package#getProcess_ProcessType()
-     * @model default="None" required="true" ordered="false"
+     * @model default="None" ordered="false"
      *        extendedMetaData="kind='attribute' name='processType'"
      * @generated
      */

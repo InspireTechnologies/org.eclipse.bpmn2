@@ -90,7 +90,7 @@ public interface Documentation extends BaseElement {
      * @return the value of the '<em>Text Format</em>' attribute.
      * @see #setTextFormat(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getDocumentation_TextFormat()
-     * @model default="text/plain" required="true" ordered="false"
+     * @model default="text/plain" ordered="false"
      *        extendedMetaData="kind='attribute' name='textFormat'"
      * @generated
      */

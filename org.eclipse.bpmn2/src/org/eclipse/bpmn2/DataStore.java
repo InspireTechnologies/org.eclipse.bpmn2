@@ -44,7 +44,7 @@ public interface DataStore extends ItemAwareElement, RootElement {
      * @return the value of the '<em>Capacity</em>' attribute.
      * @see #setCapacity(int)
      * @see org.eclipse.bpmn2.Bpmn2Package#getDataStore_Capacity()
-     * @model required="true" ordered="false"
+     * @model ordered="false"
      *        extendedMetaData="kind='attribute' name='capacity'"
      * @generated
      */
@@ -72,7 +72,7 @@ public interface DataStore extends ItemAwareElement, RootElement {
      * @return the value of the '<em>Is Unlimited</em>' attribute.
      * @see #setIsUnlimited(boolean)
      * @see org.eclipse.bpmn2.Bpmn2Package#getDataStore_IsUnlimited()
-     * @model default="true" required="true" ordered="false"
+     * @model default="true" ordered="false"
      *        extendedMetaData="kind='attribute' name='isUnlimited'"
      * @generated
      */
@@ -99,7 +99,7 @@ public interface DataStore extends ItemAwareElement, RootElement {
      * @return the value of the '<em>Name</em>' attribute.
      * @see #setName(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getDataStore_Name()
-     * @model required="true" ordered="false"
+     * @model ordered="false"
      *        extendedMetaData="kind='attribute' name='name'"
      * @generated
      */

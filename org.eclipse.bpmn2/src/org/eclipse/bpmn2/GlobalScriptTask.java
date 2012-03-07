@@ -70,7 +70,7 @@ public interface GlobalScriptTask extends GlobalTask {
      * @return the value of the '<em>Script Language</em>' attribute.
      * @see #setScriptLanguage(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getGlobalScriptTask_ScriptLanguage()
-     * @model required="true" ordered="false"
+     * @model ordered="false"
      *        extendedMetaData="kind='attribute' name='scriptLanguage'"
      * @generated
      */

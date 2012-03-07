@@ -44,7 +44,7 @@ public interface ResourceParameter extends BaseElement {
      * @return the value of the '<em>Is Required</em>' attribute.
      * @see #setIsRequired(boolean)
      * @see org.eclipse.bpmn2.Bpmn2Package#getResourceParameter_IsRequired()
-     * @model required="true" ordered="false"
+     * @model ordered="false"
      *        extendedMetaData="kind='attribute' name='isRequired'"
      * @generated
      */
@@ -71,7 +71,7 @@ public interface ResourceParameter extends BaseElement {
      * @return the value of the '<em>Name</em>' attribute.
      * @see #setName(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getResourceParameter_Name()
-     * @model required="true" ordered="false"
+     * @model ordered="false"
      *        extendedMetaData="kind='attribute' name='name'"
      * @generated
      */

@@ -72,7 +72,7 @@ public interface ParticipantMultiplicity extends BaseElement {
      * @return the value of the '<em>Minimum</em>' attribute.
      * @see #setMinimum(int)
      * @see org.eclipse.bpmn2.Bpmn2Package#getParticipantMultiplicity_Minimum()
-     * @model default="0" required="true" ordered="false"
+     * @model default="0" ordered="false"
      *        extendedMetaData="kind='attribute' name='minimum'"
      * @generated
      */

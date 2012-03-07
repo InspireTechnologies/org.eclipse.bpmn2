@@ -103,7 +103,7 @@ public interface DataOutput extends ItemAwareElement {
      * @return the value of the '<em>Is Collection</em>' attribute.
      * @see #setIsCollection(boolean)
      * @see org.eclipse.bpmn2.Bpmn2Package#getDataOutput_IsCollection()
-     * @model default="false" required="true" ordered="false"
+     * @model default="false" ordered="false"
      *        extendedMetaData="kind='attribute' name='isCollection'"
      * @generated
      */

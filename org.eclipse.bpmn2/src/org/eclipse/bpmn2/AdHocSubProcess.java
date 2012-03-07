@@ -72,7 +72,7 @@ public interface AdHocSubProcess extends SubProcess {
      * @return the value of the '<em>Cancel Remaining Instances</em>' attribute.
      * @see #setCancelRemainingInstances(boolean)
      * @see org.eclipse.bpmn2.Bpmn2Package#getAdHocSubProcess_CancelRemainingInstances()
-     * @model default="true" required="true" ordered="false"
+     * @model default="true" ordered="false"
      *        extendedMetaData="kind='attribute' name='cancelRemainingInstances'"
      * @generated
      */
@@ -101,7 +101,7 @@ public interface AdHocSubProcess extends SubProcess {
      * @see org.eclipse.bpmn2.AdHocOrdering
      * @see #setOrdering(AdHocOrdering)
      * @see org.eclipse.bpmn2.Bpmn2Package#getAdHocSubProcess_Ordering()
-     * @model required="true" ordered="false"
+     * @model ordered="false"
      *        extendedMetaData="kind='attribute' name='ordering'"
      * @generated
      */

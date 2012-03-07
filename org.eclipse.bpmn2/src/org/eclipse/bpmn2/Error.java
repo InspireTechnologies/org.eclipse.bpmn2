@@ -44,7 +44,7 @@ public interface Error extends RootElement {
      * @return the value of the '<em>Error Code</em>' attribute.
      * @see #setErrorCode(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getError_ErrorCode()
-     * @model required="true" ordered="false"
+     * @model ordered="false"
      *        extendedMetaData="kind='attribute' name='errorCode'"
      * @generated
      */
@@ -71,7 +71,7 @@ public interface Error extends RootElement {
      * @return the value of the '<em>Name</em>' attribute.
      * @see #setName(String)
      * @see org.eclipse.bpmn2.Bpmn2Package#getError_Name()
-     * @model required="true" ordered="false"
+     * @model ordered="false"
      *        extendedMetaData="kind='attribute' name='name'"
      * @generated
      */

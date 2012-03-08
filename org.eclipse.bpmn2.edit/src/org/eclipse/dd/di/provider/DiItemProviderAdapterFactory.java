@@ -107,6 +107,29 @@ public class DiItemProviderAdapterFactory extends DiAdapterFactory implements
     }
 
     /**
+     * This keeps track of the one adapter used for all {@link org.eclipse.dd.di.DiagramElement} instances.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected DiagramElementItemProvider diagramElementItemProvider;
+
+    /**
+     * This creates an adapter for a {@link org.eclipse.dd.di.DiagramElement}.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public Adapter createDiagramElementAdapter() {
+        if (diagramElementItemProvider == null) {
+            diagramElementItemProvider = new DiagramElementItemProvider(this);
+        }
+
+        return diagramElementItemProvider;
+    }
+
+    /**
      * This returns the root adapter factory that contains this factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -207,6 +230,8 @@ public class DiItemProviderAdapterFactory extends DiAdapterFactory implements
     public void dispose() {
         if (documentRootItemProvider != null)
             documentRootItemProvider.dispose();
+        if (diagramElementItemProvider != null)
+            diagramElementItemProvider.dispose();
     }
 
 }

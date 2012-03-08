@@ -135,8 +135,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="ownedStyle" ordered="false"
         upperBound="-1" eType="#//Style" changeable="false" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="rootElement" ordered="false"
-        lowerBound="1" eType="#//DiagramElement" changeable="false" transient="true"
-        derived="true" resolveProxies="false" eOpposite="#//DiagramElement/owningDiagram"/>
+        lowerBound="1" eType="#//DiagramElement" changeable="false" volatile="true"
+        transient="true" derived="true" resolveProxies="false" eOpposite="#//DiagramElement/owningDiagram"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//ID"
         iD="true">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
@@ -165,8 +165,8 @@
       <details key="abstract" value="true"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="owningDiagram" ordered="false"
-        eType="#//Diagram" changeable="false" transient="true" derived="true" resolveProxies="false"
-        eOpposite="#//Diagram/rootElement"/>
+        eType="#//Diagram" changeable="false" volatile="true" transient="true" derived="true"
+        resolveProxies="false" eOpposite="#//Diagram/rootElement"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="owningElement" ordered="false"
         eType="#//DiagramElement" changeable="false" transient="true" derived="true"
         resolveProxies="false" eOpposite="#//DiagramElement/ownedElement"/>

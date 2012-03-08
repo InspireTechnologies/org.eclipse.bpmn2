@@ -51,16 +51,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class DiagramElementImpl extends EObjectImpl implements DiagramElement {
     /**
-     * The cached value of the '{@link #getOwningDiagram() <em>Owning Diagram</em>}' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getOwningDiagram()
-     * @generated
-     * @ordered
-     */
-    protected Diagram owningDiagram;
-
-    /**
      * The cached value of the '{@link #getOwningElement() <em>Owning Element</em>}' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -142,29 +132,14 @@ public class DiagramElementImpl extends EObjectImpl implements DiagramElement {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
+     * @generated NOT
      */
     public Diagram getOwningDiagram() {
-        return owningDiagram;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public NotificationChain basicSetOwningDiagram(Diagram newOwningDiagram, NotificationChain msgs) {
-        Diagram oldOwningDiagram = owningDiagram;
-        owningDiagram = newOwningDiagram;
-        if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-                    DiPackage.DIAGRAM_ELEMENT__OWNING_DIAGRAM, oldOwningDiagram, newOwningDiagram);
-            if (msgs == null)
-                msgs = notification;
-            else
-                msgs.add(notification);
+        EObject container = eContainer();
+        if (container instanceof Diagram) {
+            return (Diagram) container;
         }
-        return msgs;
+        return null;
     }
 
     /**
@@ -296,11 +271,6 @@ public class DiagramElementImpl extends EObjectImpl implements DiagramElement {
     public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID,
             NotificationChain msgs) {
         switch (featureID) {
-        case DiPackage.DIAGRAM_ELEMENT__OWNING_DIAGRAM:
-            if (owningDiagram != null)
-                msgs = ((InternalEObject) owningDiagram).eInverseRemove(this,
-                        DiPackage.DIAGRAM__ROOT_ELEMENT, Diagram.class, msgs);
-            return basicSetOwningDiagram((Diagram) otherEnd, msgs);
         case DiPackage.DIAGRAM_ELEMENT__OWNING_ELEMENT:
             if (owningElement != null)
                 msgs = ((InternalEObject) owningElement).eInverseRemove(this,
@@ -322,8 +292,6 @@ public class DiagramElementImpl extends EObjectImpl implements DiagramElement {
     public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID,
             NotificationChain msgs) {
         switch (featureID) {
-        case DiPackage.DIAGRAM_ELEMENT__OWNING_DIAGRAM:
-            return basicSetOwningDiagram(null, msgs);
         case DiPackage.DIAGRAM_ELEMENT__OWNING_ELEMENT:
             return basicSetOwningElement(null, msgs);
         case DiPackage.DIAGRAM_ELEMENT__OWNED_ELEMENT:
@@ -399,7 +367,7 @@ public class DiagramElementImpl extends EObjectImpl implements DiagramElement {
     public boolean eIsSet(int featureID) {
         switch (featureID) {
         case DiPackage.DIAGRAM_ELEMENT__OWNING_DIAGRAM:
-            return owningDiagram != null;
+            return getOwningDiagram() != null;
         case DiPackage.DIAGRAM_ELEMENT__OWNING_ELEMENT:
             return owningElement != null;
         case DiPackage.DIAGRAM_ELEMENT__OWNED_ELEMENT:

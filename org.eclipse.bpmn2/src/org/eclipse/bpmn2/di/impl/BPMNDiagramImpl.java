@@ -22,6 +22,7 @@ import org.eclipse.bpmn2.di.BPMNDiagram;
 import org.eclipse.bpmn2.di.BPMNLabelStyle;
 import org.eclipse.bpmn2.di.BPMNPlane;
 import org.eclipse.bpmn2.di.BpmnDiPackage;
+import org.eclipse.dd.di.DiagramElement;
 import org.eclipse.dd.di.impl.DiagramImpl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -236,4 +237,8 @@ public class BPMNDiagramImpl extends DiagramImpl implements BPMNDiagram {
         return super.eIsSet(featureID);
     }
 
+    @Override
+    public DiagramElement getRootElement() {
+        return getPlane();
+    }
 } //BPMNDiagramImpl

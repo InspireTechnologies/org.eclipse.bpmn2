@@ -52,7 +52,7 @@ public interface DiagramElement extends EObject {
      * @return the value of the '<em>Owning Diagram</em>' reference.
      * @see org.eclipse.dd.di.DiPackage#getDiagramElement_OwningDiagram()
      * @see org.eclipse.dd.di.Diagram#getRootElement
-     * @model opposite="rootElement" resolveProxies="false" transient="true" changeable="false" derived="true" ordered="false"
+     * @model opposite="rootElement" resolveProxies="false" transient="true" changeable="false" volatile="true" derived="true" ordered="false"
      * @generated
      */
     Diagram getOwningDiagram();

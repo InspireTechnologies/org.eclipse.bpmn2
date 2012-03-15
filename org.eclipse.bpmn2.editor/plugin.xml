@@ -20,13 +20,13 @@
 
    <extension point="org.eclipse.ui.newWizards">
       <category
-            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            id="org.eclipse.bpmn2.wizardCategory"
             name="%_UI_Wizard_category"/>
       <wizard
             id="org.eclipse.bpmn2.presentation.Bpmn2ModelWizardID"
             name="%_UI_Bpmn2ModelWizard_label"
             class="org.eclipse.bpmn2.presentation.Bpmn2ModelWizard"
-            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            category="org.eclipse.bpmn2.wizardCategory"
             icon="icons/full/obj16/Bpmn2ModelFile.gif">
          <description>%_UI_Bpmn2ModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>

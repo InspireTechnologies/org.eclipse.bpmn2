@@ -72,6 +72,7 @@
 		<module>org.eclipse.bpmn2.editor</module>
 		<module>org.eclipse.bpmn2.feature</module>
 		<module>org.eclipse.bpmn2.site</module>
+		<module>org.eclipse.bpmn2.tools.ecoremerger</module>
 	</modules>
 
 	<repositories>

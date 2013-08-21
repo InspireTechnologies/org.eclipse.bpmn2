@@ -16777,7 +16777,7 @@ public interface Bpmn2Package extends EPackage {
     int STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION = LOOP_CHARACTERISTICS_FEATURE_COUNT + 0;
 
     /**
-     * The feature id for the '<em><b>Loop Maximum</b></em>' containment reference.
+     * The feature id for the '<em><b>Loop Maximum</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -24284,15 +24284,15 @@ public interface Bpmn2Package extends EPackage {
     EReference getStandardLoopCharacteristics_LoopCondition();
 
     /**
-     * Returns the meta object for the containment reference '{@link org.eclipse.bpmn2.StandardLoopCharacteristics#getLoopMaximum <em>Loop Maximum</em>}'.
+     * Returns the meta object for the attribute '{@link org.eclipse.bpmn2.StandardLoopCharacteristics#getLoopMaximum <em>Loop Maximum</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the containment reference '<em>Loop Maximum</em>'.
+     * @return the meta object for the attribute '<em>Loop Maximum</em>'.
      * @see org.eclipse.bpmn2.StandardLoopCharacteristics#getLoopMaximum()
      * @see #getStandardLoopCharacteristics()
      * @generated
      */
-    EReference getStandardLoopCharacteristics_LoopMaximum();
+    EAttribute getStandardLoopCharacteristics_LoopMaximum();
 
     /**
      * Returns the meta object for the attribute '{@link org.eclipse.bpmn2.StandardLoopCharacteristics#isTestBefore <em>Test Before</em>}'.
@@ -29651,12 +29651,12 @@ public interface Bpmn2Package extends EPackage {
                 .getStandardLoopCharacteristics_LoopCondition();
 
         /**
-         * The meta object literal for the '<em><b>Loop Maximum</b></em>' containment reference feature.
+         * The meta object literal for the '<em><b>Loop Maximum</b></em>' attribute feature.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @generated
          */
-        EReference STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM = eINSTANCE
+        EAttribute STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM = eINSTANCE
                 .getStandardLoopCharacteristics_LoopMaximum();
 
         /**

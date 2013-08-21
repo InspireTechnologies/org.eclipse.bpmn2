@@ -61,31 +61,31 @@ public interface StandardLoopCharacteristics extends LoopCharacteristics {
     void setLoopCondition(Expression value);
 
     /**
-     * Returns the value of the '<em><b>Loop Maximum</b></em>' containment reference.
+     * Returns the value of the '<em><b>Loop Maximum</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Loop Maximum</em>' containment reference isn't clear,
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Loop Maximum</em>' containment reference.
-     * @see #setLoopMaximum(Expression)
+     * @return the value of the '<em>Loop Maximum</em>' attribute.
+     * @see #setLoopMaximum(int)
      * @see org.eclipse.bpmn2.Bpmn2Package#getStandardLoopCharacteristics_LoopMaximum()
-     * @model containment="true" ordered="false"
+     * @model dataType="org.eclipse.emf.ecore.xml.type.Int"
      *        extendedMetaData="kind='attribute' name='loopMaximum'"
      * @generated
      */
-    Expression getLoopMaximum();
+    int getLoopMaximum();
 
     /**
-     * Sets the value of the '{@link org.eclipse.bpmn2.StandardLoopCharacteristics#getLoopMaximum <em>Loop Maximum</em>}' containment reference.
+     * Sets the value of the '{@link org.eclipse.bpmn2.StandardLoopCharacteristics#getLoopMaximum <em>Loop Maximum</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Loop Maximum</em>' containment reference.
+     * @param value the new value of the '<em>Loop Maximum</em>' attribute.
      * @see #getLoopMaximum()
      * @generated
      */
-    void setLoopMaximum(Expression value);
+    void setLoopMaximum(int value);
 
     /**
      * Returns the value of the '<em><b>Test Before</b></em>' attribute.

@@ -51,14 +51,24 @@ public class StandardLoopCharacteristicsImpl extends LoopCharacteristicsImpl imp
     protected Expression loopCondition;
 
     /**
-     * The cached value of the '{@link #getLoopMaximum() <em>Loop Maximum</em>}' containment reference.
+     * The default value of the '{@link #getLoopMaximum() <em>Loop Maximum</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see #getLoopMaximum()
      * @generated
      * @ordered
      */
-    protected Expression loopMaximum;
+    protected static final int LOOP_MAXIMUM_EDEFAULT = 0;
+
+    /**
+     * The cached value of the '{@link #getLoopMaximum() <em>Loop Maximum</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getLoopMaximum()
+     * @generated
+     * @ordered
+     */
+    protected int loopMaximum = LOOP_MAXIMUM_EDEFAULT;
 
     /**
      * The default value of the '{@link #isTestBefore() <em>Test Before</em>}' attribute.
@@ -161,7 +171,7 @@ public class StandardLoopCharacteristicsImpl extends LoopCharacteristicsImpl imp
      * <!-- end-user-doc -->
      * @generated
      */
-    public Expression getLoopMaximum() {
+    public int getLoopMaximum() {
         return loopMaximum;
     }
 
@@ -170,42 +180,13 @@ public class StandardLoopCharacteristicsImpl extends LoopCharacteristicsImpl imp
      * <!-- end-user-doc -->
      * @generated
      */
-    public NotificationChain basicSetLoopMaximum(Expression newLoopMaximum, NotificationChain msgs) {
-        Expression oldLoopMaximum = loopMaximum;
+    public void setLoopMaximum(int newLoopMaximum) {
+        int oldLoopMaximum = loopMaximum;
         loopMaximum = newLoopMaximum;
-        if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-                    Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM, oldLoopMaximum,
-                    newLoopMaximum);
-            if (msgs == null)
-                msgs = notification;
-            else
-                msgs.add(notification);
-        }
-        return msgs;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setLoopMaximum(Expression newLoopMaximum) {
-        if (newLoopMaximum != loopMaximum) {
-            NotificationChain msgs = null;
-            if (loopMaximum != null)
-                msgs = ((InternalEObject) loopMaximum).eInverseRemove(this, EOPPOSITE_FEATURE_BASE
-                        - Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM, null, msgs);
-            if (newLoopMaximum != null)
-                msgs = ((InternalEObject) newLoopMaximum).eInverseAdd(this, EOPPOSITE_FEATURE_BASE
-                        - Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM, null, msgs);
-            msgs = basicSetLoopMaximum(newLoopMaximum, msgs);
-            if (msgs != null)
-                msgs.dispatch();
-        } else if (eNotificationRequired())
+        if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
-                    Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM, newLoopMaximum,
-                    newLoopMaximum));
+                    Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM, oldLoopMaximum,
+                    loopMaximum));
     }
 
     /**
@@ -242,8 +223,6 @@ public class StandardLoopCharacteristicsImpl extends LoopCharacteristicsImpl imp
         switch (featureID) {
         case Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION:
             return basicSetLoopCondition(null, msgs);
-        case Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM:
-            return basicSetLoopMaximum(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -278,7 +257,7 @@ public class StandardLoopCharacteristicsImpl extends LoopCharacteristicsImpl imp
             setLoopCondition((Expression) newValue);
             return;
         case Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM:
-            setLoopMaximum((Expression) newValue);
+            setLoopMaximum((Integer) newValue);
             return;
         case Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__TEST_BEFORE:
             setTestBefore((Boolean) newValue);
@@ -299,7 +278,7 @@ public class StandardLoopCharacteristicsImpl extends LoopCharacteristicsImpl imp
             setLoopCondition((Expression) null);
             return;
         case Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM:
-            setLoopMaximum((Expression) null);
+            setLoopMaximum(LOOP_MAXIMUM_EDEFAULT);
             return;
         case Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__TEST_BEFORE:
             setTestBefore(TEST_BEFORE_EDEFAULT);
@@ -319,7 +298,7 @@ public class StandardLoopCharacteristicsImpl extends LoopCharacteristicsImpl imp
         case Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION:
             return loopCondition != null;
         case Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM:
-            return loopMaximum != null;
+            return loopMaximum != LOOP_MAXIMUM_EDEFAULT;
         case Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__TEST_BEFORE:
             return testBefore != TEST_BEFORE_EDEFAULT;
         }
@@ -337,7 +316,9 @@ public class StandardLoopCharacteristicsImpl extends LoopCharacteristicsImpl imp
             return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (testBefore: ");
+        result.append(" (loopMaximum: ");
+        result.append(loopMaximum);
+        result.append(", testBefore: ");
         result.append(testBefore);
         result.append(')');
         return result.toString();

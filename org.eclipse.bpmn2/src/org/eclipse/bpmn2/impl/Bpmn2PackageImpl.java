@@ -6769,8 +6769,8 @@ public class Bpmn2PackageImpl extends EPackageImpl implements Bpmn2Package {
      * <!-- end-user-doc -->
      * @generated
      */
-    public EReference getStandardLoopCharacteristics_LoopMaximum() {
-        return (EReference) getStandardLoopCharacteristics().getEStructuralFeatures().get(1);
+    public EAttribute getStandardLoopCharacteristics_LoopMaximum() {
+        return (EAttribute) getStandardLoopCharacteristics().getEStructuralFeatures().get(1);
     }
 
     /**

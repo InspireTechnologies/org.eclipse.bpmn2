@@ -24,6 +24,8 @@ import org.eclipse.bpmn2.StandardLoopCharacteristics;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.xml.type.XMLTypeFactory;
+import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import org.eclipse.emf.ecore.util.FeatureMap;
 import org.eclipse.emf.ecore.util.FeatureMapUtil;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
@@ -197,40 +199,7 @@ public class StandardLoopCharacteristicsItemProvider extends LoopCharacteristics
 
         newChildDescriptors.add(createChildParameter(
                 Bpmn2Package.Literals.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM,
-                Bpmn2Factory.eINSTANCE.createExpression()));
-
-        newChildDescriptors.add(createChildParameter(
-                Bpmn2Package.Literals.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM,
-                Bpmn2Factory.eINSTANCE.createFormalExpression()));
-    }
-
-    /**
-     * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public String getCreateChildText(Object owner, Object feature, Object child,
-            Collection<?> selection) {
-        Object childFeature = feature;
-        Object childObject = child;
-
-        if (childFeature instanceof EStructuralFeature
-                && FeatureMapUtil.isFeatureMap((EStructuralFeature) childFeature)) {
-            FeatureMap.Entry entry = (FeatureMap.Entry) childObject;
-            childFeature = entry.getEStructuralFeature();
-            childObject = entry.getValue();
-        }
-
-        boolean qualify = childFeature == Bpmn2Package.Literals.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION
-                || childFeature == Bpmn2Package.Literals.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM;
-
-        if (qualify) {
-            return getString("_UI_CreateChild_text2", new Object[] { getTypeText(childObject),
-                    getFeatureText(childFeature), getTypeText(owner) });
-        }
-        return super.getCreateChildText(owner, feature, child, selection);
+                XMLTypeFactory.eINSTANCE.createFromString(XMLTypePackage.Literals.INT, "0")));
     }
 
 }

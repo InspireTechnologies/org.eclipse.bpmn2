@@ -195,7 +195,7 @@ public class TestHelper {
     protected static Definitions initBasicModel(String targetNamespace) {
         Definitions result = Bpmn2Factory.eINSTANCE.createDefinitions();
         result.setExporter("org.eclipse.bpmn2");
-        result.setExporterVersion("0.7.0");
+        result.setExporterVersion("1.0.0");
         result.setName("Model name");
         result.setTargetNamespace(targetNamespace);
         return result;

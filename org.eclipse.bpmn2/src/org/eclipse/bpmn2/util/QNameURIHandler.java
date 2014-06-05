@@ -99,9 +99,7 @@ public class QNameURIHandler extends URIHandlerImpl {
             }
             if (prefix.length() > 0) {
                 return URI.createURI(prefix + ":" + fragment);
-            } else
-                // no prefix, just fragment (i.e. without the '#')
-                return URI.createURI(fragment);
+            }
         }
         return super.deresolve(uri);
     }

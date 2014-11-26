@@ -326,6 +326,15 @@ public interface BpmnDiPackage extends EPackage {
     int BPMN_EDGE__ID = DiPackage.LABELED_EDGE__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int BPMN_EDGE__ANY_ATTRIBUTE = DiPackage.LABELED_EDGE__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Source</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -480,6 +489,15 @@ public interface BpmnDiPackage extends EPackage {
     int BPMN_LABEL__ID = DiPackage.LABEL__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int BPMN_LABEL__ANY_ATTRIBUTE = DiPackage.LABEL__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Bounds</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -608,6 +626,15 @@ public interface BpmnDiPackage extends EPackage {
     int BPMN_PLANE__ID = DiPackage.PLANE__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int BPMN_PLANE__ANY_ATTRIBUTE = DiPackage.PLANE__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Plane Element</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -697,6 +724,15 @@ public interface BpmnDiPackage extends EPackage {
      * @ordered
      */
     int BPMN_SHAPE__ID = DiPackage.LABELED_SHAPE__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int BPMN_SHAPE__ANY_ATTRIBUTE = DiPackage.LABELED_SHAPE__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Bounds</b></em>' containment reference.

@@ -60,9 +60,43 @@ public class CallActivityItemProvider extends ActivityItemProvider implements
         if (itemPropertyDescriptors == null) {
             super.getPropertyDescriptors(object);
 
+            addIncomingConversationLinksPropertyDescriptor(object);
+            addOutgoingConversationLinksPropertyDescriptor(object);
             addCalledElementRefPropertyDescriptor(object);
         }
         return itemPropertyDescriptors;
+    }
+
+    /**
+     * This adds a property descriptor for the Incoming Conversation Links feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addIncomingConversationLinksPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_InteractionNode_incomingConversationLinks_feature"),
+                getString("_UI_InteractionNode_incomingConversationLinks_description"),
+                Bpmn2Package.Literals.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS, false, false,
+                true, null, null, null));
+    }
+
+    /**
+     * This adds a property descriptor for the Outgoing Conversation Links feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void addOutgoingConversationLinksPropertyDescriptor(Object object) {
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(),
+                getString("_UI_InteractionNode_outgoingConversationLinks_feature"),
+                getString("_UI_InteractionNode_outgoingConversationLinks_description"),
+                Bpmn2Package.Literals.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS, false, false,
+                true, null, null, null));
     }
 
     /**

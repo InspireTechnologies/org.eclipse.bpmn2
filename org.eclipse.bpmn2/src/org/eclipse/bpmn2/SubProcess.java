@@ -33,7 +33,7 @@ import java.util.List;
  * @model extendedMetaData="name='tSubProcess' kind='elementOnly'"
  * @generated
  */
-public interface SubProcess extends Activity, FlowElementsContainer {
+public interface SubProcess extends Activity, FlowElementsContainer, InteractionNode {
     /**
      * Returns the value of the '<em><b>Artifacts</b></em>' containment reference list.
      * The list contents are of type {@link org.eclipse.bpmn2.Artifact}.

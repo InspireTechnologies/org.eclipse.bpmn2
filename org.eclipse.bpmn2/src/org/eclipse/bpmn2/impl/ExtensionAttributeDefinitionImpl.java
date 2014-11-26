@@ -197,7 +197,7 @@ public class ExtensionAttributeDefinitionImpl extends EObjectImpl implements
     public ExtensionDefinition getExtensionDefinition() {
         if (eContainerFeatureID() != Bpmn2Package.EXTENSION_ATTRIBUTE_DEFINITION__EXTENSION_DEFINITION)
             return null;
-        return (ExtensionDefinition) eContainer();
+        return (ExtensionDefinition) eInternalContainer();
     }
 
     /**

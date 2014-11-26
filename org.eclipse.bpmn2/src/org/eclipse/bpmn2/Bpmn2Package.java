@@ -2082,13 +2082,31 @@ public interface Bpmn2Package extends EPackage {
     int SUB_PROCESS__FLOW_ELEMENTS = ACTIVITY_FEATURE_COUNT + 1;
 
     /**
+     * The feature id for the '<em><b>Incoming Conversation Links</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUB_PROCESS__INCOMING_CONVERSATION_LINKS = ACTIVITY_FEATURE_COUNT + 2;
+
+    /**
+     * The feature id for the '<em><b>Outgoing Conversation Links</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SUB_PROCESS__OUTGOING_CONVERSATION_LINKS = ACTIVITY_FEATURE_COUNT + 3;
+
+    /**
      * The feature id for the '<em><b>Artifacts</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int SUB_PROCESS__ARTIFACTS = ACTIVITY_FEATURE_COUNT + 2;
+    int SUB_PROCESS__ARTIFACTS = ACTIVITY_FEATURE_COUNT + 4;
 
     /**
      * The feature id for the '<em><b>Triggered By Event</b></em>' attribute.
@@ -2097,7 +2115,7 @@ public interface Bpmn2Package extends EPackage {
      * @generated
      * @ordered
      */
-    int SUB_PROCESS__TRIGGERED_BY_EVENT = ACTIVITY_FEATURE_COUNT + 3;
+    int SUB_PROCESS__TRIGGERED_BY_EVENT = ACTIVITY_FEATURE_COUNT + 5;
 
     /**
      * The number of structural features of the '<em>Sub Process</em>' class.
@@ -2106,7 +2124,7 @@ public interface Bpmn2Package extends EPackage {
      * @generated
      * @ordered
      */
-    int SUB_PROCESS_FEATURE_COUNT = ACTIVITY_FEATURE_COUNT + 4;
+    int SUB_PROCESS_FEATURE_COUNT = ACTIVITY_FEATURE_COUNT + 6;
 
     /**
      * The meta object id for the '{@link org.eclipse.bpmn2.impl.AdHocSubProcessImpl <em>Ad Hoc Sub Process</em>}' class.
@@ -2342,6 +2360,24 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int AD_HOC_SUB_PROCESS__FLOW_ELEMENTS = SUB_PROCESS__FLOW_ELEMENTS;
+
+    /**
+     * The feature id for the '<em><b>Incoming Conversation Links</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int AD_HOC_SUB_PROCESS__INCOMING_CONVERSATION_LINKS = SUB_PROCESS__INCOMING_CONVERSATION_LINKS;
+
+    /**
+     * The feature id for the '<em><b>Outgoing Conversation Links</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int AD_HOC_SUB_PROCESS__OUTGOING_CONVERSATION_LINKS = SUB_PROCESS__OUTGOING_CONVERSATION_LINKS;
 
     /**
      * The feature id for the '<em><b>Artifacts</b></em>' containment reference list.
@@ -4001,13 +4037,31 @@ public interface Bpmn2Package extends EPackage {
     int CALL_ACTIVITY__START_QUANTITY = ACTIVITY__START_QUANTITY;
 
     /**
+     * The feature id for the '<em><b>Incoming Conversation Links</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CALL_ACTIVITY__INCOMING_CONVERSATION_LINKS = ACTIVITY_FEATURE_COUNT + 0;
+
+    /**
+     * The feature id for the '<em><b>Outgoing Conversation Links</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CALL_ACTIVITY__OUTGOING_CONVERSATION_LINKS = ACTIVITY_FEATURE_COUNT + 1;
+
+    /**
      * The feature id for the '<em><b>Called Element Ref</b></em>' reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int CALL_ACTIVITY__CALLED_ELEMENT_REF = ACTIVITY_FEATURE_COUNT + 0;
+    int CALL_ACTIVITY__CALLED_ELEMENT_REF = ACTIVITY_FEATURE_COUNT + 2;
 
     /**
      * The number of structural features of the '<em>Call Activity</em>' class.
@@ -4016,7 +4070,7 @@ public interface Bpmn2Package extends EPackage {
      * @generated
      * @ordered
      */
-    int CALL_ACTIVITY_FEATURE_COUNT = ACTIVITY_FEATURE_COUNT + 1;
+    int CALL_ACTIVITY_FEATURE_COUNT = ACTIVITY_FEATURE_COUNT + 3;
 
     /**
      * The meta object id for the '{@link org.eclipse.bpmn2.impl.ChoreographyActivityImpl <em>Choreography Activity</em>}' class.
@@ -17808,6 +17862,24 @@ public interface Bpmn2Package extends EPackage {
      * @ordered
      */
     int TRANSACTION__FLOW_ELEMENTS = SUB_PROCESS__FLOW_ELEMENTS;
+
+    /**
+     * The feature id for the '<em><b>Incoming Conversation Links</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TRANSACTION__INCOMING_CONVERSATION_LINKS = SUB_PROCESS__INCOMING_CONVERSATION_LINKS;
+
+    /**
+     * The feature id for the '<em><b>Outgoing Conversation Links</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int TRANSACTION__OUTGOING_CONVERSATION_LINKS = SUB_PROCESS__OUTGOING_CONVERSATION_LINKS;
 
     /**
      * The feature id for the '<em><b>Artifacts</b></em>' containment reference list.

@@ -17,6 +17,7 @@ package org.eclipse.dd.di;
 import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.util.FeatureMap;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,6 +33,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.dd.di.DiagramElement#getModelElement <em>Model Element</em>}</li>
  *   <li>{@link org.eclipse.dd.di.DiagramElement#getStyle <em>Style</em>}</li>
  *   <li>{@link org.eclipse.dd.di.DiagramElement#getId <em>Id</em>}</li>
+ *   <li>{@link org.eclipse.dd.di.DiagramElement#getAnyAttribute <em>Any Attribute</em>}</li>
  * </ul>
  * </p>
  *
@@ -148,5 +150,22 @@ public interface DiagramElement extends EObject {
      * @generated
      */
     void setId(String value);
+
+    /**
+     * Returns the value of the '<em><b>Any Attribute</b></em>' attribute list.
+     * The list contents are of type {@link org.eclipse.emf.ecore.util.FeatureMap.Entry}.
+     * <!-- begin-user-doc -->
+     * <p>
+     * If the meaning of the '<em>Any Attribute</em>' attribute list isn't clear,
+     * there really should be more of a description here...
+     * </p>
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Any Attribute</em>' attribute list.
+     * @see org.eclipse.dd.di.DiPackage#getDiagramElement_AnyAttribute()
+     * @model unique="false" dataType="org.eclipse.emf.ecore.EFeatureMapEntry" many="true"
+     *        extendedMetaData="kind='attributeWildcard' wildcards='##other' name=':3' processing='lax'"
+     * @generated
+     */
+    FeatureMap getAnyAttribute();
 
 } // DiagramElement

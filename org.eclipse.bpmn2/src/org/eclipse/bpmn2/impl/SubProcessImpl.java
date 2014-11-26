@@ -19,10 +19,13 @@ import java.util.List;
 
 import org.eclipse.bpmn2.Artifact;
 import org.eclipse.bpmn2.Bpmn2Package;
+import org.eclipse.bpmn2.ConversationLink;
 import org.eclipse.bpmn2.FlowElement;
 import org.eclipse.bpmn2.FlowElementsContainer;
+import org.eclipse.bpmn2.InteractionNode;
 import org.eclipse.bpmn2.LaneSet;
 import org.eclipse.bpmn2.SubProcess;
+import org.eclipse.bpmn2.util.Bpmn2Resource;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -41,6 +44,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link org.eclipse.bpmn2.impl.SubProcessImpl#getLaneSets <em>Lane Sets</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.SubProcessImpl#getFlowElements <em>Flow Elements</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.impl.SubProcessImpl#getIncomingConversationLinks <em>Incoming Conversation Links</em>}</li>
+ *   <li>{@link org.eclipse.bpmn2.impl.SubProcessImpl#getOutgoingConversationLinks <em>Outgoing Conversation Links</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.SubProcessImpl#getArtifacts <em>Artifacts</em>}</li>
  *   <li>{@link org.eclipse.bpmn2.impl.SubProcessImpl#isTriggeredByEvent <em>Triggered By Event</em>}</li>
  * </ul>
@@ -147,6 +152,34 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @generated NOT
+     */
+    public List<ConversationLink> getIncomingConversationLinks() {
+        if (eResource() instanceof Bpmn2Resource) {
+            return ((Bpmn2Resource) eResource()).getOppositeReferenceAdapter().getOppositeList(
+                    ConversationLink.class, this,
+                    Bpmn2Package.Literals.CONVERSATION_LINK__TARGET_REF);
+        }
+        throw new UnsupportedOperationException();
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated NOT
+     */
+    public List<ConversationLink> getOutgoingConversationLinks() {
+        if (eResource() instanceof Bpmn2Resource) {
+            return ((Bpmn2Resource) eResource()).getOppositeReferenceAdapter().getOppositeList(
+                    ConversationLink.class, this,
+                    Bpmn2Package.Literals.CONVERSATION_LINK__SOURCE_REF);
+        }
+        throw new UnsupportedOperationException();
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
     public List<Artifact> getArtifacts() {
@@ -211,6 +244,10 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
             return getLaneSets();
         case Bpmn2Package.SUB_PROCESS__FLOW_ELEMENTS:
             return getFlowElements();
+        case Bpmn2Package.SUB_PROCESS__INCOMING_CONVERSATION_LINKS:
+            return getIncomingConversationLinks();
+        case Bpmn2Package.SUB_PROCESS__OUTGOING_CONVERSATION_LINKS:
+            return getOutgoingConversationLinks();
         case Bpmn2Package.SUB_PROCESS__ARTIFACTS:
             return getArtifacts();
         case Bpmn2Package.SUB_PROCESS__TRIGGERED_BY_EVENT:
@@ -283,6 +320,10 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
             return laneSets != null && !laneSets.isEmpty();
         case Bpmn2Package.SUB_PROCESS__FLOW_ELEMENTS:
             return flowElements != null && !flowElements.isEmpty();
+        case Bpmn2Package.SUB_PROCESS__INCOMING_CONVERSATION_LINKS:
+            return !getIncomingConversationLinks().isEmpty();
+        case Bpmn2Package.SUB_PROCESS__OUTGOING_CONVERSATION_LINKS:
+            return !getOutgoingConversationLinks().isEmpty();
         case Bpmn2Package.SUB_PROCESS__ARTIFACTS:
             return artifacts != null && !artifacts.isEmpty();
         case Bpmn2Package.SUB_PROCESS__TRIGGERED_BY_EVENT:
@@ -308,6 +349,16 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
                 return -1;
             }
         }
+        if (baseClass == InteractionNode.class) {
+            switch (derivedFeatureID) {
+            case Bpmn2Package.SUB_PROCESS__INCOMING_CONVERSATION_LINKS:
+                return Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS;
+            case Bpmn2Package.SUB_PROCESS__OUTGOING_CONVERSATION_LINKS:
+                return Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS;
+            default:
+                return -1;
+            }
+        }
         return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
     }
 
@@ -324,6 +375,16 @@ public class SubProcessImpl extends ActivityImpl implements SubProcess {
                 return Bpmn2Package.SUB_PROCESS__LANE_SETS;
             case Bpmn2Package.FLOW_ELEMENTS_CONTAINER__FLOW_ELEMENTS:
                 return Bpmn2Package.SUB_PROCESS__FLOW_ELEMENTS;
+            default:
+                return -1;
+            }
+        }
+        if (baseClass == InteractionNode.class) {
+            switch (baseFeatureID) {
+            case Bpmn2Package.INTERACTION_NODE__INCOMING_CONVERSATION_LINKS:
+                return Bpmn2Package.SUB_PROCESS__INCOMING_CONVERSATION_LINKS;
+            case Bpmn2Package.INTERACTION_NODE__OUTGOING_CONVERSATION_LINKS:
+                return Bpmn2Package.SUB_PROCESS__OUTGOING_CONVERSATION_LINKS;
             default:
                 return -1;
             }

@@ -8,7 +8,10 @@ Bundle-Activator: org.eclipse.bpmn2.presentation.Bpmn2EditorPlugin$Implementatio
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Export-Package: org.eclipse.bpmn2.presentation;version="1.0.0",
+Export-Package: org.eclipse.bpmn2.di.presentation,
+ org.eclipse.bpmn2.presentation;version="1.0.0",
+ org.eclipse.dd.dc.presentation,
+ org.eclipse.dd.di.presentation,
  org.eclipse.bpmn2.presentation.actions;version="1.0.0"
 Require-Bundle: org.eclipse.core.runtime;bundle-version="[3.4.0,4.0.0)",
  org.eclipse.core.resources;bundle-version="[3.4.0,4.0.0)";visibility:=reexport,

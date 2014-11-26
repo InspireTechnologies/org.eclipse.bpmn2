@@ -28,7 +28,9 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.util.BasicFeatureMap;
 import org.eclipse.emf.ecore.util.EObjectWithInverseEList;
+import org.eclipse.emf.ecore.util.FeatureMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -44,6 +46,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link org.eclipse.dd.di.impl.DiagramElementImpl#getModelElement <em>Model Element</em>}</li>
  *   <li>{@link org.eclipse.dd.di.impl.DiagramElementImpl#getStyle <em>Style</em>}</li>
  *   <li>{@link org.eclipse.dd.di.impl.DiagramElementImpl#getId <em>Id</em>}</li>
+ *   <li>{@link org.eclipse.dd.di.impl.DiagramElementImpl#getAnyAttribute <em>Any Attribute</em>}</li>
  * </ul>
  * </p>
  *
@@ -109,6 +112,16 @@ public class DiagramElementImpl extends EObjectImpl implements DiagramElement {
      * @ordered
      */
     protected String id = ID_EDEFAULT;
+
+    /**
+     * The cached value of the '{@link #getAnyAttribute() <em>Any Attribute</em>}' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getAnyAttribute()
+     * @generated
+     * @ordered
+     */
+    protected FeatureMap anyAttribute;
 
     /**
      * <!-- begin-user-doc -->
@@ -266,6 +279,18 @@ public class DiagramElementImpl extends EObjectImpl implements DiagramElement {
      * <!-- end-user-doc -->
      * @generated
      */
+    public FeatureMap getAnyAttribute() {
+        if (anyAttribute == null) {
+            anyAttribute = new BasicFeatureMap(this, DiPackage.DIAGRAM_ELEMENT__ANY_ATTRIBUTE);
+        }
+        return anyAttribute;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     @SuppressWarnings("unchecked")
     @Override
     public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID,
@@ -296,6 +321,8 @@ public class DiagramElementImpl extends EObjectImpl implements DiagramElement {
             return basicSetOwningElement(null, msgs);
         case DiPackage.DIAGRAM_ELEMENT__OWNED_ELEMENT:
             return ((InternalEList<?>) getOwnedElement()).basicRemove(otherEnd, msgs);
+        case DiPackage.DIAGRAM_ELEMENT__ANY_ATTRIBUTE:
+            return ((InternalEList<?>) getAnyAttribute()).basicRemove(otherEnd, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -324,6 +351,10 @@ public class DiagramElementImpl extends EObjectImpl implements DiagramElement {
             return basicGetStyle();
         case DiPackage.DIAGRAM_ELEMENT__ID:
             return getId();
+        case DiPackage.DIAGRAM_ELEMENT__ANY_ATTRIBUTE:
+            if (coreType)
+                return getAnyAttribute();
+            return ((FeatureMap.Internal) getAnyAttribute()).getWrapper();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -339,6 +370,9 @@ public class DiagramElementImpl extends EObjectImpl implements DiagramElement {
         case DiPackage.DIAGRAM_ELEMENT__ID:
             setId((String) newValue);
             return;
+        case DiPackage.DIAGRAM_ELEMENT__ANY_ATTRIBUTE:
+            ((FeatureMap.Internal) getAnyAttribute()).set(newValue);
+            return;
         }
         super.eSet(featureID, newValue);
     }
@@ -353,6 +387,9 @@ public class DiagramElementImpl extends EObjectImpl implements DiagramElement {
         switch (featureID) {
         case DiPackage.DIAGRAM_ELEMENT__ID:
             setId(ID_EDEFAULT);
+            return;
+        case DiPackage.DIAGRAM_ELEMENT__ANY_ATTRIBUTE:
+            getAnyAttribute().clear();
             return;
         }
         super.eUnset(featureID);
@@ -378,6 +415,8 @@ public class DiagramElementImpl extends EObjectImpl implements DiagramElement {
             return style != null;
         case DiPackage.DIAGRAM_ELEMENT__ID:
             return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+        case DiPackage.DIAGRAM_ELEMENT__ANY_ATTRIBUTE:
+            return anyAttribute != null && !anyAttribute.isEmpty();
         }
         return super.eIsSet(featureID);
     }
@@ -395,6 +434,8 @@ public class DiagramElementImpl extends EObjectImpl implements DiagramElement {
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (id: ");
         result.append(id);
+        result.append(", anyAttribute: ");
+        result.append(anyAttribute);
         result.append(')');
         return result.toString();
     }

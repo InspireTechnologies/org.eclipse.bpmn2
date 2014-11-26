@@ -19,7 +19,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.MissingResourceException;
 import java.util.StringTokenizer;
 
@@ -39,6 +41,7 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
@@ -120,6 +123,14 @@ public class Bpmn2ModelWizard extends Wizard implements INewWizard {
      * @generated
      */
     protected Bpmn2ModelWizardNewFileCreationPage newFileCreationPage;
+
+    /**
+     * This is the initial object creation page.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected Bpmn2ModelWizardInitialObjectCreationPage initialObjectCreationPage;
 
     /**
      * Remember the selection during initialization for populating the default container.
@@ -600,6 +611,12 @@ public class Bpmn2ModelWizard extends Wizard implements INewWizard {
                 }
             }
         }
+        initialObjectCreationPage = new Bpmn2ModelWizardInitialObjectCreationPage("Whatever2");
+        initialObjectCreationPage.setTitle(Bpmn2EditorPlugin.INSTANCE
+                .getString("_UI_Bpmn2ModelWizard_label"));
+        initialObjectCreationPage.setDescription(Bpmn2EditorPlugin.INSTANCE
+                .getString("_UI_Wizard_initial_object_description"));
+        addPage(initialObjectCreationPage);
     }
 
     /**

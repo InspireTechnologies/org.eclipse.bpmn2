@@ -257,6 +257,8 @@ public class Bpmn2Switch<T> {
             if (result == null)
                 result = caseFlowElementsContainer(adHocSubProcess);
             if (result == null)
+                result = caseInteractionNode(adHocSubProcess);
+            if (result == null)
                 result = caseFlowNode(adHocSubProcess);
             if (result == null)
                 result = caseFlowElement(adHocSubProcess);
@@ -354,6 +356,8 @@ public class Bpmn2Switch<T> {
             T result = caseCallActivity(callActivity);
             if (result == null)
                 result = caseActivity(callActivity);
+            if (result == null)
+                result = caseInteractionNode(callActivity);
             if (result == null)
                 result = caseFlowNode(callActivity);
             if (result == null)
@@ -1783,6 +1787,8 @@ public class Bpmn2Switch<T> {
             if (result == null)
                 result = caseFlowElementsContainer(subProcess);
             if (result == null)
+                result = caseInteractionNode(subProcess);
+            if (result == null)
                 result = caseFlowNode(subProcess);
             if (result == null)
                 result = caseFlowElement(subProcess);
@@ -1872,6 +1878,8 @@ public class Bpmn2Switch<T> {
                 result = caseActivity(transaction);
             if (result == null)
                 result = caseFlowElementsContainer(transaction);
+            if (result == null)
+                result = caseInteractionNode(transaction);
             if (result == null)
                 result = caseFlowNode(transaction);
             if (result == null)

@@ -30,7 +30,7 @@ package org.eclipse.bpmn2;
  * @model extendedMetaData="name='tCallActivity' kind='elementOnly'"
  * @generated
  */
-public interface CallActivity extends Activity {
+public interface CallActivity extends Activity, InteractionNode {
     /**
      * Returns the value of the '<em><b>Called Element Ref</b></em>' reference.
      * <!-- begin-user-doc -->

@@ -489,6 +489,15 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    public EAttribute getDiagramElement_AnyAttribute() {
+        return (EAttribute) diagramElementEClass.getEStructuralFeatures().get(6);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public EClass getEdge() {
         return edgeEClass;
     }
@@ -696,6 +705,7 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
         createEReference(diagramElementEClass, DIAGRAM_ELEMENT__MODEL_ELEMENT);
         createEReference(diagramElementEClass, DIAGRAM_ELEMENT__STYLE);
         createEAttribute(diagramElementEClass, DIAGRAM_ELEMENT__ID);
+        createEAttribute(diagramElementEClass, DIAGRAM_ELEMENT__ANY_ATTRIBUTE);
 
         edgeEClass = createEClass(EDGE);
         createEReference(edgeEClass, EDGE__SOURCE);
@@ -859,6 +869,9 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
         initEAttribute(getDiagramElement_Id(), theXMLTypePackage.getID(), "id", null, 0, 1,
                 DiagramElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
                 IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getDiagramElement_AnyAttribute(), ecorePackage.getEFeatureMapEntry(),
+                "anyAttribute", null, 0, -1, DiagramElement.class, !IS_TRANSIENT, !IS_VOLATILE,
+                IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(edgeEClass, Edge.class, "Edge", IS_ABSTRACT, !IS_INTERFACE,
                 IS_GENERATED_INSTANCE_CLASS);
@@ -977,6 +990,8 @@ public class DiPackageImpl extends EPackageImpl implements DiPackage {
                 "kind", "elementOnly", "abstract", "true" });
         addAnnotation(getDiagramElement_Id(), source, new String[] { "kind", "attribute", "name",
                 "id" });
+        addAnnotation(getDiagramElement_AnyAttribute(), source, new String[] { "kind",
+                "attributeWildcard", "wildcards", "##other", "name", ":3", "processing", "lax" });
         addAnnotation(edgeEClass, source, new String[] { "name", "Edge", "kind", "elementOnly" });
         addAnnotation(getEdge_Waypoint(), source, new String[] { "kind", "element", "name",
                 "waypoint", "namespace", "http://www.omg.org/spec/DD/20100524/DI" });

@@ -341,13 +341,22 @@ public interface DiPackage extends EPackage {
     int DIAGRAM_ELEMENT__ID = 5;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DIAGRAM_ELEMENT__ANY_ATTRIBUTE = 6;
+
+    /**
      * The number of structural features of the '<em>Diagram Element</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int DIAGRAM_ELEMENT_FEATURE_COUNT = 6;
+    int DIAGRAM_ELEMENT_FEATURE_COUNT = 7;
 
     /**
      * The meta object id for the '{@link org.eclipse.dd.di.impl.EdgeImpl <em>Edge</em>}' class.
@@ -412,6 +421,15 @@ public interface DiPackage extends EPackage {
      * @ordered
      */
     int EDGE__ID = DIAGRAM_ELEMENT__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EDGE__ANY_ATTRIBUTE = DIAGRAM_ELEMENT__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Source</b></em>' reference.
@@ -514,6 +532,15 @@ public interface DiPackage extends EPackage {
     int NODE__ID = DIAGRAM_ELEMENT__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int NODE__ANY_ATTRIBUTE = DIAGRAM_ELEMENT__ANY_ATTRIBUTE;
+
+    /**
      * The number of structural features of the '<em>Node</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -585,6 +612,15 @@ public interface DiPackage extends EPackage {
      * @ordered
      */
     int LABEL__ID = NODE__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LABEL__ANY_ATTRIBUTE = NODE__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Bounds</b></em>' containment reference.
@@ -667,6 +703,15 @@ public interface DiPackage extends EPackage {
      * @ordered
      */
     int LABELED_EDGE__ID = EDGE__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LABELED_EDGE__ANY_ATTRIBUTE = EDGE__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Source</b></em>' reference.
@@ -778,6 +823,15 @@ public interface DiPackage extends EPackage {
     int SHAPE__ID = NODE__ID;
 
     /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int SHAPE__ANY_ATTRIBUTE = NODE__ANY_ATTRIBUTE;
+
+    /**
      * The feature id for the '<em><b>Bounds</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -858,6 +912,15 @@ public interface DiPackage extends EPackage {
      * @ordered
      */
     int LABELED_SHAPE__ID = SHAPE__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int LABELED_SHAPE__ANY_ATTRIBUTE = SHAPE__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Bounds</b></em>' containment reference.
@@ -949,6 +1012,15 @@ public interface DiPackage extends EPackage {
      * @ordered
      */
     int PLANE__ID = NODE__ID;
+
+    /**
+     * The feature id for the '<em><b>Any Attribute</b></em>' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PLANE__ANY_ATTRIBUTE = NODE__ANY_ATTRIBUTE;
 
     /**
      * The feature id for the '<em><b>Plane Element</b></em>' containment reference list.
@@ -1300,6 +1372,17 @@ public interface DiPackage extends EPackage {
      * @generated
      */
     EAttribute getDiagramElement_Id();
+
+    /**
+     * Returns the meta object for the attribute list '{@link org.eclipse.dd.di.DiagramElement#getAnyAttribute <em>Any Attribute</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute list '<em>Any Attribute</em>'.
+     * @see org.eclipse.dd.di.DiagramElement#getAnyAttribute()
+     * @see #getDiagramElement()
+     * @generated
+     */
+    EAttribute getDiagramElement_AnyAttribute();
 
     /**
      * Returns the meta object for class '{@link org.eclipse.dd.di.Edge <em>Edge</em>}'.
@@ -1732,6 +1815,14 @@ public interface DiPackage extends EPackage {
          * @generated
          */
         EAttribute DIAGRAM_ELEMENT__ID = eINSTANCE.getDiagramElement_Id();
+
+        /**
+         * The meta object literal for the '<em><b>Any Attribute</b></em>' attribute list feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EAttribute DIAGRAM_ELEMENT__ANY_ATTRIBUTE = eINSTANCE.getDiagramElement_AnyAttribute();
 
         /**
          * The meta object literal for the '{@link org.eclipse.dd.di.impl.EdgeImpl <em>Edge</em>}' class.

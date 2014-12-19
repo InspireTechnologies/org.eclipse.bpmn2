@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description url="https://www.eclipse.org/modeling/mdt/?project=bpmn2">
+      Eclipse BPMN 2.0 Metamodel
+   </description>
+
+   <category-def name="Eclipse BPMN 2.0 Metamodel" label="Eclipse BPMN 2.0 Metamodel">
+      <description>
+      Eclipse BPMN 2.0 Metamodel
+      </description>
+   </category-def>
+
+   <feature url="features/org.eclipse.bpmn2_0.0.0.jar" id="org.eclipse.bpmn2" version="0.0.0">
+      <category name="Eclipse BPMN 2.0 Metamodel"/>
+   </feature>
+
+   <feature url="features/org.eclipse.bpmn2.source_0.0.0.jar" id="org.eclipse.bpmn2.source" version="0.0.0">
+      <category name="Eclipse BPMN 2.0 Metamodel"/>
+   </feature>
+ 
+ </site>

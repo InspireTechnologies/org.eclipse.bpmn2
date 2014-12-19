@@ -9,14 +9,14 @@ Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: org.eclipse.bpmn2.di.presentation,
- org.eclipse.bpmn2.presentation;version="1.0.0",
+ org.eclipse.bpmn2.presentation,
  org.eclipse.dd.dc.presentation,
  org.eclipse.dd.di.presentation,
- org.eclipse.bpmn2.presentation.actions;version="1.0.0"
-Require-Bundle: org.eclipse.core.runtime;bundle-version="[3.4.0,4.0.0)",
- org.eclipse.core.resources;bundle-version="[3.4.0,4.0.0)";visibility:=reexport,
- org.eclipse.bpmn2.edit;bundle-version="1.0.0";visibility:=reexport,
- org.eclipse.emf.ecore.xmi;bundle-version="[2.4.0,3.0.0)";visibility:=reexport,
- org.eclipse.emf.edit.ui;bundle-version="[2.4.0,3.0.0)";visibility:=reexport,
- org.eclipse.ui.ide;bundle-version="[3.4.0,4.0.0)";visibility:=reexport
+ org.eclipse.bpmn2.presentation.actions
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.core.resources;visibility:=reexport,
+ org.eclipse.bpmn2.edit;visibility:=reexport,
+ org.eclipse.emf.ecore.xmi;visibility:=reexport,
+ org.eclipse.emf.edit.ui;visibility:=reexport,
+ org.eclipse.ui.ide;visibility:=reexport
 Bundle-ActivationPolicy: lazy

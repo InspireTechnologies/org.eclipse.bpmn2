@@ -14,6 +14,6 @@
   <packaging>pom</packaging>
 
 	<modules>
-		<module>org.eclipse.bpmn2</module>
+		<module>org.eclipse.bpmn2.feature</module>
 	</modules>
 </project>

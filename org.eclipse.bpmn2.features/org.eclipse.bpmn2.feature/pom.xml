@@ -21,7 +21,7 @@
 	</parent>
 
 	<groupId>org.eclipse.bpmn2.features</groupId>
-	<artifactId>org.eclipse.bpmn2</artifactId>
+	<artifactId>org.eclipse.bpmn2.feature</artifactId>
 	<version>1.0.0.Final</version>
 	<packaging>eclipse-feature</packaging>
 	<name>BPMN 2.0 Metamodel Feature</name>

@@ -4,13 +4,13 @@
   <parent>
     <artifactId>bpmn2-parent</artifactId>
     <groupId>org.eclipse.bpmn2</groupId>
-    <version>1.0.0.Final</version>
+    <version>1.1.0.Final</version>
   </parent>
 
   <groupId>org.eclipse.bpmn2</groupId>
   <artifactId>org.eclipse.bpmn2.features</artifactId>
   <name>BPMN 2.0 Metamodel - Feature</name>
-  <version>1.0.0.Final</version>
+  <version>1.1.0.Final</version>
   <packaging>pom</packaging>
 
 	<modules>

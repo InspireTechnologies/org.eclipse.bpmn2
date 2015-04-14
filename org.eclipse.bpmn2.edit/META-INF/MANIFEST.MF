@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.eclipse.bpmn2.edit;singleton:=true
-Bundle-Version: 1.0.0.Final
+Bundle-Version: 1.0.1.Final
 Bundle-ClassPath: .
 Bundle-Activator: org.eclipse.bpmn2.provider.Bpmn2EditPlugin$Implementation
 Bundle-Vendor: %providerName

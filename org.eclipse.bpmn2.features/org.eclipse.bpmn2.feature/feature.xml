@@ -2,7 +2,7 @@
 <feature
       id="org.eclipse.bpmn2.feature"
       label="BPMN2 Metamodel"
-      version="1.0.0.Final"
+      version="1.2.0.Final"
       provider-name="Eclipse.org">
 
    <description url="https://www.eclipse.org/modeling/mdt/?project=bpmn2">

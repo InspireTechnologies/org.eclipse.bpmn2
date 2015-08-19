@@ -10,7 +10,6 @@
   <groupId>org.eclipse.bpmn2</groupId>
   <artifactId>org.eclipse.bpmn2.features</artifactId>
   <name>BPMN 2.0 Metamodel - Feature</name>
-  <version>1.2.1.Final</version>
   <packaging>pom</packaging>
 
 	<modules>

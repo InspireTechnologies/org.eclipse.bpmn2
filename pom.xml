@@ -8,7 +8,7 @@
 
 	<groupId>org.eclipse.bpmn2</groupId>
 	<artifactId>bpmn2-parent</artifactId>
-	<version>1.2.0.Final</version>
+	<version>1.2.1.Final</version>
 	<packaging>pom</packaging>
 
 	<name>BPMN 2.0 Metamodel</name>
@@ -123,6 +123,27 @@
 				<platform-version-name>mars</platform-version-name>
 			</properties>
 		</profile>
+		<profile>
+			<id>sign</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.eclipse.cbi.maven.plugins</groupId>
+						<artifactId>eclipse-jarsigner-plugin</artifactId>
+						<version>1.0.5</version>
+						<executions>
+							<execution>
+								<id>sign</id>
+								<phase>verify</phase>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
 	</profiles>
 
 	<modules>
@@ -143,20 +164,29 @@
 	</repositories>
 
 	<pluginRepositories>
+		<pluginRepository>
+			<id>maven-central</id>
+			<url>http://repo1.maven.org/maven2/</url>
+		</pluginRepository>
+		
+		<pluginRepository>
+			<id>eclipse-nexus-central</id>
+			<url>http://maven.eclipse.org/nexus/content/groups/central/</url>
+		</pluginRepository>
+		
+		<pluginRepository>
+			<id>eclipse-nexus-public</id>
+			<url>http://maven.eclipse.org/nexus/content/groups/public/</url>
+		</pluginRepository>
+
+		<pluginRepository>
+			<id>m2e-cbi</id>
+			<url>http://download.eclipse.org/technology/m2e/maven/</url>
+		</pluginRepository>
 
 		<pluginRepository>
 			<id>repo.eclipse.org.cbi-releases</id>
 			<url>https://repo.eclipse.org/content/repositories/cbi-releases/</url>
-		</pluginRepository>
-		<pluginRepository>
-			<!-- need maven-findbugs-2.3.2-SNAPSHOT, see http://jira.codehaus.org/browse/MFINDBUGS-122 
-				remove this when this version is released -->
-			<id>codehaus.snapshots</id>
-			<url>http://snapshots.repository.codehaus.org/</url>
-		</pluginRepository>
-		<pluginRepository>
-			<id>m2e-cbi</id>
-			<url>http://download.eclipse.org/technology/m2e/maven/</url>
 		</pluginRepository>
 	</pluginRepositories>
 
@@ -209,6 +239,7 @@
 				</configuration>
 			</plugin>
 
+<!-- 
 			<plugin>
 				<groupId>org.eclipse.tycho.extras</groupId>
 				<artifactId>tycho-pack200a-plugin</artifactId>
@@ -250,7 +281,7 @@
 					</execution>
 				</executions>
 			</plugin>
-
+ -->
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>tycho-source-plugin</artifactId>

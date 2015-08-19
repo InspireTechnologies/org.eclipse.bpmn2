@@ -4,7 +4,7 @@
   <parent>
     <artifactId>bpmn2-parent</artifactId>
     <groupId>org.eclipse.bpmn2</groupId>
-    <version>1.2.0.Final</version>
+    <version>1.2.1.Final</version>
   </parent>
 
   <artifactId>org.eclipse.bpmn2.edit</artifactId>

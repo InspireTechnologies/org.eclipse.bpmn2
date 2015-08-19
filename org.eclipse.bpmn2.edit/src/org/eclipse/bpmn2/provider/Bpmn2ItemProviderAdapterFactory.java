@@ -43,8 +43,8 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory implements
-        ComposeableAdapterFactory, IChangeNotifier, IDisposable {
+public class Bpmn2ItemProviderAdapterFactory extends Bpmn2AdapterFactory
+        implements ComposeableAdapterFactory, IChangeNotifier, IDisposable {
     /**
      * This keeps track of the root adapter factory that delegates to this adapter factory.
      * <!-- begin-user-doc -->

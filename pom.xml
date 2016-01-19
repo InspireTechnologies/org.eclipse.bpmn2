@@ -36,7 +36,7 @@
 	<properties>
 		<tycho-version>0.21.0</tycho-version>
 		<tycho-extras-version>${tycho-version}</tycho-extras-version>
-		<BUILD_ALIAS>CI</BUILD_ALIAS>
+		<BUILD_ALIAS>Final</BUILD_ALIAS>
 	</properties>
 
 	<profiles>

@@ -1,2 +1,2 @@
-mvn clean install -P platform-luna
+mvn clean install -P platform-photon
 find *site/target

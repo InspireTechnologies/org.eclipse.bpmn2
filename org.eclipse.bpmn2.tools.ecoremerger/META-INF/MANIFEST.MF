@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: EMFEcoreGenerator
 Bundle-SymbolicName: org.eclipse.bpmn2.tools.ecoremerger;singleton:=true
-Bundle-Version: 1.4.0.qualifier
+Bundle-Version: 1.5.0.qualifier
 Require-Bundle: org.eclipse.emf,
  org.eclipse.jface,
  org.eclipse.ui,

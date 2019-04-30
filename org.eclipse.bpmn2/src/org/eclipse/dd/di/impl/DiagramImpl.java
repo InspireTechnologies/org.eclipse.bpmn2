@@ -25,6 +25,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
@@ -94,7 +95,7 @@ public abstract class DiagramImpl extends EObjectImpl implements Diagram {
      * @generated
      * @ordered
      */
-    protected String id = ID_EDEFAULT;
+    protected String id = EcoreUtil.generateUUID();
 
     /**
      * The default value of the '{@link #getName() <em>Name</em>}' attribute.

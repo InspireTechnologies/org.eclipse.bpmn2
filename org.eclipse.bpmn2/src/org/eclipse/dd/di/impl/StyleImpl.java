@@ -20,6 +20,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
  * <!-- begin-user-doc -->
@@ -53,7 +54,7 @@ public abstract class StyleImpl extends EObjectImpl implements Style {
      * @generated
      * @ordered
      */
-    protected String id = ID_EDEFAULT;
+    protected String id = EcoreUtil.generateUUID();
 
     /**
      * <!-- begin-user-doc -->

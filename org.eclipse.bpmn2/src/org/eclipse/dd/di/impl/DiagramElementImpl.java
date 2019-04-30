@@ -29,6 +29,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.BasicFeatureMap;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.EObjectWithInverseEList;
 import org.eclipse.emf.ecore.util.FeatureMap;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -111,7 +112,7 @@ public class DiagramElementImpl extends EObjectImpl implements DiagramElement {
      * @generated
      * @ordered
      */
-    protected String id = ID_EDEFAULT;
+    protected String id = EcoreUtil.generateUUID();
 
     /**
      * The cached value of the '{@link #getAnyAttribute() <em>Any Attribute</em>}' attribute list.

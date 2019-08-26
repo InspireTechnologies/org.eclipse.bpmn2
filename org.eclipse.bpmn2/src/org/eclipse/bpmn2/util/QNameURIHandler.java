@@ -90,6 +90,16 @@ public class QNameURIHandler extends URIHandlerImpl {
     @Override
     public URI deresolve(URI uri) {
         String fragment = uri.fragment();
+
+        if ((fragment != null) && !fragment.startsWith("/")) //$NON-NLS-1$
+        {
+            // return just fragment (i.e. without the '#') but only if local reference
+            final URI otherURI = uri.trimFragment();
+
+            if (baseURI.equals(otherURI)) {
+                return URI.createURI(fragment);
+            }
+        }
         if (fragment != null && !fragment.startsWith("/")) // We better don't try to QName XPath references to e.g. XML or WSDL context for now.
         {
             String prefix = "";

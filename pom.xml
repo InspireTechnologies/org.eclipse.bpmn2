@@ -36,7 +36,7 @@
 	<properties>
 		<tycho-version>1.1.0</tycho-version>
 		<tycho-extras-version>${tycho-version}</tycho-extras-version>
-		<BUILD_ALIAS>inspire-1</BUILD_ALIAS>
+		<BUILD_ALIAS>inspire-2</BUILD_ALIAS>
 	</properties>
 
 	<profiles>

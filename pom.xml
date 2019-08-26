@@ -33,6 +33,7 @@
 		</license>
 	</licenses>
 
+	<!-- Incompatible with Maven 3.6.1! Build with Maven 3.5.4! -->
 	<properties>
 		<tycho-version>1.1.0</tycho-version>
 		<tycho-extras-version>${tycho-version}</tycho-extras-version>

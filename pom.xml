@@ -35,7 +35,7 @@
 
 	<!-- Incompatible with Maven 3.6.1! Build with Maven 3.5.4! -->
 	<properties>
-		<tycho-version>1.1.0</tycho-version>
+		<tycho-version>1.4.0</tycho-version>
 		<tycho-extras-version>${tycho-version}</tycho-extras-version>
 		<BUILD_ALIAS>inspire-2</BUILD_ALIAS>
 	</properties>
@@ -165,6 +165,20 @@
 				<eclipse-site>http://download.eclipse.org/releases/photon</eclipse-site>
 				<platform-version>[4.8,5.0]</platform-version>
 				<platform-version-name>photon</platform-version-name>
+			</properties>
+		</profile>
+		<profile>
+			<id>platform-2019-06</id>
+			<activation>
+				<property>
+					<name>platform-version-name</name>
+					<value>2019-06</value>
+				</property>
+			</activation>
+			<properties>
+				<eclipse-site>http://download.eclipse.org/releases/2019-06</eclipse-site>
+				<platform-version>[4.11,5.0]</platform-version>
+				<platform-version-name>2019-06</platform-version-name>
 			</properties>
 		</profile>
 		<profile>

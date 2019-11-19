@@ -40,9 +40,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class CallableElementItemProvider extends RootElementItemProvider implements
-        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
-        IItemLabelProvider, IItemPropertySource {
+public class CallableElementItemProvider extends RootElementItemProvider
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -84,8 +84,8 @@ public class CallableElementItemProvider extends RootElementItemProvider impleme
                 getString("_UI_PropertyDescriptor_description",
                         "_UI_CallableElement_supportedInterfaceRefs_feature",
                         "_UI_CallableElement_type"),
-                Bpmn2Package.Literals.CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REFS, true, false,
-                true, null, null, null));
+                Bpmn2Package.Literals.CALLABLE_ELEMENT__SUPPORTED_INTERFACE_REFS, true, false, true,
+                null, null, null));
     }
 
     /**
@@ -97,11 +97,11 @@ public class CallableElementItemProvider extends RootElementItemProvider impleme
     protected void addNamePropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_CallableElement_name_feature"),
+                getResourceLocator(), getString("_UI_CallableElement_name_feature"),
                 getString("_UI_PropertyDescriptor_description", "_UI_CallableElement_name_feature",
-                        "_UI_CallableElement_type"), Bpmn2Package.Literals.CALLABLE_ELEMENT__NAME,
-                true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+                        "_UI_CallableElement_type"),
+                Bpmn2Package.Literals.CALLABLE_ELEMENT__NAME, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -136,6 +136,16 @@ public class CallableElementItemProvider extends RootElementItemProvider impleme
     }
 
     /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
+    }
+
+    /**
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -161,13 +171,13 @@ public class CallableElementItemProvider extends RootElementItemProvider impleme
 
         switch (notification.getFeatureID(CallableElement.class)) {
         case Bpmn2Package.CALLABLE_ELEMENT__NAME:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    false, true));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
         case Bpmn2Package.CALLABLE_ELEMENT__IO_SPECIFICATION:
         case Bpmn2Package.CALLABLE_ELEMENT__IO_BINDING:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    true, false));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -181,16 +191,17 @@ public class CallableElementItemProvider extends RootElementItemProvider impleme
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors,
+            Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(
-                Bpmn2Package.Literals.CALLABLE_ELEMENT__IO_SPECIFICATION,
-                Bpmn2Factory.eINSTANCE.createInputOutputSpecification()));
+        newChildDescriptors
+                .add(createChildParameter(Bpmn2Package.Literals.CALLABLE_ELEMENT__IO_SPECIFICATION,
+                        Bpmn2Factory.eINSTANCE.createInputOutputSpecification()));
 
-        newChildDescriptors.add(createChildParameter(
-                Bpmn2Package.Literals.CALLABLE_ELEMENT__IO_BINDING,
-                Bpmn2Factory.eINSTANCE.createInputOutputBinding()));
+        newChildDescriptors
+                .add(createChildParameter(Bpmn2Package.Literals.CALLABLE_ELEMENT__IO_BINDING,
+                        Bpmn2Factory.eINSTANCE.createInputOutputBinding()));
     }
 
 }

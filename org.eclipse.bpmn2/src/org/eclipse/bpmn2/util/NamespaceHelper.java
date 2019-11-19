@@ -23,7 +23,7 @@ public class NamespaceHelper {
      */
     public static String xmiToXsdNamespaceUri(String xmiNsUri) {
         if (!xmiNsUri.endsWith("-XMI"))
-            throw new IllegalArgumentException("XMI namespace expected");
+            return xmiNsUri;
 
         return xmiNsUri.substring(0, xmiNsUri.length() - 4);
     }

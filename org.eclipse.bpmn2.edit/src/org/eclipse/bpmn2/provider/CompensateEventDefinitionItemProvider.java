@@ -38,9 +38,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class CompensateEventDefinitionItemProvider extends EventDefinitionItemProvider implements
-        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
-        IItemLabelProvider, IItemPropertySource {
+public class CompensateEventDefinitionItemProvider extends EventDefinitionItemProvider
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -100,8 +100,8 @@ public class CompensateEventDefinitionItemProvider extends EventDefinitionItemPr
                 getString("_UI_PropertyDescriptor_description",
                         "_UI_CompensateEventDefinition_waitForCompletion_feature",
                         "_UI_CompensateEventDefinition_type"),
-                Bpmn2Package.Literals.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION, true,
-                false, false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+                Bpmn2Package.Literals.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION, true, false,
+                false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -122,6 +122,16 @@ public class CompensateEventDefinitionItemProvider extends EventDefinitionItemPr
     }
 
     /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
+    }
+
+    /**
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -130,7 +140,8 @@ public class CompensateEventDefinitionItemProvider extends EventDefinitionItemPr
     @Override
     public String getText(Object object) {
         String label = ((CompensateEventDefinition) object).getId();
-        return label == null || label.length() == 0 ? getString("_UI_CompensateEventDefinition_type")
+        return label == null || label.length() == 0
+                ? getString("_UI_CompensateEventDefinition_type")
                 : getString("_UI_CompensateEventDefinition_type") + " " + label;
     }
 
@@ -147,8 +158,8 @@ public class CompensateEventDefinitionItemProvider extends EventDefinitionItemPr
 
         switch (notification.getFeatureID(CompensateEventDefinition.class)) {
         case Bpmn2Package.COMPENSATE_EVENT_DEFINITION__WAIT_FOR_COMPLETION:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    false, true));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);
@@ -162,7 +173,8 @@ public class CompensateEventDefinitionItemProvider extends EventDefinitionItemPr
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors,
+            Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
     }
 

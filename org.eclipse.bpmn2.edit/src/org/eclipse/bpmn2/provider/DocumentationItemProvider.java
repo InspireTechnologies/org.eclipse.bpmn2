@@ -42,9 +42,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DocumentationItemProvider extends BaseElementItemProvider implements
-        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
-        IItemLabelProvider, IItemPropertySource {
+public class DocumentationItemProvider extends BaseElementItemProvider
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -81,11 +81,11 @@ public class DocumentationItemProvider extends BaseElementItemProvider implement
     protected void addTextPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_Documentation_text_feature"),
+                getResourceLocator(), getString("_UI_Documentation_text_feature"),
                 getString("_UI_PropertyDescriptor_description", "_UI_Documentation_text_feature",
-                        "_UI_Documentation_type"), Bpmn2Package.Literals.DOCUMENTATION__TEXT, true,
-                false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+                        "_UI_Documentation_type"),
+                Bpmn2Package.Literals.DOCUMENTATION__TEXT, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -97,8 +97,7 @@ public class DocumentationItemProvider extends BaseElementItemProvider implement
     protected void addTextFormatPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_Documentation_textFormat_feature"),
+                getResourceLocator(), getString("_UI_Documentation_textFormat_feature"),
                 getString("_UI_PropertyDescriptor_description",
                         "_UI_Documentation_textFormat_feature", "_UI_Documentation_type"),
                 Bpmn2Package.Literals.DOCUMENTATION__TEXT_FORMAT, true, false, false,
@@ -153,6 +152,16 @@ public class DocumentationItemProvider extends BaseElementItemProvider implement
     }
 
     /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
+    }
+
+    /**
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -179,12 +188,12 @@ public class DocumentationItemProvider extends BaseElementItemProvider implement
         switch (notification.getFeatureID(Documentation.class)) {
         case Bpmn2Package.DOCUMENTATION__TEXT:
         case Bpmn2Package.DOCUMENTATION__TEXT_FORMAT:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    false, true));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
         case Bpmn2Package.DOCUMENTATION__MIXED:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    true, false));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -198,15 +207,16 @@ public class DocumentationItemProvider extends BaseElementItemProvider implement
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors,
+            Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DOCUMENTATION__MIXED,
-                FeatureMapUtil.createEntry(XMLTypePackage.Literals.XML_TYPE_DOCUMENT_ROOT__COMMENT,
-                        "")));
+        newChildDescriptors
+                .add(createChildParameter(Bpmn2Package.Literals.DOCUMENTATION__MIXED, FeatureMapUtil
+                        .createEntry(XMLTypePackage.Literals.XML_TYPE_DOCUMENT_ROOT__COMMENT, "")));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DOCUMENTATION__MIXED,
-                FeatureMapUtil
+        newChildDescriptors
+                .add(createChildParameter(Bpmn2Package.Literals.DOCUMENTATION__MIXED, FeatureMapUtil
                         .createEntry(XMLTypePackage.Literals.XML_TYPE_DOCUMENT_ROOT__TEXT, "")));
 
         newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DOCUMENTATION__MIXED,
@@ -214,9 +224,9 @@ public class DocumentationItemProvider extends BaseElementItemProvider implement
                         XMLTypePackage.Literals.XML_TYPE_DOCUMENT_ROOT__PROCESSING_INSTRUCTION,
                         XMLTypeFactory.eINSTANCE.createProcessingInstruction())));
 
-        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DOCUMENTATION__MIXED,
-                FeatureMapUtil.createEntry(XMLTypePackage.Literals.XML_TYPE_DOCUMENT_ROOT__CDATA,
-                        "")));
+        newChildDescriptors
+                .add(createChildParameter(Bpmn2Package.Literals.DOCUMENTATION__MIXED, FeatureMapUtil
+                        .createEntry(XMLTypePackage.Literals.XML_TYPE_DOCUMENT_ROOT__CDATA, "")));
 
         newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.DOCUMENTATION__MIXED,
                 FeatureMapUtil.createEntry(Bpmn2Package.Literals.DOCUMENTATION__TEXT, "")));

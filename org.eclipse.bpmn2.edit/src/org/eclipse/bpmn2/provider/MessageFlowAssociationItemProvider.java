@@ -36,9 +36,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class MessageFlowAssociationItemProvider extends BaseElementItemProvider implements
-        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
-        IItemLabelProvider, IItemPropertySource {
+public class MessageFlowAssociationItemProvider extends BaseElementItemProvider
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -80,8 +80,8 @@ public class MessageFlowAssociationItemProvider extends BaseElementItemProvider 
                 getString("_UI_PropertyDescriptor_description",
                         "_UI_MessageFlowAssociation_innerMessageFlowRef_feature",
                         "_UI_MessageFlowAssociation_type"),
-                Bpmn2Package.Literals.MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF, true,
-                false, true, null, null, null));
+                Bpmn2Package.Literals.MESSAGE_FLOW_ASSOCIATION__INNER_MESSAGE_FLOW_REF, true, false,
+                true, null, null, null));
     }
 
     /**
@@ -98,8 +98,8 @@ public class MessageFlowAssociationItemProvider extends BaseElementItemProvider 
                 getString("_UI_PropertyDescriptor_description",
                         "_UI_MessageFlowAssociation_outerMessageFlowRef_feature",
                         "_UI_MessageFlowAssociation_type"),
-                Bpmn2Package.Literals.MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF, true,
-                false, true, null, null, null));
+                Bpmn2Package.Literals.MESSAGE_FLOW_ASSOCIATION__OUTER_MESSAGE_FLOW_REF, true, false,
+                true, null, null, null));
     }
 
     /**
@@ -117,6 +117,16 @@ public class MessageFlowAssociationItemProvider extends BaseElementItemProvider 
             return overlayImage(object,
                     getResourceLocator().getImage("full/obj16/MessageFlowAssociation.gif"));
         }
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
     }
 
     /**
@@ -153,7 +163,8 @@ public class MessageFlowAssociationItemProvider extends BaseElementItemProvider 
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors,
+            Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
     }
 

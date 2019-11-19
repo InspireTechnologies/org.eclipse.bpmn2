@@ -39,9 +39,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class EdgeItemProvider extends DiagramElementItemProvider implements
-        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
-        IItemLabelProvider, IItemPropertySource {
+public class EdgeItemProvider extends DiagramElementItemProvider
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -78,11 +78,10 @@ public class EdgeItemProvider extends DiagramElementItemProvider implements
     protected void addSourcePropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_Edge_source_feature"),
+                getResourceLocator(), getString("_UI_Edge_source_feature"),
                 getString("_UI_PropertyDescriptor_description", "_UI_Edge_source_feature",
-                        "_UI_Edge_type"), DiPackage.Literals.EDGE__SOURCE, true, false, false,
-                null, null, null));
+                        "_UI_Edge_type"),
+                DiPackage.Literals.EDGE__SOURCE, true, false, false, null, null, null));
     }
 
     /**
@@ -94,11 +93,10 @@ public class EdgeItemProvider extends DiagramElementItemProvider implements
     protected void addTargetPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_Edge_target_feature"),
+                getResourceLocator(), getString("_UI_Edge_target_feature"),
                 getString("_UI_PropertyDescriptor_description", "_UI_Edge_target_feature",
-                        "_UI_Edge_type"), DiPackage.Literals.EDGE__TARGET, true, false, false,
-                null, null, null));
+                        "_UI_Edge_type"),
+                DiPackage.Literals.EDGE__TARGET, true, false, false, null, null, null));
     }
 
     /**
@@ -147,6 +145,16 @@ public class EdgeItemProvider extends DiagramElementItemProvider implements
     }
 
     /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
+    }
+
+    /**
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -173,12 +181,12 @@ public class EdgeItemProvider extends DiagramElementItemProvider implements
         switch (notification.getFeatureID(Edge.class)) {
         case DiPackage.EDGE__SOURCE:
         case DiPackage.EDGE__TARGET:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    false, true));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
         case DiPackage.EDGE__WAYPOINT:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    true, false));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -192,7 +200,8 @@ public class EdgeItemProvider extends DiagramElementItemProvider implements
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors,
+            Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
         newChildDescriptors.add(createChildParameter(DiPackage.Literals.EDGE__WAYPOINT,

@@ -38,9 +38,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class BoundaryEventItemProvider extends CatchEventItemProvider implements
-        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
-        IItemLabelProvider, IItemPropertySource {
+public class BoundaryEventItemProvider extends CatchEventItemProvider
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -77,8 +77,7 @@ public class BoundaryEventItemProvider extends CatchEventItemProvider implements
     protected void addAttachedToRefPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_BoundaryEvent_attachedToRef_feature"),
+                getResourceLocator(), getString("_UI_BoundaryEvent_attachedToRef_feature"),
                 getString("_UI_PropertyDescriptor_description",
                         "_UI_BoundaryEvent_attachedToRef_feature", "_UI_BoundaryEvent_type"),
                 Bpmn2Package.Literals.BOUNDARY_EVENT__ATTACHED_TO_REF, true, false, true, null,
@@ -94,8 +93,7 @@ public class BoundaryEventItemProvider extends CatchEventItemProvider implements
     protected void addCancelActivityPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_BoundaryEvent_cancelActivity_feature"),
+                getResourceLocator(), getString("_UI_BoundaryEvent_cancelActivity_feature"),
                 getString("_UI_PropertyDescriptor_description",
                         "_UI_BoundaryEvent_cancelActivity_feature", "_UI_BoundaryEvent_type"),
                 Bpmn2Package.Literals.BOUNDARY_EVENT__CANCEL_ACTIVITY, true, false, false,
@@ -117,6 +115,16 @@ public class BoundaryEventItemProvider extends CatchEventItemProvider implements
             return overlayImage(object,
                     getResourceLocator().getImage("full/obj16/BoundaryEvent.gif"));
         }
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
     }
 
     /**
@@ -145,8 +153,8 @@ public class BoundaryEventItemProvider extends CatchEventItemProvider implements
 
         switch (notification.getFeatureID(BoundaryEvent.class)) {
         case Bpmn2Package.BOUNDARY_EVENT__CANCEL_ACTIVITY:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    false, true));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);
@@ -160,7 +168,8 @@ public class BoundaryEventItemProvider extends CatchEventItemProvider implements
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors,
+            Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
     }
 

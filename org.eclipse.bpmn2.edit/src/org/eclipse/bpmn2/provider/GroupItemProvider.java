@@ -36,9 +36,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class GroupItemProvider extends ArtifactItemProvider implements IEditingDomainItemProvider,
-        IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider,
-        IItemPropertySource {
+public class GroupItemProvider extends ArtifactItemProvider
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -74,8 +74,7 @@ public class GroupItemProvider extends ArtifactItemProvider implements IEditingD
     protected void addCategoryValueRefPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_Group_categoryValueRef_feature"),
+                getResourceLocator(), getString("_UI_Group_categoryValueRef_feature"),
                 getString("_UI_PropertyDescriptor_description",
                         "_UI_Group_categoryValueRef_feature", "_UI_Group_type"),
                 Bpmn2Package.Literals.GROUP__CATEGORY_VALUE_REF, true, false, true, null, null,
@@ -95,6 +94,16 @@ public class GroupItemProvider extends ArtifactItemProvider implements IEditingD
         } catch (java.util.MissingResourceException e) {
             return overlayImage(object, getResourceLocator().getImage("full/obj16/Group.gif"));
         }
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
     }
 
     /**
@@ -131,7 +140,8 @@ public class GroupItemProvider extends ArtifactItemProvider implements IEditingD
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors,
+            Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
     }
 

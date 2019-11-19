@@ -40,9 +40,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ChoreographyActivityItemProvider extends FlowNodeItemProvider implements
-        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
-        IItemLabelProvider, IItemPropertySource {
+public class ChoreographyActivityItemProvider extends FlowNodeItemProvider
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -80,8 +80,7 @@ public class ChoreographyActivityItemProvider extends FlowNodeItemProvider imple
     protected void addParticipantRefsPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_ChoreographyActivity_participantRefs_feature"),
+                getResourceLocator(), getString("_UI_ChoreographyActivity_participantRefs_feature"),
                 getString("_UI_PropertyDescriptor_description",
                         "_UI_ChoreographyActivity_participantRefs_feature",
                         "_UI_ChoreographyActivity_type"),
@@ -116,8 +115,7 @@ public class ChoreographyActivityItemProvider extends FlowNodeItemProvider imple
     protected void addLoopTypePropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_ChoreographyActivity_loopType_feature"),
+                getResourceLocator(), getString("_UI_ChoreographyActivity_loopType_feature"),
                 getString("_UI_PropertyDescriptor_description",
                         "_UI_ChoreographyActivity_loopType_feature",
                         "_UI_ChoreographyActivity_type"),
@@ -156,6 +154,16 @@ public class ChoreographyActivityItemProvider extends FlowNodeItemProvider imple
     }
 
     /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
+    }
+
+    /**
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -181,12 +189,12 @@ public class ChoreographyActivityItemProvider extends FlowNodeItemProvider imple
 
         switch (notification.getFeatureID(ChoreographyActivity.class)) {
         case Bpmn2Package.CHOREOGRAPHY_ACTIVITY__LOOP_TYPE:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    false, true));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
         case Bpmn2Package.CHOREOGRAPHY_ACTIVITY__CORRELATION_KEYS:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    true, false));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -200,12 +208,13 @@ public class ChoreographyActivityItemProvider extends FlowNodeItemProvider imple
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors,
+            Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(
-                Bpmn2Package.Literals.CHOREOGRAPHY_ACTIVITY__CORRELATION_KEYS,
-                Bpmn2Factory.eINSTANCE.createCorrelationKey()));
+        newChildDescriptors.add(
+                createChildParameter(Bpmn2Package.Literals.CHOREOGRAPHY_ACTIVITY__CORRELATION_KEYS,
+                        Bpmn2Factory.eINSTANCE.createCorrelationKey()));
     }
 
 }

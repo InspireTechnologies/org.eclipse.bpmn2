@@ -42,9 +42,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class BaseElementItemProvider extends ItemProviderAdapter implements
-        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
-        IItemLabelProvider, IItemPropertySource {
+public class BaseElementItemProvider extends ItemProviderAdapter
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -81,8 +81,7 @@ public class BaseElementItemProvider extends ItemProviderAdapter implements
     protected void addExtensionDefinitionsPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_BaseElement_extensionDefinitions_feature"),
+                getResourceLocator(), getString("_UI_BaseElement_extensionDefinitions_feature"),
                 getString("_UI_PropertyDescriptor_description",
                         "_UI_BaseElement_extensionDefinitions_feature", "_UI_BaseElement_type"),
                 Bpmn2Package.Literals.BASE_ELEMENT__EXTENSION_DEFINITIONS, true, false, true, null,
@@ -98,11 +97,11 @@ public class BaseElementItemProvider extends ItemProviderAdapter implements
     protected void addIdPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_BaseElement_id_feature"),
+                getResourceLocator(), getString("_UI_BaseElement_id_feature"),
                 getString("_UI_PropertyDescriptor_description", "_UI_BaseElement_id_feature",
-                        "_UI_BaseElement_type"), Bpmn2Package.Literals.BASE_ELEMENT__ID, true,
-                false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+                        "_UI_BaseElement_type"),
+                Bpmn2Package.Literals.BASE_ELEMENT__ID, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -138,6 +137,16 @@ public class BaseElementItemProvider extends ItemProviderAdapter implements
     }
 
     /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
+    }
+
+    /**
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -163,14 +172,14 @@ public class BaseElementItemProvider extends ItemProviderAdapter implements
 
         switch (notification.getFeatureID(BaseElement.class)) {
         case Bpmn2Package.BASE_ELEMENT__ID:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    false, true));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
         case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES:
         case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION:
         case Bpmn2Package.BASE_ELEMENT__ANY_ATTRIBUTE:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    true, false));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -184,16 +193,17 @@ public class BaseElementItemProvider extends ItemProviderAdapter implements
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors,
+            Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(
-                Bpmn2Package.Literals.BASE_ELEMENT__EXTENSION_VALUES,
-                Bpmn2Factory.eINSTANCE.createExtensionAttributeValue()));
+        newChildDescriptors
+                .add(createChildParameter(Bpmn2Package.Literals.BASE_ELEMENT__EXTENSION_VALUES,
+                        Bpmn2Factory.eINSTANCE.createExtensionAttributeValue()));
 
-        newChildDescriptors.add(createChildParameter(
-                Bpmn2Package.Literals.BASE_ELEMENT__DOCUMENTATION,
-                Bpmn2Factory.eINSTANCE.createDocumentation()));
+        newChildDescriptors
+                .add(createChildParameter(Bpmn2Package.Literals.BASE_ELEMENT__DOCUMENTATION,
+                        Bpmn2Factory.eINSTANCE.createDocumentation()));
     }
 
     /**

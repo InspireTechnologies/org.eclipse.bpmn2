@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="bpmn2" nsURI="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI"
-    nsPrefix="bpmn2">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="bpmn2" nsURI="http://www.omg.org/spec/BPMN/20100524/MODEL" nsPrefix="bpmn2">
   <eClassifiers xsi:type="ecore:EClass" name="DocumentRoot">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
       <details key="name" value=""/>
@@ -1367,7 +1366,6 @@
         <details key="kind" value="element"/>
         <details key="name" value="resourceRole"/>
         <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
-        <details key="group" value="http://www.omg.org/spec/BPMN/20100524/MODEL#resourceRole"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="loopCharacteristics" ordered="false"
@@ -1376,7 +1374,6 @@
         <details key="kind" value="element"/>
         <details key="name" value="loopCharacteristics"/>
         <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
-        <details key="group" value="http://www.omg.org/spec/BPMN/20100524/MODEL#loopCharacteristics"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="completionQuantity" ordered="false"
@@ -1721,7 +1718,6 @@
         <details key="kind" value="element"/>
         <details key="name" value="eventDefinition"/>
         <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
-        <details key="group" value="http://www.omg.org/spec/BPMN/20100524/MODEL#eventDefinition"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="eventDefinitionRefs" ordered="false"
@@ -1869,7 +1865,6 @@
         <details key="kind" value="element"/>
         <details key="name" value="artifact"/>
         <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
-        <details key="group" value="http://www.omg.org/spec/BPMN/20100524/MODEL#artifact"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="conversations" ordered="false"
@@ -1878,7 +1873,6 @@
         <details key="kind" value="element"/>
         <details key="name" value="conversationNode"/>
         <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
-        <details key="group" value="http://www.omg.org/spec/BPMN/20100524/MODEL#conversationNode"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="conversationAssociations"
@@ -2429,7 +2423,6 @@
         <details key="kind" value="element"/>
         <details key="name" value="rootElement"/>
         <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
-        <details key="group" value="http://www.omg.org/spec/BPMN/20100524/MODEL#rootElement"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="diagrams" ordered="false"
@@ -2783,7 +2776,6 @@
         <details key="kind" value="element"/>
         <details key="name" value="flowElement"/>
         <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
-        <details key="group" value="http://www.omg.org/spec/BPMN/20100524/MODEL#flowElement"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
@@ -2933,7 +2925,6 @@
         <details key="kind" value="element"/>
         <details key="name" value="resourceRole"/>
         <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
-        <details key="group" value="http://www.omg.org/spec/BPMN/20100524/MODEL#resourceRole"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
@@ -3807,7 +3798,6 @@
         <details key="kind" value="element"/>
         <details key="name" value="artifact"/>
         <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
-        <details key="group" value="http://www.omg.org/spec/BPMN/20100524/MODEL#artifact"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="resources" ordered="false"
@@ -3816,7 +3806,6 @@
         <details key="kind" value="element"/>
         <details key="name" value="resourceRole"/>
         <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
-        <details key="group" value="http://www.omg.org/spec/BPMN/20100524/MODEL#resourceRole"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="correlationSubscriptions"
@@ -4001,7 +3990,6 @@
         <details key="kind" value="element"/>
         <details key="name" value="expression"/>
         <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
-        <details key="group" value="http://www.omg.org/spec/BPMN/20100524/MODEL#expression"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
@@ -4041,7 +4029,6 @@
         <details key="kind" value="element"/>
         <details key="name" value="expression"/>
         <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
-        <details key="group" value="http://www.omg.org/spec/BPMN/20100524/MODEL#expression"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parameterRef" ordered="false"
@@ -4281,7 +4268,6 @@
         <details key="kind" value="element"/>
         <details key="name" value="artifact"/>
         <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
-        <details key="group" value="http://www.omg.org/spec/BPMN/20100524/MODEL#artifact"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
@@ -4296,7 +4282,6 @@
         <details key="kind" value="element"/>
         <details key="name" value="conversationNode"/>
         <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
-        <details key="group" value="http://www.omg.org/spec/BPMN/20100524/MODEL#conversationNode"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
@@ -4311,7 +4296,6 @@
         <details key="kind" value="element"/>
         <details key="name" value="artifact"/>
         <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
-        <details key="group" value="http://www.omg.org/spec/BPMN/20100524/MODEL#artifact"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="triggeredByEvent" ordered="false"
@@ -4390,7 +4374,6 @@
         <details key="kind" value="element"/>
         <details key="name" value="eventDefinition"/>
         <details key="namespace" value="http://www.omg.org/spec/BPMN/20100524/MODEL"/>
-        <details key="group" value="http://www.omg.org/spec/BPMN/20100524/MODEL#eventDefinition"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="eventDefinitionRefs" ordered="false"

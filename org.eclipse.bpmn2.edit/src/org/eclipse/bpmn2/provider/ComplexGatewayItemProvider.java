@@ -39,9 +39,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ComplexGatewayItemProvider extends GatewayItemProvider implements
-        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
-        IItemLabelProvider, IItemPropertySource {
+public class ComplexGatewayItemProvider extends GatewayItemProvider
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -75,15 +75,13 @@ public class ComplexGatewayItemProvider extends GatewayItemProvider implements
      * @generated
      */
     protected void addDefaultPropertyDescriptor(Object object) {
-        itemPropertyDescriptors
-                .add(createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                        getResourceLocator(),
-                        getString("_UI_ComplexGateway_default_feature"),
-                        getString("_UI_PropertyDescriptor_description",
-                                "_UI_ComplexGateway_default_feature", "_UI_ComplexGateway_type"),
-                        Bpmn2Package.Literals.COMPLEX_GATEWAY__DEFAULT, true, false, true, null,
-                        null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(), getString("_UI_ComplexGateway_default_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_ComplexGateway_default_feature", "_UI_ComplexGateway_type"),
+                Bpmn2Package.Literals.COMPLEX_GATEWAY__DEFAULT, true, false, true, null, null,
+                null));
     }
 
     /**
@@ -134,6 +132,16 @@ public class ComplexGatewayItemProvider extends GatewayItemProvider implements
     }
 
     /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
+    }
+
+    /**
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -159,8 +167,8 @@ public class ComplexGatewayItemProvider extends GatewayItemProvider implements
 
         switch (notification.getFeatureID(ComplexGateway.class)) {
         case Bpmn2Package.COMPLEX_GATEWAY__ACTIVATION_CONDITION:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    true, false));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -174,16 +182,17 @@ public class ComplexGatewayItemProvider extends GatewayItemProvider implements
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors,
+            Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(
-                Bpmn2Package.Literals.COMPLEX_GATEWAY__ACTIVATION_CONDITION,
-                Bpmn2Factory.eINSTANCE.createExpression()));
+        newChildDescriptors.add(
+                createChildParameter(Bpmn2Package.Literals.COMPLEX_GATEWAY__ACTIVATION_CONDITION,
+                        Bpmn2Factory.eINSTANCE.createExpression()));
 
-        newChildDescriptors.add(createChildParameter(
-                Bpmn2Package.Literals.COMPLEX_GATEWAY__ACTIVATION_CONDITION,
-                Bpmn2Factory.eINSTANCE.createFormalExpression()));
+        newChildDescriptors.add(
+                createChildParameter(Bpmn2Package.Literals.COMPLEX_GATEWAY__ACTIVATION_CONDITION,
+                        Bpmn2Factory.eINSTANCE.createFormalExpression()));
     }
 
 }

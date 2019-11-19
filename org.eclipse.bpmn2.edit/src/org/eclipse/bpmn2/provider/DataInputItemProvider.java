@@ -38,9 +38,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DataInputItemProvider extends ItemAwareElementItemProvider implements
-        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
-        IItemLabelProvider, IItemPropertySource {
+public class DataInputItemProvider extends ItemAwareElementItemProvider
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -80,8 +80,7 @@ public class DataInputItemProvider extends ItemAwareElementItemProvider implemen
     protected void addInputSetWithOptionalPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_DataInput_inputSetWithOptional_feature"),
+                getResourceLocator(), getString("_UI_DataInput_inputSetWithOptional_feature"),
                 getString("_UI_PropertyDescriptor_description",
                         "_UI_DataInput_inputSetWithOptional_feature", "_UI_DataInput_type"),
                 Bpmn2Package.Literals.DATA_INPUT__INPUT_SET_WITH_OPTIONAL, true, false, true, null,
@@ -97,12 +96,11 @@ public class DataInputItemProvider extends ItemAwareElementItemProvider implemen
     protected void addInputSetWithWhileExecutingPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_DataInput_inputSetWithWhileExecuting_feature"),
+                getResourceLocator(), getString("_UI_DataInput_inputSetWithWhileExecuting_feature"),
                 getString("_UI_PropertyDescriptor_description",
                         "_UI_DataInput_inputSetWithWhileExecuting_feature", "_UI_DataInput_type"),
-                Bpmn2Package.Literals.DATA_INPUT__INPUT_SET_WITH_WHILE_EXECUTING, true, false,
-                true, null, null, null));
+                Bpmn2Package.Literals.DATA_INPUT__INPUT_SET_WITH_WHILE_EXECUTING, true, false, true,
+                null, null, null));
     }
 
     /**
@@ -114,8 +112,7 @@ public class DataInputItemProvider extends ItemAwareElementItemProvider implemen
     protected void addInputSetRefsPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_DataInput_inputSetRefs_feature"),
+                getResourceLocator(), getString("_UI_DataInput_inputSetRefs_feature"),
                 getString("_UI_PropertyDescriptor_description",
                         "_UI_DataInput_inputSetRefs_feature", "_UI_DataInput_type"),
                 Bpmn2Package.Literals.DATA_INPUT__INPUT_SET_REFS, true, false, true, null, null,
@@ -131,8 +128,7 @@ public class DataInputItemProvider extends ItemAwareElementItemProvider implemen
     protected void addIsCollectionPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_DataInput_isCollection_feature"),
+                getResourceLocator(), getString("_UI_DataInput_isCollection_feature"),
                 getString("_UI_PropertyDescriptor_description",
                         "_UI_DataInput_isCollection_feature", "_UI_DataInput_type"),
                 Bpmn2Package.Literals.DATA_INPUT__IS_COLLECTION, true, false, false,
@@ -148,11 +144,11 @@ public class DataInputItemProvider extends ItemAwareElementItemProvider implemen
     protected void addNamePropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_DataInput_name_feature"),
+                getResourceLocator(), getString("_UI_DataInput_name_feature"),
                 getString("_UI_PropertyDescriptor_description", "_UI_DataInput_name_feature",
-                        "_UI_DataInput_type"), Bpmn2Package.Literals.DATA_INPUT__NAME, true, false,
-                false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+                        "_UI_DataInput_type"),
+                Bpmn2Package.Literals.DATA_INPUT__NAME, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -168,6 +164,16 @@ public class DataInputItemProvider extends ItemAwareElementItemProvider implemen
         } catch (java.util.MissingResourceException e) {
             return overlayImage(object, getResourceLocator().getImage("full/obj16/DataInput.gif"));
         }
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
     }
 
     /**
@@ -197,8 +203,8 @@ public class DataInputItemProvider extends ItemAwareElementItemProvider implemen
         switch (notification.getFeatureID(DataInput.class)) {
         case Bpmn2Package.DATA_INPUT__IS_COLLECTION:
         case Bpmn2Package.DATA_INPUT__NAME:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    false, true));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);
@@ -212,7 +218,8 @@ public class DataInputItemProvider extends ItemAwareElementItemProvider implemen
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors,
+            Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
     }
 

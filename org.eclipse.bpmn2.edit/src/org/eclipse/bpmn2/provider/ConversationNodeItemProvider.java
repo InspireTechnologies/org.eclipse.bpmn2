@@ -40,9 +40,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ConversationNodeItemProvider extends BaseElementItemProvider implements
-        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
-        IItemLabelProvider, IItemPropertySource {
+public class ConversationNodeItemProvider extends BaseElementItemProvider
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -112,16 +112,14 @@ public class ConversationNodeItemProvider extends BaseElementItemProvider implem
      * @generated
      */
     protected void addParticipantRefsPropertyDescriptor(Object object) {
-        itemPropertyDescriptors
-                .add(createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                        getResourceLocator(),
-                        getString("_UI_ConversationNode_participantRefs_feature"),
-                        getString("_UI_PropertyDescriptor_description",
-                                "_UI_ConversationNode_participantRefs_feature",
-                                "_UI_ConversationNode_type"),
-                        Bpmn2Package.Literals.CONVERSATION_NODE__PARTICIPANT_REFS, true, false,
-                        true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(), getString("_UI_ConversationNode_participantRefs_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_ConversationNode_participantRefs_feature",
+                        "_UI_ConversationNode_type"),
+                Bpmn2Package.Literals.CONVERSATION_NODE__PARTICIPANT_REFS, true, false, true, null,
+                null, null));
     }
 
     /**
@@ -131,16 +129,14 @@ public class ConversationNodeItemProvider extends BaseElementItemProvider implem
      * @generated
      */
     protected void addMessageFlowRefsPropertyDescriptor(Object object) {
-        itemPropertyDescriptors
-                .add(createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                        getResourceLocator(),
-                        getString("_UI_ConversationNode_messageFlowRefs_feature"),
-                        getString("_UI_PropertyDescriptor_description",
-                                "_UI_ConversationNode_messageFlowRefs_feature",
-                                "_UI_ConversationNode_type"),
-                        Bpmn2Package.Literals.CONVERSATION_NODE__MESSAGE_FLOW_REFS, true, false,
-                        true, null, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(), getString("_UI_ConversationNode_messageFlowRefs_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_ConversationNode_messageFlowRefs_feature",
+                        "_UI_ConversationNode_type"),
+                Bpmn2Package.Literals.CONVERSATION_NODE__MESSAGE_FLOW_REFS, true, false, true, null,
+                null, null));
     }
 
     /**
@@ -152,10 +148,9 @@ public class ConversationNodeItemProvider extends BaseElementItemProvider implem
     protected void addNamePropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_ConversationNode_name_feature"),
-                getString("_UI_PropertyDescriptor_description",
-                        "_UI_ConversationNode_name_feature", "_UI_ConversationNode_type"),
+                getResourceLocator(), getString("_UI_ConversationNode_name_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_ConversationNode_name_feature",
+                        "_UI_ConversationNode_type"),
                 Bpmn2Package.Literals.CONVERSATION_NODE__NAME, true, false, false,
                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
@@ -191,6 +186,16 @@ public class ConversationNodeItemProvider extends BaseElementItemProvider implem
     }
 
     /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
+    }
+
+    /**
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -216,12 +221,12 @@ public class ConversationNodeItemProvider extends BaseElementItemProvider implem
 
         switch (notification.getFeatureID(ConversationNode.class)) {
         case Bpmn2Package.CONVERSATION_NODE__NAME:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    false, true));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
         case Bpmn2Package.CONVERSATION_NODE__CORRELATION_KEYS:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    true, false));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -235,12 +240,13 @@ public class ConversationNodeItemProvider extends BaseElementItemProvider implem
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors,
+            Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(
-                Bpmn2Package.Literals.CONVERSATION_NODE__CORRELATION_KEYS,
-                Bpmn2Factory.eINSTANCE.createCorrelationKey()));
+        newChildDescriptors
+                .add(createChildParameter(Bpmn2Package.Literals.CONVERSATION_NODE__CORRELATION_KEYS,
+                        Bpmn2Factory.eINSTANCE.createCorrelationKey()));
     }
 
 }

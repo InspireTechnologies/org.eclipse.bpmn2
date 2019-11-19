@@ -34,9 +34,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ConversationItemProvider extends ConversationNodeItemProvider implements
-        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
-        IItemLabelProvider, IItemPropertySource {
+public class ConversationItemProvider extends ConversationNodeItemProvider
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -71,12 +71,22 @@ public class ConversationItemProvider extends ConversationNodeItemProvider imple
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator()
-                    .getImage("full/obj16/Conversation.png"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Conversation.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator()
-                    .getImage("full/obj16/Conversation.gif"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Conversation.gif"));
         }
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
     }
 
     /**
@@ -113,7 +123,8 @@ public class ConversationItemProvider extends ConversationNodeItemProvider imple
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors,
+            Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
     }
 

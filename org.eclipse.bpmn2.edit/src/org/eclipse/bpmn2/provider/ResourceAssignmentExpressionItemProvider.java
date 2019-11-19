@@ -38,9 +38,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ResourceAssignmentExpressionItemProvider extends BaseElementItemProvider implements
-        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
-        IItemLabelProvider, IItemPropertySource {
+public class ResourceAssignmentExpressionItemProvider extends BaseElementItemProvider
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -114,6 +114,16 @@ public class ResourceAssignmentExpressionItemProvider extends BaseElementItemPro
     }
 
     /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
+    }
+
+    /**
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -122,7 +132,8 @@ public class ResourceAssignmentExpressionItemProvider extends BaseElementItemPro
     @Override
     public String getText(Object object) {
         String label = ((ResourceAssignmentExpression) object).getId();
-        return label == null || label.length() == 0 ? getString("_UI_ResourceAssignmentExpression_type")
+        return label == null || label.length() == 0
+                ? getString("_UI_ResourceAssignmentExpression_type")
                 : getString("_UI_ResourceAssignmentExpression_type") + " " + label;
     }
 
@@ -139,8 +150,8 @@ public class ResourceAssignmentExpressionItemProvider extends BaseElementItemPro
 
         switch (notification.getFeatureID(ResourceAssignmentExpression.class)) {
         case Bpmn2Package.RESOURCE_ASSIGNMENT_EXPRESSION__EXPRESSION:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    true, false));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -154,7 +165,8 @@ public class ResourceAssignmentExpressionItemProvider extends BaseElementItemPro
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors,
+            Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
         newChildDescriptors.add(createChildParameter(

@@ -21,13 +21,10 @@ import java.util.List;
 import org.eclipse.bpmn2.Bpmn2Factory;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.DocumentRoot;
-import org.eclipse.bpmn2.di.BpmnDiFactory;
-import org.eclipse.dd.dc.DcFactory;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.ecore.xml.type.XMLTypeFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
@@ -43,9 +40,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DocumentRootItemProvider extends ItemProviderAdapter implements
-        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
-        IItemLabelProvider, IItemPropertySource {
+public class DocumentRootItemProvider extends ItemProviderAdapter
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -111,12 +108,22 @@ public class DocumentRootItemProvider extends ItemProviderAdapter implements
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator()
-                    .getImage("full/obj16/DocumentRoot.png"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/DocumentRoot.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator()
-                    .getImage("full/obj16/DocumentRoot.gif"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/DocumentRoot.gif"));
         }
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
     }
 
     /**
@@ -144,8 +151,8 @@ public class DocumentRootItemProvider extends ItemProviderAdapter implements
         switch (notification.getFeatureID(DocumentRoot.class)) {
 
         case Bpmn2Package.DOCUMENT_ROOT__DEFINITIONS:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    true, false));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -159,12 +166,13 @@ public class DocumentRootItemProvider extends ItemProviderAdapter implements
      * @generated not
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors,
+            Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(
-                Bpmn2Package.Literals.DOCUMENT_ROOT__DEFINITIONS,
-                Bpmn2Factory.eINSTANCE.createDefinitions()));
+        newChildDescriptors
+                .add(createChildParameter(Bpmn2Package.Literals.DOCUMENT_ROOT__DEFINITIONS,
+                        Bpmn2Factory.eINSTANCE.createDefinitions()));
 
     }
 

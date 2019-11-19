@@ -38,9 +38,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ParticipantMultiplicityItemProvider extends BaseElementItemProvider implements
-        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
-        IItemLabelProvider, IItemPropertySource {
+public class ParticipantMultiplicityItemProvider extends BaseElementItemProvider
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -77,8 +77,7 @@ public class ParticipantMultiplicityItemProvider extends BaseElementItemProvider
     protected void addMaximumPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_ParticipantMultiplicity_maximum_feature"),
+                getResourceLocator(), getString("_UI_ParticipantMultiplicity_maximum_feature"),
                 getString("_UI_PropertyDescriptor_description",
                         "_UI_ParticipantMultiplicity_maximum_feature",
                         "_UI_ParticipantMultiplicity_type"),
@@ -95,8 +94,7 @@ public class ParticipantMultiplicityItemProvider extends BaseElementItemProvider
     protected void addMinimumPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_ParticipantMultiplicity_minimum_feature"),
+                getResourceLocator(), getString("_UI_ParticipantMultiplicity_minimum_feature"),
                 getString("_UI_PropertyDescriptor_description",
                         "_UI_ParticipantMultiplicity_minimum_feature",
                         "_UI_ParticipantMultiplicity_type"),
@@ -119,6 +117,16 @@ public class ParticipantMultiplicityItemProvider extends BaseElementItemProvider
             return overlayImage(object,
                     getResourceLocator().getImage("full/obj16/ParticipantMultiplicity.gif"));
         }
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
     }
 
     /**
@@ -148,8 +156,8 @@ public class ParticipantMultiplicityItemProvider extends BaseElementItemProvider
         switch (notification.getFeatureID(ParticipantMultiplicity.class)) {
         case Bpmn2Package.PARTICIPANT_MULTIPLICITY__MAXIMUM:
         case Bpmn2Package.PARTICIPANT_MULTIPLICITY__MINIMUM:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    false, true));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);
@@ -163,7 +171,8 @@ public class ParticipantMultiplicityItemProvider extends BaseElementItemProvider
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors,
+            Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
     }
 

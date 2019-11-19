@@ -38,9 +38,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class GlobalScriptTaskItemProvider extends GlobalTaskItemProvider implements
-        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
-        IItemLabelProvider, IItemPropertySource {
+public class GlobalScriptTaskItemProvider extends GlobalTaskItemProvider
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -77,8 +77,7 @@ public class GlobalScriptTaskItemProvider extends GlobalTaskItemProvider impleme
     protected void addScriptPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_GlobalScriptTask_script_feature"),
+                getResourceLocator(), getString("_UI_GlobalScriptTask_script_feature"),
                 getString("_UI_PropertyDescriptor_description",
                         "_UI_GlobalScriptTask_script_feature", "_UI_GlobalScriptTask_type"),
                 Bpmn2Package.Literals.GLOBAL_SCRIPT_TASK__SCRIPT, true, false, false,
@@ -92,16 +91,13 @@ public class GlobalScriptTaskItemProvider extends GlobalTaskItemProvider impleme
      * @generated
      */
     protected void addScriptLanguagePropertyDescriptor(Object object) {
-        itemPropertyDescriptors
-                .add(createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                        getResourceLocator(),
-                        getString("_UI_GlobalScriptTask_scriptLanguage_feature"),
-                        getString("_UI_PropertyDescriptor_description",
-                                "_UI_GlobalScriptTask_scriptLanguage_feature",
-                                "_UI_GlobalScriptTask_type"),
-                        Bpmn2Package.Literals.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE, true, false,
-                        false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(), getString("_UI_GlobalScriptTask_scriptLanguage_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_GlobalScriptTask_scriptLanguage_feature", "_UI_GlobalScriptTask_type"),
+                Bpmn2Package.Literals.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -119,6 +115,16 @@ public class GlobalScriptTaskItemProvider extends GlobalTaskItemProvider impleme
             return overlayImage(object,
                     getResourceLocator().getImage("full/obj16/GlobalScriptTask.gif"));
         }
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
     }
 
     /**
@@ -148,8 +154,8 @@ public class GlobalScriptTaskItemProvider extends GlobalTaskItemProvider impleme
         switch (notification.getFeatureID(GlobalScriptTask.class)) {
         case Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT:
         case Bpmn2Package.GLOBAL_SCRIPT_TASK__SCRIPT_LANGUAGE:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    false, true));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);
@@ -163,7 +169,8 @@ public class GlobalScriptTaskItemProvider extends GlobalTaskItemProvider impleme
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors,
+            Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
     }
 

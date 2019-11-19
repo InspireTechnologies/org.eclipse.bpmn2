@@ -39,9 +39,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class CorrelationPropertyBindingItemProvider extends BaseElementItemProvider implements
-        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
-        IItemLabelProvider, IItemPropertySource {
+public class CorrelationPropertyBindingItemProvider extends BaseElementItemProvider
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -134,6 +134,16 @@ public class CorrelationPropertyBindingItemProvider extends BaseElementItemProvi
     }
 
     /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
+    }
+
+    /**
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -142,7 +152,8 @@ public class CorrelationPropertyBindingItemProvider extends BaseElementItemProvi
     @Override
     public String getText(Object object) {
         String label = ((CorrelationPropertyBinding) object).getId();
-        return label == null || label.length() == 0 ? getString("_UI_CorrelationPropertyBinding_type")
+        return label == null || label.length() == 0
+                ? getString("_UI_CorrelationPropertyBinding_type")
                 : getString("_UI_CorrelationPropertyBinding_type") + " " + label;
     }
 
@@ -159,8 +170,8 @@ public class CorrelationPropertyBindingItemProvider extends BaseElementItemProvi
 
         switch (notification.getFeatureID(CorrelationPropertyBinding.class)) {
         case Bpmn2Package.CORRELATION_PROPERTY_BINDING__DATA_PATH:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    true, false));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -174,12 +185,13 @@ public class CorrelationPropertyBindingItemProvider extends BaseElementItemProvi
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors,
+            Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(
-                Bpmn2Package.Literals.CORRELATION_PROPERTY_BINDING__DATA_PATH,
-                Bpmn2Factory.eINSTANCE.createFormalExpression()));
+        newChildDescriptors.add(
+                createChildParameter(Bpmn2Package.Literals.CORRELATION_PROPERTY_BINDING__DATA_PATH,
+                        Bpmn2Factory.eINSTANCE.createFormalExpression()));
     }
 
 }

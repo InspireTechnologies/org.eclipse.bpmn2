@@ -59,8 +59,8 @@ import org.eclipse.ui.PartInitException;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DiActionBarContributor extends EditingDomainActionBarContributor implements
-        ISelectionChangedListener {
+public class DiActionBarContributor extends EditingDomainActionBarContributor
+        implements ISelectionChangedListener {
     /**
      * This keeps track of the active editor.
      * <!-- begin-user-doc -->
@@ -175,6 +175,7 @@ public class DiActionBarContributor extends EditingDomainActionBarContributor im
      */
     @Override
     public void contributeToToolBar(IToolBarManager toolBarManager) {
+        super.contributeToToolBar(toolBarManager);
         toolBarManager.add(new Separator("di-settings"));
         toolBarManager.add(new Separator("di-additions"));
     }
@@ -214,6 +215,7 @@ public class DiActionBarContributor extends EditingDomainActionBarContributor im
         // Force an update because Eclipse hides empty menus now.
         //
         submenuManager.addMenuListener(new IMenuListener() {
+            @Override
             public void menuAboutToShow(IMenuManager menuManager) {
                 menuManager.updateAll(true);
             }
@@ -261,6 +263,7 @@ public class DiActionBarContributor extends EditingDomainActionBarContributor im
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void selectionChanged(SelectionChangedEvent event) {
         // Remove any menu items for old selection.
         //

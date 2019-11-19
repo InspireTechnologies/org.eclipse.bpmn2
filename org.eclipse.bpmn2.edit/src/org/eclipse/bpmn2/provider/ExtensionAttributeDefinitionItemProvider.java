@@ -40,9 +40,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ExtensionAttributeDefinitionItemProvider extends ItemProviderAdapter implements
-        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
-        IItemLabelProvider, IItemPropertySource {
+public class ExtensionAttributeDefinitionItemProvider extends ItemProviderAdapter
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -80,8 +80,7 @@ public class ExtensionAttributeDefinitionItemProvider extends ItemProviderAdapte
     protected void addNamePropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_ExtensionAttributeDefinition_name_feature"),
+                getResourceLocator(), getString("_UI_ExtensionAttributeDefinition_name_feature"),
                 getString("_UI_PropertyDescriptor_description",
                         "_UI_ExtensionAttributeDefinition_name_feature",
                         "_UI_ExtensionAttributeDefinition_type"),
@@ -98,8 +97,7 @@ public class ExtensionAttributeDefinitionItemProvider extends ItemProviderAdapte
     protected void addTypePropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_ExtensionAttributeDefinition_type_feature"),
+                getResourceLocator(), getString("_UI_ExtensionAttributeDefinition_type_feature"),
                 getString("_UI_PropertyDescriptor_description",
                         "_UI_ExtensionAttributeDefinition_type_feature",
                         "_UI_ExtensionAttributeDefinition_type"),
@@ -143,6 +141,16 @@ public class ExtensionAttributeDefinitionItemProvider extends ItemProviderAdapte
     }
 
     /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
+    }
+
+    /**
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -151,7 +159,8 @@ public class ExtensionAttributeDefinitionItemProvider extends ItemProviderAdapte
     @Override
     public String getText(Object object) {
         String label = ((ExtensionAttributeDefinition) object).getName();
-        return label == null || label.length() == 0 ? getString("_UI_ExtensionAttributeDefinition_type")
+        return label == null || label.length() == 0
+                ? getString("_UI_ExtensionAttributeDefinition_type")
                 : getString("_UI_ExtensionAttributeDefinition_type") + " " + label;
     }
 
@@ -170,8 +179,8 @@ public class ExtensionAttributeDefinitionItemProvider extends ItemProviderAdapte
         case Bpmn2Package.EXTENSION_ATTRIBUTE_DEFINITION__NAME:
         case Bpmn2Package.EXTENSION_ATTRIBUTE_DEFINITION__TYPE:
         case Bpmn2Package.EXTENSION_ATTRIBUTE_DEFINITION__IS_REFERENCE:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    false, true));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);
@@ -185,7 +194,8 @@ public class ExtensionAttributeDefinitionItemProvider extends ItemProviderAdapte
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors,
+            Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
     }
 

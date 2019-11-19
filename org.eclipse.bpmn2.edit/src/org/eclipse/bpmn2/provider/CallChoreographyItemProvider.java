@@ -39,9 +39,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class CallChoreographyItemProvider extends ChoreographyActivityItemProvider implements
-        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
-        IItemLabelProvider, IItemPropertySource {
+public class CallChoreographyItemProvider extends ChoreographyActivityItemProvider
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -82,8 +82,8 @@ public class CallChoreographyItemProvider extends ChoreographyActivityItemProvid
                 getString("_UI_PropertyDescriptor_description",
                         "_UI_CallChoreography_calledChoreographyRef_feature",
                         "_UI_CallChoreography_type"),
-                Bpmn2Package.Literals.CALL_CHOREOGRAPHY__CALLED_CHOREOGRAPHY_REF, true, false,
-                true, null, null, null));
+                Bpmn2Package.Literals.CALL_CHOREOGRAPHY__CALLED_CHOREOGRAPHY_REF, true, false, true,
+                null, null, null));
     }
 
     /**
@@ -134,6 +134,16 @@ public class CallChoreographyItemProvider extends ChoreographyActivityItemProvid
     }
 
     /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
+    }
+
+    /**
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -159,8 +169,8 @@ public class CallChoreographyItemProvider extends ChoreographyActivityItemProvid
 
         switch (notification.getFeatureID(CallChoreography.class)) {
         case Bpmn2Package.CALL_CHOREOGRAPHY__PARTICIPANT_ASSOCIATIONS:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    true, false));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -174,7 +184,8 @@ public class CallChoreographyItemProvider extends ChoreographyActivityItemProvid
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors,
+            Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
         newChildDescriptors.add(createChildParameter(

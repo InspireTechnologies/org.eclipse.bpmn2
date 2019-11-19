@@ -41,36 +41,32 @@ import org.eclipse.emf.ecore.*;
   protected final String TEXT_8 = "\"> <xsl:value-of select=\"";
   protected final String TEXT_9 = "\" /> </xsl:attribute></xsl:if>\t\t\t";
   protected final String TEXT_10 = NL + "      <xsl:if test=\"";
-  protected final String TEXT_11 = "\"><xsl:attribute name=\"";
-  protected final String TEXT_12 = "\"><xsl:call-template name=\"concat\"><xsl:with-param name=\"nodeset\" select=\"";
-  protected final String TEXT_13 = "\"/></xsl:call-template></xsl:attribute></xsl:if>\t\t\t";
-  protected final String TEXT_14 = NL + "\t</xsl:template>" + NL + "" + NL + "\t<xsl:template name=\"";
-  protected final String TEXT_15 = "Template\">";
-  protected final String TEXT_16 = NL + "\t  <xsl:call-template name=\"";
-  protected final String TEXT_17 = "Template\"/> ";
-  protected final String TEXT_18 = NL + "      <xsl:for-each select=\"";
-  protected final String TEXT_19 = "\">";
-  protected final String TEXT_20 = NL + "        <xsl:choose>\t\t";
-  protected final String TEXT_21 = " " + NL + "          <xsl:when test=\"self::";
-  protected final String TEXT_22 = "\">" + NL + "            <";
-  protected final String TEXT_23 = " xmi:type=\"";
-  protected final String TEXT_24 = "xmi:";
-  protected final String TEXT_25 = "\">\t\t\t    " + NL + "\t          <xsl:call-template name=\"";
-  protected final String TEXT_26 = "AttributesTemplate\"/> " + NL + "\t\t\t  <xsl:call-template name=\"";
-  protected final String TEXT_27 = "Template\" />\t\t\t   " + NL + "\t\t\t</";
-  protected final String TEXT_28 = ">" + NL + "          </xsl:when >";
-  protected final String TEXT_29 = NL + "        </xsl:choose>";
-  protected final String TEXT_30 = NL + "        <";
-  protected final String TEXT_31 = " xmi:type=\"";
-  protected final String TEXT_32 = "xmi:";
-  protected final String TEXT_33 = "\">\t\t\t    " + NL + "\t       <xsl:call-template name=\"";
-  protected final String TEXT_34 = "AttributesTemplate\"/> " + NL + "           <xsl:call-template name=\"";
-  protected final String TEXT_35 = "Template\" />\t\t\t   " + NL + "        </";
-  protected final String TEXT_36 = ">";
-  protected final String TEXT_37 = NL + "      </xsl:for-each>";
-  protected final String TEXT_38 = NL + "\t</xsl:template>" + NL + "  ";
-  protected final String TEXT_39 = NL + "</xsl:stylesheet>";
-  protected final String TEXT_40 = NL;
+  protected final String TEXT_11 = "\"><xsl:call-template name=\"concat\"><xsl:with-param name=\"nodeset\" select=\"";
+  protected final String TEXT_12 = "\"/></xsl:call-template></xsl:attribute></xsl:if>\t\t\t";
+  protected final String TEXT_13 = NL + "\t</xsl:template>" + NL + "" + NL + "\t<xsl:template name=\"";
+  protected final String TEXT_14 = "Template\">";
+  protected final String TEXT_15 = "Template\"/> ";
+  protected final String TEXT_16 = NL + "      <xsl:for-each select=\"";
+  protected final String TEXT_17 = "\">";
+  protected final String TEXT_18 = NL + "        <xsl:choose>\t\t";
+  protected final String TEXT_19 = " " + NL + "          <xsl:when test=\"self::";
+  protected final String TEXT_20 = "\">" + NL + "            <";
+  protected final String TEXT_21 = " xmi:type=\"";
+  protected final String TEXT_22 = "xmi:";
+  protected final String TEXT_23 = "\">\t\t\t    " + NL + "\t          <xsl:call-template name=\"";
+  protected final String TEXT_24 = "AttributesTemplate\"/> " + NL + "\t\t\t  <xsl:call-template name=\"";
+  protected final String TEXT_25 = "Template\" />\t\t\t   " + NL + "\t\t\t</";
+  protected final String TEXT_26 = ">" + NL + "          </xsl:when >";
+  protected final String TEXT_27 = NL + "        </xsl:choose>";
+  protected final String TEXT_28 = NL + "        <";
+  protected final String TEXT_29 = "\">\t\t\t    " + NL + "\t       <xsl:call-template name=\"";
+  protected final String TEXT_30 = "AttributesTemplate\"/> " + NL + "           <xsl:call-template name=\"";
+  protected final String TEXT_31 = "Template\" />\t\t\t   " + NL + "        </";
+  protected final String TEXT_32 = ">";
+  protected final String TEXT_33 = NL + "      </xsl:for-each>";
+  protected final String TEXT_34 = NL + "\t</xsl:template>" + NL + "  ";
+  protected final String TEXT_35 = NL + "</xsl:stylesheet>";
+  protected final String TEXT_36 = NL;
 
    public String generate(Object argument)
   {
@@ -98,65 +94,65 @@ import org.eclipse.emf.ecore.*;
      for(EStructuralFeature feature: input.getAllFeatureThatAreReferences(c)) { 
     stringBuffer.append(TEXT_10);
     stringBuffer.append(input.getXPathForXml(feature));
-    stringBuffer.append(TEXT_11);
+    stringBuffer.append(TEXT_7);
     stringBuffer.append(feature.getName() );
-    stringBuffer.append(TEXT_12);
+    stringBuffer.append(TEXT_11);
     stringBuffer.append(input.getXPathForXml(feature));
-    stringBuffer.append(TEXT_13);
+    stringBuffer.append(TEXT_12);
      } 
-    stringBuffer.append(TEXT_14);
+    stringBuffer.append(TEXT_13);
     stringBuffer.append(c.getName());
-    stringBuffer.append(TEXT_15);
+    stringBuffer.append(TEXT_14);
     for(EClass superClass: c.getESuperTypes()) {
-    stringBuffer.append(TEXT_16);
+    stringBuffer.append(TEXT_4);
     stringBuffer.append(superClass.getName());
-    stringBuffer.append(TEXT_17);
+    stringBuffer.append(TEXT_15);
     }
      for(EStructuralFeature feature: input.getAllOtherFeaturesInXMI(c)) { 
-    stringBuffer.append(TEXT_18);
+    stringBuffer.append(TEXT_16);
     stringBuffer.append(input.getSubFeaturesXPath(feature));
-    stringBuffer.append(TEXT_19);
+    stringBuffer.append(TEXT_17);
     if(input.hasSubFeatures(feature)){ 
-    stringBuffer.append(TEXT_20);
+    stringBuffer.append(TEXT_18);
     for(EStructuralFeature subFeature: input.getAllSubFeatures(feature)) {
-    stringBuffer.append(TEXT_21);
+    stringBuffer.append(TEXT_19);
     stringBuffer.append(input.getXPathForXml(subFeature));
-    stringBuffer.append(TEXT_22);
+    stringBuffer.append(TEXT_20);
     stringBuffer.append(feature.getName());
-    stringBuffer.append(TEXT_23);
+    stringBuffer.append(TEXT_21);
     stringBuffer.append(input.getPrefix(subFeature));
+    stringBuffer.append(TEXT_22);
+    stringBuffer.append(subFeature.getEType().getName());
+    stringBuffer.append(TEXT_23);
+    stringBuffer.append(subFeature.getEType().getName());
     stringBuffer.append(TEXT_24);
     stringBuffer.append(subFeature.getEType().getName());
     stringBuffer.append(TEXT_25);
-    stringBuffer.append(subFeature.getEType().getName());
+    stringBuffer.append(feature.getName());
     stringBuffer.append(TEXT_26);
-    stringBuffer.append(subFeature.getEType().getName());
+     }
     stringBuffer.append(TEXT_27);
-    stringBuffer.append(feature.getName());
-    stringBuffer.append(TEXT_28);
-     }
-    stringBuffer.append(TEXT_29);
     } else {
-    stringBuffer.append(TEXT_30);
+    stringBuffer.append(TEXT_28);
     stringBuffer.append(feature.getName());
-    stringBuffer.append(TEXT_31);
+    stringBuffer.append(TEXT_21);
     stringBuffer.append(input.getPrefix(feature));
-    stringBuffer.append(TEXT_32);
+    stringBuffer.append(TEXT_22);
     stringBuffer.append(feature.getEType().getName());
-    stringBuffer.append(TEXT_33);
+    stringBuffer.append(TEXT_29);
     stringBuffer.append(feature.getEType().getName());
-    stringBuffer.append(TEXT_34);
+    stringBuffer.append(TEXT_30);
     stringBuffer.append(feature.getEType().getName());
-    stringBuffer.append(TEXT_35);
+    stringBuffer.append(TEXT_31);
     stringBuffer.append(feature.getName());
-    stringBuffer.append(TEXT_36);
+    stringBuffer.append(TEXT_32);
     }
-    stringBuffer.append(TEXT_37);
+    stringBuffer.append(TEXT_33);
      }
-    stringBuffer.append(TEXT_38);
+    stringBuffer.append(TEXT_34);
      }
-    stringBuffer.append(TEXT_39);
-    stringBuffer.append(TEXT_40);
+    stringBuffer.append(TEXT_35);
+    stringBuffer.append(TEXT_36);
     return stringBuffer.toString();
   }
 }

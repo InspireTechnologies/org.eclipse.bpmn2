@@ -38,9 +38,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class AssociationItemProvider extends ArtifactItemProvider implements
-        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
-        IItemLabelProvider, IItemPropertySource {
+public class AssociationItemProvider extends ArtifactItemProvider
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -78,8 +78,7 @@ public class AssociationItemProvider extends ArtifactItemProvider implements
     protected void addAssociationDirectionPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_Association_associationDirection_feature"),
+                getResourceLocator(), getString("_UI_Association_associationDirection_feature"),
                 getString("_UI_PropertyDescriptor_description",
                         "_UI_Association_associationDirection_feature", "_UI_Association_type"),
                 Bpmn2Package.Literals.ASSOCIATION__ASSOCIATION_DIRECTION, true, false, false,
@@ -93,15 +92,13 @@ public class AssociationItemProvider extends ArtifactItemProvider implements
      * @generated
      */
     protected void addSourceRefPropertyDescriptor(Object object) {
-        itemPropertyDescriptors
-                .add(createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                        getResourceLocator(),
-                        getString("_UI_Association_sourceRef_feature"),
-                        getString("_UI_PropertyDescriptor_description",
-                                "_UI_Association_sourceRef_feature", "_UI_Association_type"),
-                        Bpmn2Package.Literals.ASSOCIATION__SOURCE_REF, true, false, true, null,
-                        null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(), getString("_UI_Association_sourceRef_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_Association_sourceRef_feature",
+                        "_UI_Association_type"),
+                Bpmn2Package.Literals.ASSOCIATION__SOURCE_REF, true, false, true, null, null,
+                null));
     }
 
     /**
@@ -111,15 +108,13 @@ public class AssociationItemProvider extends ArtifactItemProvider implements
      * @generated
      */
     protected void addTargetRefPropertyDescriptor(Object object) {
-        itemPropertyDescriptors
-                .add(createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                        getResourceLocator(),
-                        getString("_UI_Association_targetRef_feature"),
-                        getString("_UI_PropertyDescriptor_description",
-                                "_UI_Association_targetRef_feature", "_UI_Association_type"),
-                        Bpmn2Package.Literals.ASSOCIATION__TARGET_REF, true, false, true, null,
-                        null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(), getString("_UI_Association_targetRef_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_Association_targetRef_feature",
+                        "_UI_Association_type"),
+                Bpmn2Package.Literals.ASSOCIATION__TARGET_REF, true, false, true, null, null,
+                null));
     }
 
     /**
@@ -131,10 +126,22 @@ public class AssociationItemProvider extends ArtifactItemProvider implements
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/Association.png"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Association.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/Association.gif"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Association.gif"));
         }
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
     }
 
     /**
@@ -163,8 +170,8 @@ public class AssociationItemProvider extends ArtifactItemProvider implements
 
         switch (notification.getFeatureID(Association.class)) {
         case Bpmn2Package.ASSOCIATION__ASSOCIATION_DIRECTION:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    false, true));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);
@@ -178,7 +185,8 @@ public class AssociationItemProvider extends ArtifactItemProvider implements
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors,
+            Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
     }
 

@@ -42,9 +42,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ExtensionItemProvider extends ItemProviderAdapter implements
-        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
-        IItemLabelProvider, IItemPropertySource {
+public class ExtensionItemProvider extends ItemProviderAdapter
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -81,8 +81,7 @@ public class ExtensionItemProvider extends ItemProviderAdapter implements
     protected void addMustUnderstandPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_Extension_mustUnderstand_feature"),
+                getResourceLocator(), getString("_UI_Extension_mustUnderstand_feature"),
                 getString("_UI_PropertyDescriptor_description",
                         "_UI_Extension_mustUnderstand_feature", "_UI_Extension_type"),
                 Bpmn2Package.Literals.EXTENSION__MUST_UNDERSTAND, true, false, false,
@@ -98,8 +97,7 @@ public class ExtensionItemProvider extends ItemProviderAdapter implements
     protected void addXsdDefinitionPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_Extension_xsdDefinition_feature"),
+                getResourceLocator(), getString("_UI_Extension_xsdDefinition_feature"),
                 getString("_UI_PropertyDescriptor_description",
                         "_UI_Extension_xsdDefinition_feature", "_UI_Extension_type"),
                 Bpmn2Package.Literals.EXTENSION__XSD_DEFINITION, true, false, false,
@@ -152,6 +150,16 @@ public class ExtensionItemProvider extends ItemProviderAdapter implements
     }
 
     /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
+    }
+
+    /**
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -177,12 +185,12 @@ public class ExtensionItemProvider extends ItemProviderAdapter implements
         switch (notification.getFeatureID(Extension.class)) {
         case Bpmn2Package.EXTENSION__MUST_UNDERSTAND:
         case Bpmn2Package.EXTENSION__XSD_DEFINITION:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    false, true));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
         case Bpmn2Package.EXTENSION__DEFINITION:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    true, false));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -196,7 +204,8 @@ public class ExtensionItemProvider extends ItemProviderAdapter implements
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors,
+            Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
         newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.EXTENSION__DEFINITION,

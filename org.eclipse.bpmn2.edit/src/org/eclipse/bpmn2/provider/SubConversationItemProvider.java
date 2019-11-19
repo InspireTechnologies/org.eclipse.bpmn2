@@ -38,9 +38,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class SubConversationItemProvider extends ConversationNodeItemProvider implements
-        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
-        IItemLabelProvider, IItemPropertySource {
+public class SubConversationItemProvider extends ConversationNodeItemProvider
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -114,6 +114,16 @@ public class SubConversationItemProvider extends ConversationNodeItemProvider im
     }
 
     /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
+    }
+
+    /**
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -139,8 +149,8 @@ public class SubConversationItemProvider extends ConversationNodeItemProvider im
 
         switch (notification.getFeatureID(SubConversation.class)) {
         case Bpmn2Package.SUB_CONVERSATION__CONVERSATION_NODES:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    true, false));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -154,20 +164,21 @@ public class SubConversationItemProvider extends ConversationNodeItemProvider im
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors,
+            Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(
-                Bpmn2Package.Literals.SUB_CONVERSATION__CONVERSATION_NODES,
-                Bpmn2Factory.eINSTANCE.createCallConversation()));
+        newChildDescriptors.add(
+                createChildParameter(Bpmn2Package.Literals.SUB_CONVERSATION__CONVERSATION_NODES,
+                        Bpmn2Factory.eINSTANCE.createCallConversation()));
 
-        newChildDescriptors.add(createChildParameter(
-                Bpmn2Package.Literals.SUB_CONVERSATION__CONVERSATION_NODES,
-                Bpmn2Factory.eINSTANCE.createConversation()));
+        newChildDescriptors.add(
+                createChildParameter(Bpmn2Package.Literals.SUB_CONVERSATION__CONVERSATION_NODES,
+                        Bpmn2Factory.eINSTANCE.createConversation()));
 
-        newChildDescriptors.add(createChildParameter(
-                Bpmn2Package.Literals.SUB_CONVERSATION__CONVERSATION_NODES,
-                Bpmn2Factory.eINSTANCE.createSubConversation()));
+        newChildDescriptors.add(
+                createChildParameter(Bpmn2Package.Literals.SUB_CONVERSATION__CONVERSATION_NODES,
+                        Bpmn2Factory.eINSTANCE.createSubConversation()));
     }
 
 }

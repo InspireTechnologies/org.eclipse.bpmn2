@@ -3,10 +3,11 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="&lt;copyright>&#xD;&#xA;&#xD;&#xA;Copyright (c) 2010 SAP AG.&#xD;&#xA;All rights reserved. This program and the accompanying materials&#xD;&#xA;are made available under the terms of the Eclipse Public License v1.0&#xD;&#xA;which accompanies this distribution, and is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-v10.html&#xD;&#xA;&#xD;&#xA;Contributors:&#xD;&#xA;   Reiner Hille-Doering (SAP AG) - initial API and implementation and/or initial documentation&#xD;&#xA;&#xD;&#xA;&lt;/copyright>"
     modelDirectory="/org.eclipse.bpmn2/src" creationIcons="false" modelPluginID="org.eclipse.bpmn2"
     templateDirectory="org.eclipse.bpmn2/templates" dynamicTemplates="true" modelName="Bpmn2"
-    modelPluginClass="" suppressEMFTypes="true" codeFormatting="true" importerID="org.eclipse.emf.importer.ecore"
-    complianceLevel="5.0" copyrightFields="false" runtimeVersion="2.4" language="en">
+    modelPluginClass="" suppressEMFTypes="true" codeFormatting="true" testsDirectory=""
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    runtimeVersion="2.16" language="en" cleanup="true">
   <foreignModel>BPMN20.ecore</foreignModel>
-  <genPackages prefix="Bpmn2" basePackage="org.eclipse" resource="XML" disposableProviderFactory="true"
+  <genPackages prefix="Bpmn2" basePackage="org.eclipse" disposableProviderFactory="true"
       loadInitialization="true" multipleEditorPages="false" ecorePackage="BPMN20.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="BPMN20.ecore#//AdHocOrdering">
       <genEnumLiterals ecoreEnumLiteral="BPMN20.ecore#//AdHocOrdering/Parallel"/>
@@ -765,7 +766,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BPMN20.ecore#//UserTask/implementation"/>
     </genClasses>
   </genPackages>
-  <genPackages prefix="BpmnDi" basePackage="org.eclipse.bpmn2" resource="XML" multipleEditorPages="false"
+  <genPackages prefix="BpmnDi" basePackage="org.eclipse.bpmn2" multipleEditorPages="false"
       generateModelWizard="false" ecorePackage="BPMNDI.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="BPMNDI.ecore#//MessageVisibleKind">
       <genEnumLiterals ecoreEnumLiteral="BPMNDI.ecore#//MessageVisibleKind/initiating"/>
@@ -821,7 +822,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BPMNDI.ecore#//BPMNShape/participantBandKind"/>
     </genClasses>
   </genPackages>
-  <genPackages prefix="Di" basePackage="org.eclipse.dd" resource="XML" disposableProviderFactory="true"
+  <genPackages prefix="Di" basePackage="org.eclipse.dd" disposableProviderFactory="true"
       multipleEditorPages="false" generateModelWizard="false" ecorePackage="DI.ecore#/">
     <genClasses ecoreClass="DI.ecore#//DocumentRoot">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute DI.ecore#//DocumentRoot/mixed"/>
@@ -853,6 +854,7 @@
       <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference DI.ecore#//DiagramElement/modelElement"/>
       <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference DI.ecore#//DiagramElement/style"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DI.ecore#//DiagramElement/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute DI.ecore#//DiagramElement/anyAttribute"/>
     </genClasses>
     <genClasses ecoreClass="DI.ecore#//Edge">
       <genFeatures createChild="false" ecoreFeature="ecore:EReference DI.ecore#//Edge/source"/>
@@ -883,7 +885,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DI.ecore#//Style/id"/>
     </genClasses>
   </genPackages>
-  <genPackages prefix="Dc" basePackage="org.eclipse.dd" resource="XML" multipleEditorPages="false"
+  <genPackages prefix="Dc" basePackage="org.eclipse.dd" multipleEditorPages="false"
       generateModelWizard="false" ecorePackage="DC.ecore#/">
     <genClasses ecoreClass="DC.ecore#//DocumentRoot">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute DC.ecore#//DocumentRoot/mixed"/>

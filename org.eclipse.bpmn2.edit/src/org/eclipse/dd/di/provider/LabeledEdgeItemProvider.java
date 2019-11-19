@@ -36,9 +36,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class LabeledEdgeItemProvider extends EdgeItemProvider implements
-        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
-        IItemLabelProvider, IItemPropertySource {
+public class LabeledEdgeItemProvider extends EdgeItemProvider
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -72,15 +72,13 @@ public class LabeledEdgeItemProvider extends EdgeItemProvider implements
      * @generated
      */
     protected void addOwnedLabelPropertyDescriptor(Object object) {
-        itemPropertyDescriptors
-                .add(createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                        getResourceLocator(),
-                        getString("_UI_LabeledEdge_ownedLabel_feature"),
-                        getString("_UI_PropertyDescriptor_description",
-                                "_UI_LabeledEdge_ownedLabel_feature", "_UI_LabeledEdge_type"),
-                        DiPackage.Literals.LABELED_EDGE__OWNED_LABEL, false, false, false, null,
-                        null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(), getString("_UI_LabeledEdge_ownedLabel_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_LabeledEdge_ownedLabel_feature", "_UI_LabeledEdge_type"),
+                DiPackage.Literals.LABELED_EDGE__OWNED_LABEL, false, false, false, null, null,
+                null));
     }
 
     /**
@@ -92,10 +90,22 @@ public class LabeledEdgeItemProvider extends EdgeItemProvider implements
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/LabeledEdge.png"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/LabeledEdge.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/LabeledEdge.gif"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/LabeledEdge.gif"));
         }
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
     }
 
     /**
@@ -132,7 +142,8 @@ public class LabeledEdgeItemProvider extends EdgeItemProvider implements
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors,
+            Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
     }
 

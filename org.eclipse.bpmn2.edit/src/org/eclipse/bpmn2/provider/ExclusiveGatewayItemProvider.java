@@ -36,9 +36,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ExclusiveGatewayItemProvider extends GatewayItemProvider implements
-        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
-        IItemLabelProvider, IItemPropertySource {
+public class ExclusiveGatewayItemProvider extends GatewayItemProvider
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -74,8 +74,7 @@ public class ExclusiveGatewayItemProvider extends GatewayItemProvider implements
     protected void addDefaultPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_ExclusiveGateway_default_feature"),
+                getResourceLocator(), getString("_UI_ExclusiveGateway_default_feature"),
                 getString("_UI_PropertyDescriptor_description",
                         "_UI_ExclusiveGateway_default_feature", "_UI_ExclusiveGateway_type"),
                 Bpmn2Package.Literals.EXCLUSIVE_GATEWAY__DEFAULT, true, false, true, null, null,
@@ -97,6 +96,16 @@ public class ExclusiveGatewayItemProvider extends GatewayItemProvider implements
             return overlayImage(object,
                     getResourceLocator().getImage("full/obj16/ExclusiveGateway.gif"));
         }
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
     }
 
     /**
@@ -133,7 +142,8 @@ public class ExclusiveGatewayItemProvider extends GatewayItemProvider implements
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors,
+            Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
     }
 

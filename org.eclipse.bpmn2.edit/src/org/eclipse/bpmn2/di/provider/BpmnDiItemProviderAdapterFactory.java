@@ -42,8 +42,8 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class BpmnDiItemProviderAdapterFactory extends BpmnDiAdapterFactory implements
-        ComposeableAdapterFactory, IChangeNotifier {
+public class BpmnDiItemProviderAdapterFactory extends BpmnDiAdapterFactory
+        implements ComposeableAdapterFactory, IChangeNotifier {
     /**
      * This keeps track of the root adapter factory that delegates to this adapter factory.
      * <!-- begin-user-doc -->
@@ -249,6 +249,7 @@ public class BpmnDiItemProviderAdapterFactory extends BpmnDiAdapterFactory imple
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public ComposeableAdapterFactory getRootAdapterFactory() {
         return parentAdapterFactory == null ? this : parentAdapterFactory.getRootAdapterFactory();
     }
@@ -259,6 +260,7 @@ public class BpmnDiItemProviderAdapterFactory extends BpmnDiAdapterFactory imple
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void setParentAdapterFactory(ComposedAdapterFactory parentAdapterFactory) {
         this.parentAdapterFactory = parentAdapterFactory;
     }
@@ -307,6 +309,7 @@ public class BpmnDiItemProviderAdapterFactory extends BpmnDiAdapterFactory imple
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void addListener(INotifyChangedListener notifyChangedListener) {
         changeNotifier.addListener(notifyChangedListener);
     }
@@ -317,6 +320,7 @@ public class BpmnDiItemProviderAdapterFactory extends BpmnDiAdapterFactory imple
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void removeListener(INotifyChangedListener notifyChangedListener) {
         changeNotifier.removeListener(notifyChangedListener);
     }
@@ -327,6 +331,7 @@ public class BpmnDiItemProviderAdapterFactory extends BpmnDiAdapterFactory imple
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public void fireNotifyChanged(Notification notification) {
         changeNotifier.fireNotifyChanged(notification);
 

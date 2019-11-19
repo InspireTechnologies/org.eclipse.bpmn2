@@ -38,9 +38,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class RelationshipItemProvider extends BaseElementItemProvider implements
-        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
-        IItemLabelProvider, IItemPropertySource {
+public class RelationshipItemProvider extends BaseElementItemProvider
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -79,11 +79,10 @@ public class RelationshipItemProvider extends BaseElementItemProvider implements
     protected void addSourcesPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_Relationship_sources_feature"),
+                getResourceLocator(), getString("_UI_Relationship_sources_feature"),
                 getString("_UI_PropertyDescriptor_description", "_UI_Relationship_sources_feature",
-                        "_UI_Relationship_type"), Bpmn2Package.Literals.RELATIONSHIP__SOURCES,
-                true, false, true, null, null, null));
+                        "_UI_Relationship_type"),
+                Bpmn2Package.Literals.RELATIONSHIP__SOURCES, true, false, true, null, null, null));
     }
 
     /**
@@ -95,11 +94,10 @@ public class RelationshipItemProvider extends BaseElementItemProvider implements
     protected void addTargetsPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_Relationship_targets_feature"),
+                getResourceLocator(), getString("_UI_Relationship_targets_feature"),
                 getString("_UI_PropertyDescriptor_description", "_UI_Relationship_targets_feature",
-                        "_UI_Relationship_type"), Bpmn2Package.Literals.RELATIONSHIP__TARGETS,
-                true, false, true, null, null, null));
+                        "_UI_Relationship_type"),
+                Bpmn2Package.Literals.RELATIONSHIP__TARGETS, true, false, true, null, null, null));
     }
 
     /**
@@ -111,8 +109,7 @@ public class RelationshipItemProvider extends BaseElementItemProvider implements
     protected void addDirectionPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_Relationship_direction_feature"),
+                getResourceLocator(), getString("_UI_Relationship_direction_feature"),
                 getString("_UI_PropertyDescriptor_description",
                         "_UI_Relationship_direction_feature", "_UI_Relationship_type"),
                 Bpmn2Package.Literals.RELATIONSHIP__DIRECTION, true, false, false,
@@ -128,11 +125,11 @@ public class RelationshipItemProvider extends BaseElementItemProvider implements
     protected void addTypePropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_Relationship_type_feature"),
+                getResourceLocator(), getString("_UI_Relationship_type_feature"),
                 getString("_UI_PropertyDescriptor_description", "_UI_Relationship_type_feature",
-                        "_UI_Relationship_type"), Bpmn2Package.Literals.RELATIONSHIP__TYPE, true,
-                false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+                        "_UI_Relationship_type"),
+                Bpmn2Package.Literals.RELATIONSHIP__TYPE, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -144,12 +141,22 @@ public class RelationshipItemProvider extends BaseElementItemProvider implements
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator()
-                    .getImage("full/obj16/Relationship.png"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Relationship.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator()
-                    .getImage("full/obj16/Relationship.gif"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/Relationship.gif"));
         }
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
     }
 
     /**
@@ -179,8 +186,8 @@ public class RelationshipItemProvider extends BaseElementItemProvider implements
         switch (notification.getFeatureID(Relationship.class)) {
         case Bpmn2Package.RELATIONSHIP__DIRECTION:
         case Bpmn2Package.RELATIONSHIP__TYPE:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    false, true));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);
@@ -194,7 +201,8 @@ public class RelationshipItemProvider extends BaseElementItemProvider implements
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors,
+            Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
     }
 

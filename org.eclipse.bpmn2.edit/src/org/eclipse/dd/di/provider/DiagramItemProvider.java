@@ -41,9 +41,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DiagramItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
-        IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider,
-        IItemPropertySource {
+public class DiagramItemProvider extends ItemProviderAdapter
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -84,10 +84,9 @@ public class DiagramItemProvider extends ItemProviderAdapter implements IEditing
     protected void addDocumentationPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_Diagram_documentation_feature"),
-                getString("_UI_PropertyDescriptor_description",
-                        "_UI_Diagram_documentation_feature", "_UI_Diagram_type"),
+                getResourceLocator(), getString("_UI_Diagram_documentation_feature"),
+                getString("_UI_PropertyDescriptor_description", "_UI_Diagram_documentation_feature",
+                        "_UI_Diagram_type"),
                 DiPackage.Literals.DIAGRAM__DOCUMENTATION, true, false, false,
                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
@@ -101,11 +100,10 @@ public class DiagramItemProvider extends ItemProviderAdapter implements IEditing
     protected void addOwnedStylePropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_Diagram_ownedStyle_feature"),
+                getResourceLocator(), getString("_UI_Diagram_ownedStyle_feature"),
                 getString("_UI_PropertyDescriptor_description", "_UI_Diagram_ownedStyle_feature",
-                        "_UI_Diagram_type"), DiPackage.Literals.DIAGRAM__OWNED_STYLE, false, false,
-                false, null, null, null));
+                        "_UI_Diagram_type"),
+                DiPackage.Literals.DIAGRAM__OWNED_STYLE, false, false, false, null, null, null));
     }
 
     /**
@@ -117,11 +115,10 @@ public class DiagramItemProvider extends ItemProviderAdapter implements IEditing
     protected void addRootElementPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_Diagram_rootElement_feature"),
+                getResourceLocator(), getString("_UI_Diagram_rootElement_feature"),
                 getString("_UI_PropertyDescriptor_description", "_UI_Diagram_rootElement_feature",
-                        "_UI_Diagram_type"), DiPackage.Literals.DIAGRAM__ROOT_ELEMENT, false,
-                false, false, null, null, null));
+                        "_UI_Diagram_type"),
+                DiPackage.Literals.DIAGRAM__ROOT_ELEMENT, false, false, false, null, null, null));
     }
 
     /**
@@ -133,10 +130,10 @@ public class DiagramItemProvider extends ItemProviderAdapter implements IEditing
     protected void addIdPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_Diagram_id_feature"),
+                getResourceLocator(), getString("_UI_Diagram_id_feature"),
                 getString("_UI_PropertyDescriptor_description", "_UI_Diagram_id_feature",
-                        "_UI_Diagram_type"), DiPackage.Literals.DIAGRAM__ID, true, false, false,
+                        "_UI_Diagram_type"),
+                DiPackage.Literals.DIAGRAM__ID, true, false, false,
                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
@@ -149,10 +146,10 @@ public class DiagramItemProvider extends ItemProviderAdapter implements IEditing
     protected void addNamePropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_Diagram_name_feature"),
+                getResourceLocator(), getString("_UI_Diagram_name_feature"),
                 getString("_UI_PropertyDescriptor_description", "_UI_Diagram_name_feature",
-                        "_UI_Diagram_type"), DiPackage.Literals.DIAGRAM__NAME, true, false, false,
+                        "_UI_Diagram_type"),
+                DiPackage.Literals.DIAGRAM__NAME, true, false, false,
                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
@@ -165,11 +162,11 @@ public class DiagramItemProvider extends ItemProviderAdapter implements IEditing
     protected void addResolutionPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_Diagram_resolution_feature"),
+                getResourceLocator(), getString("_UI_Diagram_resolution_feature"),
                 getString("_UI_PropertyDescriptor_description", "_UI_Diagram_resolution_feature",
-                        "_UI_Diagram_type"), DiPackage.Literals.DIAGRAM__RESOLUTION, true, false,
-                false, ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+                        "_UI_Diagram_type"),
+                DiPackage.Literals.DIAGRAM__RESOLUTION, true, false, false,
+                ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -185,6 +182,16 @@ public class DiagramItemProvider extends ItemProviderAdapter implements IEditing
         } catch (java.util.MissingResourceException e) {
             return overlayImage(object, getResourceLocator().getImage("full/obj16/Diagram.gif"));
         }
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
     }
 
     /**
@@ -216,8 +223,8 @@ public class DiagramItemProvider extends ItemProviderAdapter implements IEditing
         case DiPackage.DIAGRAM__ID:
         case DiPackage.DIAGRAM__NAME:
         case DiPackage.DIAGRAM__RESOLUTION:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    false, true));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);
@@ -231,7 +238,8 @@ public class DiagramItemProvider extends ItemProviderAdapter implements IEditing
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors,
+            Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
     }
 

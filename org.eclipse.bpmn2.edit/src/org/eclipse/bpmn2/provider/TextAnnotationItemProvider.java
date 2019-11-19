@@ -38,9 +38,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class TextAnnotationItemProvider extends ArtifactItemProvider implements
-        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
-        IItemLabelProvider, IItemPropertySource {
+public class TextAnnotationItemProvider extends ArtifactItemProvider
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -77,11 +77,11 @@ public class TextAnnotationItemProvider extends ArtifactItemProvider implements
     protected void addTextPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_TextAnnotation_text_feature"),
+                getResourceLocator(), getString("_UI_TextAnnotation_text_feature"),
                 getString("_UI_PropertyDescriptor_description", "_UI_TextAnnotation_text_feature",
-                        "_UI_TextAnnotation_type"), Bpmn2Package.Literals.TEXT_ANNOTATION__TEXT,
-                true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+                        "_UI_TextAnnotation_type"),
+                Bpmn2Package.Literals.TEXT_ANNOTATION__TEXT, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -93,8 +93,7 @@ public class TextAnnotationItemProvider extends ArtifactItemProvider implements
     protected void addTextFormatPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_TextAnnotation_textFormat_feature"),
+                getResourceLocator(), getString("_UI_TextAnnotation_textFormat_feature"),
                 getString("_UI_PropertyDescriptor_description",
                         "_UI_TextAnnotation_textFormat_feature", "_UI_TextAnnotation_type"),
                 Bpmn2Package.Literals.TEXT_ANNOTATION__TEXT_FORMAT, true, false, false,
@@ -116,6 +115,16 @@ public class TextAnnotationItemProvider extends ArtifactItemProvider implements
             return overlayImage(object,
                     getResourceLocator().getImage("full/obj16/TextAnnotation.gif"));
         }
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
     }
 
     /**
@@ -145,8 +154,8 @@ public class TextAnnotationItemProvider extends ArtifactItemProvider implements
         switch (notification.getFeatureID(TextAnnotation.class)) {
         case Bpmn2Package.TEXT_ANNOTATION__TEXT:
         case Bpmn2Package.TEXT_ANNOTATION__TEXT_FORMAT:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    false, true));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);
@@ -160,7 +169,8 @@ public class TextAnnotationItemProvider extends ArtifactItemProvider implements
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors,
+            Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
     }
 

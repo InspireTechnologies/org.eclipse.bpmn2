@@ -38,9 +38,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ResourceParameterItemProvider extends BaseElementItemProvider implements
-        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
-        IItemLabelProvider, IItemPropertySource {
+public class ResourceParameterItemProvider extends BaseElementItemProvider
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -78,8 +78,7 @@ public class ResourceParameterItemProvider extends BaseElementItemProvider imple
     protected void addIsRequiredPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_ResourceParameter_isRequired_feature"),
+                getResourceLocator(), getString("_UI_ResourceParameter_isRequired_feature"),
                 getString("_UI_PropertyDescriptor_description",
                         "_UI_ResourceParameter_isRequired_feature", "_UI_ResourceParameter_type"),
                 Bpmn2Package.Literals.RESOURCE_PARAMETER__IS_REQUIRED, true, false, false,
@@ -95,8 +94,7 @@ public class ResourceParameterItemProvider extends BaseElementItemProvider imple
     protected void addNamePropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_ResourceParameter_name_feature"),
+                getResourceLocator(), getString("_UI_ResourceParameter_name_feature"),
                 getString("_UI_PropertyDescriptor_description",
                         "_UI_ResourceParameter_name_feature", "_UI_ResourceParameter_type"),
                 Bpmn2Package.Literals.RESOURCE_PARAMETER__NAME, true, false, false,
@@ -110,15 +108,13 @@ public class ResourceParameterItemProvider extends BaseElementItemProvider imple
      * @generated
      */
     protected void addTypePropertyDescriptor(Object object) {
-        itemPropertyDescriptors
-                .add(createItemPropertyDescriptor(
-                        ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                        getResourceLocator(),
-                        getString("_UI_ResourceParameter_type_feature"),
-                        getString("_UI_PropertyDescriptor_description",
-                                "_UI_ResourceParameter_type_feature", "_UI_ResourceParameter_type"),
-                        Bpmn2Package.Literals.RESOURCE_PARAMETER__TYPE, true, false, true, null,
-                        null, null));
+        itemPropertyDescriptors.add(createItemPropertyDescriptor(
+                ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+                getResourceLocator(), getString("_UI_ResourceParameter_type_feature"),
+                getString("_UI_PropertyDescriptor_description",
+                        "_UI_ResourceParameter_type_feature", "_UI_ResourceParameter_type"),
+                Bpmn2Package.Literals.RESOURCE_PARAMETER__TYPE, true, false, true, null, null,
+                null));
     }
 
     /**
@@ -136,6 +132,16 @@ public class ResourceParameterItemProvider extends BaseElementItemProvider imple
             return overlayImage(object,
                     getResourceLocator().getImage("full/obj16/ResourceParameter.gif"));
         }
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
     }
 
     /**
@@ -165,8 +171,8 @@ public class ResourceParameterItemProvider extends BaseElementItemProvider imple
         switch (notification.getFeatureID(ResourceParameter.class)) {
         case Bpmn2Package.RESOURCE_PARAMETER__IS_REQUIRED:
         case Bpmn2Package.RESOURCE_PARAMETER__NAME:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    false, true));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);
@@ -180,7 +186,8 @@ public class ResourceParameterItemProvider extends BaseElementItemProvider imple
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors,
+            Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
     }
 

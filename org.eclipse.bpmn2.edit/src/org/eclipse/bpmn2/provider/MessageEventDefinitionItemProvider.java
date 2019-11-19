@@ -36,9 +36,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class MessageEventDefinitionItemProvider extends EventDefinitionItemProvider implements
-        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
-        IItemLabelProvider, IItemPropertySource {
+public class MessageEventDefinitionItemProvider extends EventDefinitionItemProvider
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -75,8 +75,7 @@ public class MessageEventDefinitionItemProvider extends EventDefinitionItemProvi
     protected void addOperationRefPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_MessageEventDefinition_operationRef_feature"),
+                getResourceLocator(), getString("_UI_MessageEventDefinition_operationRef_feature"),
                 getString("_UI_PropertyDescriptor_description",
                         "_UI_MessageEventDefinition_operationRef_feature",
                         "_UI_MessageEventDefinition_type"),
@@ -93,8 +92,7 @@ public class MessageEventDefinitionItemProvider extends EventDefinitionItemProvi
     protected void addMessageRefPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_MessageEventDefinition_messageRef_feature"),
+                getResourceLocator(), getString("_UI_MessageEventDefinition_messageRef_feature"),
                 getString("_UI_PropertyDescriptor_description",
                         "_UI_MessageEventDefinition_messageRef_feature",
                         "_UI_MessageEventDefinition_type"),
@@ -117,6 +115,16 @@ public class MessageEventDefinitionItemProvider extends EventDefinitionItemProvi
             return overlayImage(object,
                     getResourceLocator().getImage("full/obj16/MessageEventDefinition.gif"));
         }
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
     }
 
     /**
@@ -153,7 +161,8 @@ public class MessageEventDefinitionItemProvider extends EventDefinitionItemProvi
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors,
+            Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
     }
 

@@ -1,337 +1,506 @@
+//**********************************************************
+//*
+//*    %%SUITE_PRODUCT_NAME%% %%MAJOR_VERSION%%.%%MINOR_VERSION%%.%%RELEASE_NUMBER%%
+//*
+//*    %%COPYRIGHT%% 
+//*
+//*    %%VENDOR%%
+//*
+//*    All rights reserved.
+//*
+//*    %%VENDOR_HOMEPAGE%%
+//*
+//**********************************************************
 /**
  * <copyright>
- * 
+ *
  * Copyright (c) 2010 SAP AG.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
- * 
+ *
  * Contributors:
  *    Reiner Hille-Doering (SAP AG) - initial API and implementation and/or initial documentation
- * 
+ *
  * </copyright>
  */
 package org.eclipse.dd.dc.impl;
 
 import org.eclipse.dd.dc.Bounds;
 import org.eclipse.dd.dc.DcPackage;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
+
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Bounds</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * The following features are implemented:
+ *
+ * <p>The following features are implemented:</p>
+ *
  * <ul>
  *   <li>{@link org.eclipse.dd.dc.impl.BoundsImpl#getHeight <em>Height</em>}</li>
  *   <li>{@link org.eclipse.dd.dc.impl.BoundsImpl#getWidth <em>Width</em>}</li>
  *   <li>{@link org.eclipse.dd.dc.impl.BoundsImpl#getX <em>X</em>}</li>
  *   <li>{@link org.eclipse.dd.dc.impl.BoundsImpl#getY <em>Y</em>}</li>
  * </ul>
- * </p>
  *
+ * @author     Harald
  * @generated
  */
-public class BoundsImpl extends EObjectImpl implements Bounds {
-    /**
-     * The default value of the '{@link #getHeight() <em>Height</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getHeight()
-     * @generated
-     * @ordered
-     */
-    protected static final float HEIGHT_EDEFAULT = 0.0F;
+public class BoundsImpl
+	extends EObjectImpl
+	implements Bounds
+{
+	//~ Constructors ...........................................................................................................................................................................................................................................
 
-    /**
-     * The cached value of the '{@link #getHeight() <em>Height</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getHeight()
-     * @generated
-     * @ordered
-     */
-    protected float height = HEIGHT_EDEFAULT;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected BoundsImpl()
+	{
+		super();
+	}
 
-    /**
-     * The default value of the '{@link #getWidth() <em>Width</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getWidth()
-     * @generated
-     * @ordered
-     */
-    protected static final float WIDTH_EDEFAULT = 0.0F;
+	//~ Methods ................................................................................................................................................................................................................................................
 
-    /**
-     * The cached value of the '{@link #getWidth() <em>Width</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getWidth()
-     * @generated
-     * @ordered
-     */
-    protected float width = WIDTH_EDEFAULT;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param      featureID  DOCUMENT ME!
+	 * @param      resolve    DOCUMENT ME!
+	 * @param      coreType   DOCUMENT ME!
+	 *
+	 * @return     DOCUMENT ME!
+	 *
+	 * @generated
+	 */
+	@Override public Object eGet( final int featureID, final boolean resolve, final boolean coreType )
+	{
+		switch( featureID )
+		{
+			case DcPackage.BOUNDS__HEIGHT :
+			{
+				return getHeight();
+			}
 
-    /**
-     * The default value of the '{@link #getX() <em>X</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getX()
-     * @generated
-     * @ordered
-     */
-    protected static final float X_EDEFAULT = 0.0F;
+			case DcPackage.BOUNDS__WIDTH :
+			{
+				return getWidth();
+			}
 
-    /**
-     * The cached value of the '{@link #getX() <em>X</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getX()
-     * @generated
-     * @ordered
-     */
-    protected float x = X_EDEFAULT;
+			case DcPackage.BOUNDS__X :
+			{
+				return getX();
+			}
 
-    /**
-     * The default value of the '{@link #getY() <em>Y</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getY()
-     * @generated
-     * @ordered
-     */
-    protected static final float Y_EDEFAULT = 0.0F;
+			case DcPackage.BOUNDS__Y :
+			{
+				return getY();
+			}
+		}
 
-    /**
-     * The cached value of the '{@link #getY() <em>Y</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getY()
-     * @generated
-     * @ordered
-     */
-    protected float y = Y_EDEFAULT;
+		return super.eGet( featureID, resolve, coreType );
+	} // end method eGet
 
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    protected BoundsImpl() {
-        super();
-    }
+	//~ ........................................................................................................................................................................................................................................................
 
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    protected EClass eStaticClass() {
-        return DcPackage.Literals.BOUNDS;
-    }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param      featureID  DOCUMENT ME!
+	 *
+	 * @return     DOCUMENT ME!
+	 *
+	 * @generated
+	 */
+	@Override public boolean eIsSet( final int featureID )
+	{
+		switch( featureID )
+		{
+			case DcPackage.BOUNDS__HEIGHT :
+			{
+				return height != HEIGHT_EDEFAULT;
+			}
 
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public float getHeight() {
-        return height;
-    }
+			case DcPackage.BOUNDS__WIDTH :
+			{
+				return width != WIDTH_EDEFAULT;
+			}
 
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setHeight(float newHeight) {
-        float oldHeight = height;
-        height = newHeight;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, DcPackage.BOUNDS__HEIGHT,
-                    oldHeight, height));
-    }
+			case DcPackage.BOUNDS__X :
+			{
+				return x != X_EDEFAULT;
+			}
 
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public float getWidth() {
-        return width;
-    }
+			case DcPackage.BOUNDS__Y :
+			{
+				return y != Y_EDEFAULT;
+			}
+		}
 
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setWidth(float newWidth) {
-        float oldWidth = width;
-        width = newWidth;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, DcPackage.BOUNDS__WIDTH,
-                    oldWidth, width));
-    }
+		return super.eIsSet( featureID );
+	} // end method eIsSet
 
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public float getX() {
-        return x;
-    }
+	//~ ........................................................................................................................................................................................................................................................
 
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setX(float newX) {
-        float oldX = x;
-        x = newX;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, DcPackage.BOUNDS__X, oldX, x));
-    }
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param      featureID  DOCUMENT ME!
+	 * @param      newValue   DOCUMENT ME!
+	 *
+	 * @generated
+	 */
+	@Override public void eSet( final int featureID, final Object newValue )
+	{
+		switch( featureID )
+		{
+			case DcPackage.BOUNDS__HEIGHT :
+			{
+				setHeight((Float) newValue );
 
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public float getY() {
-        return y;
-    }
+				return;
+			}
 
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public void setY(float newY) {
-        float oldY = y;
-        y = newY;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, DcPackage.BOUNDS__Y, oldY, y));
-    }
+			case DcPackage.BOUNDS__WIDTH :
+			{
+				setWidth((Float) newValue );
 
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
-        switch (featureID) {
-        case DcPackage.BOUNDS__HEIGHT:
-            return getHeight();
-        case DcPackage.BOUNDS__WIDTH:
-            return getWidth();
-        case DcPackage.BOUNDS__X:
-            return getX();
-        case DcPackage.BOUNDS__Y:
-            return getY();
-        }
-        return super.eGet(featureID, resolve, coreType);
-    }
+				return;
+			}
 
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public void eSet(int featureID, Object newValue) {
-        switch (featureID) {
-        case DcPackage.BOUNDS__HEIGHT:
-            setHeight((Float) newValue);
-            return;
-        case DcPackage.BOUNDS__WIDTH:
-            setWidth((Float) newValue);
-            return;
-        case DcPackage.BOUNDS__X:
-            setX((Float) newValue);
-            return;
-        case DcPackage.BOUNDS__Y:
-            setY((Float) newValue);
-            return;
-        }
-        super.eSet(featureID, newValue);
-    }
+			case DcPackage.BOUNDS__X :
+			{
+				setX((Float) newValue );
 
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public void eUnset(int featureID) {
-        switch (featureID) {
-        case DcPackage.BOUNDS__HEIGHT:
-            setHeight(HEIGHT_EDEFAULT);
-            return;
-        case DcPackage.BOUNDS__WIDTH:
-            setWidth(WIDTH_EDEFAULT);
-            return;
-        case DcPackage.BOUNDS__X:
-            setX(X_EDEFAULT);
-            return;
-        case DcPackage.BOUNDS__Y:
-            setY(Y_EDEFAULT);
-            return;
-        }
-        super.eUnset(featureID);
-    }
+				return;
+			}
 
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public boolean eIsSet(int featureID) {
-        switch (featureID) {
-        case DcPackage.BOUNDS__HEIGHT:
-            return height != HEIGHT_EDEFAULT;
-        case DcPackage.BOUNDS__WIDTH:
-            return width != WIDTH_EDEFAULT;
-        case DcPackage.BOUNDS__X:
-            return x != X_EDEFAULT;
-        case DcPackage.BOUNDS__Y:
-            return y != Y_EDEFAULT;
-        }
-        return super.eIsSet(featureID);
-    }
+			case DcPackage.BOUNDS__Y :
+			{
+				setY((Float) newValue );
 
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public String toString() {
-        if (eIsProxy())
-            return super.toString();
+				return;
+			}
+		}
 
-        StringBuffer result = new StringBuffer(super.toString());
-        result.append(" (height: ");
-        result.append(height);
-        result.append(", width: ");
-        result.append(width);
-        result.append(", x: ");
-        result.append(x);
-        result.append(", y: ");
-        result.append(y);
-        result.append(')');
-        return result.toString();
-    }
+		super.eSet( featureID, newValue );
+	} // end method eSet
 
+	//~ ........................................................................................................................................................................................................................................................
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param      featureID  DOCUMENT ME!
+	 *
+	 * @generated
+	 */
+	@Override public void eUnset( final int featureID )
+	{
+		switch( featureID )
+		{
+			case DcPackage.BOUNDS__HEIGHT :
+			{
+				setHeight( HEIGHT_EDEFAULT );
+
+				return;
+			}
+
+			case DcPackage.BOUNDS__WIDTH :
+			{
+				setWidth( WIDTH_EDEFAULT );
+
+				return;
+			}
+
+			case DcPackage.BOUNDS__X :
+			{
+				setX( X_EDEFAULT );
+
+				return;
+			}
+
+			case DcPackage.BOUNDS__Y :
+			{
+				setY( Y_EDEFAULT );
+
+				return;
+			}
+		}
+
+		super.eUnset( featureID );
+	} // end method eUnset
+
+	//~ ........................................................................................................................................................................................................................................................
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return     DOCUMENT ME!
+	 *
+	 * @generated
+	 */
+	@Override public float getHeight()
+	{
+		return height;
+	}
+
+	//~ ........................................................................................................................................................................................................................................................
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return     DOCUMENT ME!
+	 *
+	 * @generated
+	 */
+	@Override public float getWidth()
+	{
+		return width;
+	}
+
+	//~ ........................................................................................................................................................................................................................................................
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return     DOCUMENT ME!
+	 *
+	 * @generated
+	 */
+	@Override public float getX()
+	{
+		return x;
+	}
+
+	//~ ........................................................................................................................................................................................................................................................
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return     DOCUMENT ME!
+	 *
+	 * @generated
+	 */
+	@Override public float getY()
+	{
+		return y;
+	}
+
+	//~ ........................................................................................................................................................................................................................................................
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param      newHeight  DOCUMENT ME!
+	 *
+	 * @generated
+	 */
+	@Override public void setHeight( final float newHeight )
+	{
+		final float oldHeight = height;
+		height = newHeight;
+
+		if( eNotificationRequired())
+		{
+			eNotify( new ENotificationImpl( this, Notification.SET, DcPackage.BOUNDS__HEIGHT, oldHeight, height ));
+		}
+	}
+
+	//~ ........................................................................................................................................................................................................................................................
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param      newWidth  DOCUMENT ME!
+	 *
+	 * @generated
+	 */
+	@Override public void setWidth( final float newWidth )
+	{
+		final float oldWidth = width;
+		width = newWidth;
+
+		if( eNotificationRequired())
+		{
+			eNotify( new ENotificationImpl( this, Notification.SET, DcPackage.BOUNDS__WIDTH, oldWidth, width ));
+		}
+	}
+
+	//~ ........................................................................................................................................................................................................................................................
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param      newX  DOCUMENT ME!
+	 *
+	 * @generated
+	 */
+	@Override public void setX( final float newX )
+	{
+		final float oldX = x;
+		x = newX;
+
+		if( eNotificationRequired())
+		{
+			eNotify( new ENotificationImpl( this, Notification.SET, DcPackage.BOUNDS__X, oldX, x ));
+		}
+	}
+
+	//~ ........................................................................................................................................................................................................................................................
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param      newY  DOCUMENT ME!
+	 *
+	 * @generated
+	 */
+	@Override public void setY( final float newY )
+	{
+		final float oldY = y;
+		y = newY;
+
+		if( eNotificationRequired())
+		{
+			eNotify( new ENotificationImpl( this, Notification.SET, DcPackage.BOUNDS__Y, oldY, y ));
+		}
+	}
+
+	//~ ........................................................................................................................................................................................................................................................
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return     DOCUMENT ME!
+	 *
+	 * @generated
+	 */
+	@Override public String toString()
+	{
+		if( eIsProxy())
+		{
+			return super.toString();
+		}
+
+		final StringBuilder result = new StringBuilder( super.toString());
+		result.append( " (height: " );
+		result.append( height );
+		result.append( ", width: " );
+		result.append( width );
+		result.append( ", x: " );
+		result.append( x );
+		result.append( ", y: " );
+		result.append( y );
+		result.append( ')' );
+
+		return result.toString();
+	}
+
+	//~ ........................................................................................................................................................................................................................................................
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return     DOCUMENT ME!
+	 *
+	 * @generated
+	 */
+	@Override protected EClass eStaticClass()
+	{
+		return DcPackage.Literals.BOUNDS;
+	}
+
+	//~ Instance variables .....................................................................................................................................................................................................................................
+
+	/**
+	 * The cached value of the '{@link #getHeight() <em>Height</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see        #getHeight()
+	 * @generated
+	 * @orderd
+	 */
+	protected float height = HEIGHT_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getWidth() <em>Width</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see        #getWidth()
+	 * @generated
+	 * @orderd
+	 */
+	protected float width = WIDTH_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getX() <em>X</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see        #getX()
+	 * @generated
+	 * @orderd
+	 */
+	protected float x = X_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getY() <em>Y</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see        #getY()
+	 * @generated
+	 * @orderd
+	 */
+	protected float y = Y_EDEFAULT;
+
+	//~ Static variables/initializers ..........................................................................................................................................................................................................................
+
+	/**
+	 * The default value of the '{@link #getHeight() <em>Height</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see        #getHeight()
+	 * @generated
+	 * @orderd
+	 */
+	protected static final float HEIGHT_EDEFAULT = 0.0F;
+
+	/**
+	 * The default value of the '{@link #getWidth() <em>Width</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see        #getWidth()
+	 * @generated
+	 * @orderd
+	 */
+	protected static final float WIDTH_EDEFAULT = 0.0F;
+
+	/**
+	 * The default value of the '{@link #getX() <em>X</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see        #getX()
+	 * @generated
+	 * @orderd
+	 */
+	protected static final float X_EDEFAULT = 0.0F;
+
+	/**
+	 * The default value of the '{@link #getY() <em>Y</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see        #getY()
+	 * @generated
+	 * @orderd
+	 */
+	protected static final float Y_EDEFAULT = 0.0F;
 } //BoundsImpl

@@ -34,6 +34,54 @@
    </extension>
 
    <extension point="org.eclipse.ui.editors">
+      <!-- @generated BPMN20 -->
+      <editor
+            id="org.eclipse.bpmn2.presentation.Bpmn2EditorID"
+            name="%_UI_Bpmn2Editor_label"
+            icon="icons/full/obj16/Bpmn2ModelFile.gif"
+            extensions="bpmn2"
+            class="org.eclipse.bpmn2.presentation.Bpmn2Editor"
+            contributorClass="org.eclipse.bpmn2.presentation.Bpmn2ActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated BPMN20 -->
+      <editor
+            id="org.eclipse.bpmn2.di.presentation.BpmnDiEditorID"
+            name="%_UI_BpmnDiEditor_label"
+            icon="icons/full/obj16/BpmnDiModelFile.gif"
+            extensions="bpmndi"
+            class="org.eclipse.bpmn2.di.presentation.BpmnDiEditor"
+            contributorClass="org.eclipse.bpmn2.di.presentation.BpmnDiActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated BPMN20 -->
+      <editor
+            id="org.eclipse.dd.di.presentation.DiEditorID"
+            name="%_UI_DiEditor_label"
+            icon="icons/full/obj16/DiModelFile.gif"
+            extensions="di"
+            class="org.eclipse.dd.di.presentation.DiEditor"
+            contributorClass="org.eclipse.dd.di.presentation.DiActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated BPMN20 -->
+      <editor
+            id="org.eclipse.dd.dc.presentation.DcEditorID"
+            name="%_UI_DcEditor_label"
+            icon="icons/full/obj16/DcModelFile.gif"
+            extensions="dc"
+            class="org.eclipse.dd.dc.presentation.DcEditor"
+            contributorClass="org.eclipse.dd.dc.presentation.DcActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
       <editor
             class="org.eclipse.bpmn2.presentation.Bpmn2Editor"
             contributorClass="org.eclipse.bpmn2.presentation.Bpmn2ActionBarContributor"

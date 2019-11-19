@@ -38,9 +38,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class LinkEventDefinitionItemProvider extends EventDefinitionItemProvider implements
-        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
-        IItemLabelProvider, IItemPropertySource {
+public class LinkEventDefinitionItemProvider extends EventDefinitionItemProvider
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -78,8 +78,7 @@ public class LinkEventDefinitionItemProvider extends EventDefinitionItemProvider
     protected void addSourcePropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_LinkEventDefinition_source_feature"),
+                getResourceLocator(), getString("_UI_LinkEventDefinition_source_feature"),
                 getString("_UI_PropertyDescriptor_description",
                         "_UI_LinkEventDefinition_source_feature", "_UI_LinkEventDefinition_type"),
                 Bpmn2Package.Literals.LINK_EVENT_DEFINITION__SOURCE, true, false, true, null, null,
@@ -95,8 +94,7 @@ public class LinkEventDefinitionItemProvider extends EventDefinitionItemProvider
     protected void addTargetPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_LinkEventDefinition_target_feature"),
+                getResourceLocator(), getString("_UI_LinkEventDefinition_target_feature"),
                 getString("_UI_PropertyDescriptor_description",
                         "_UI_LinkEventDefinition_target_feature", "_UI_LinkEventDefinition_type"),
                 Bpmn2Package.Literals.LINK_EVENT_DEFINITION__TARGET, true, false, true, null, null,
@@ -112,8 +110,7 @@ public class LinkEventDefinitionItemProvider extends EventDefinitionItemProvider
     protected void addNamePropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_LinkEventDefinition_name_feature"),
+                getResourceLocator(), getString("_UI_LinkEventDefinition_name_feature"),
                 getString("_UI_PropertyDescriptor_description",
                         "_UI_LinkEventDefinition_name_feature", "_UI_LinkEventDefinition_type"),
                 Bpmn2Package.Literals.LINK_EVENT_DEFINITION__NAME, true, false, false,
@@ -135,6 +132,16 @@ public class LinkEventDefinitionItemProvider extends EventDefinitionItemProvider
             return overlayImage(object,
                     getResourceLocator().getImage("full/obj16/LinkEventDefinition.gif"));
         }
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
     }
 
     /**
@@ -163,8 +170,8 @@ public class LinkEventDefinitionItemProvider extends EventDefinitionItemProvider
 
         switch (notification.getFeatureID(LinkEventDefinition.class)) {
         case Bpmn2Package.LINK_EVENT_DEFINITION__NAME:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    false, true));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
         }
         super.notifyChanged(notification);
@@ -178,7 +185,8 @@ public class LinkEventDefinitionItemProvider extends EventDefinitionItemProvider
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors,
+            Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
     }
 

@@ -36,9 +36,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class SignalEventDefinitionItemProvider extends EventDefinitionItemProvider implements
-        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
-        IItemLabelProvider, IItemPropertySource {
+public class SignalEventDefinitionItemProvider extends EventDefinitionItemProvider
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -74,8 +74,7 @@ public class SignalEventDefinitionItemProvider extends EventDefinitionItemProvid
     protected void addSignalRefPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_SignalEventDefinition_signalRef_feature"),
+                getResourceLocator(), getString("_UI_SignalEventDefinition_signalRef_feature"),
                 getString("_UI_PropertyDescriptor_description",
                         "_UI_SignalEventDefinition_signalRef_feature",
                         "_UI_SignalEventDefinition_type"),
@@ -98,6 +97,16 @@ public class SignalEventDefinitionItemProvider extends EventDefinitionItemProvid
             return overlayImage(object,
                     getResourceLocator().getImage("full/obj16/SignalEventDefinition.gif"));
         }
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
     }
 
     /**
@@ -134,7 +143,8 @@ public class SignalEventDefinitionItemProvider extends EventDefinitionItemProvid
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors,
+            Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
     }
 

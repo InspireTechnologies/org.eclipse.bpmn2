@@ -41,9 +41,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class BPMNDiagramItemProvider extends DiagramItemProvider implements
-        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
-        IItemLabelProvider, IItemPropertySource {
+public class BPMNDiagramItemProvider extends DiagramItemProvider
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -109,10 +109,22 @@ public class BPMNDiagramItemProvider extends DiagramItemProvider implements
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/BPMNDiagram.png"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/BPMNDiagram.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator().getImage("full/obj16/BPMNDiagram.gif"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/BPMNDiagram.gif"));
         }
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
     }
 
     /**
@@ -142,8 +154,8 @@ public class BPMNDiagramItemProvider extends DiagramItemProvider implements
         switch (notification.getFeatureID(BPMNDiagram.class)) {
         case BpmnDiPackage.BPMN_DIAGRAM__PLANE:
         case BpmnDiPackage.BPMN_DIAGRAM__LABEL_STYLE:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    true, false));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -157,15 +169,16 @@ public class BPMNDiagramItemProvider extends DiagramItemProvider implements
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors,
+            Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
         newChildDescriptors.add(createChildParameter(BpmnDiPackage.Literals.BPMN_DIAGRAM__PLANE,
                 BpmnDiFactory.eINSTANCE.createBPMNPlane()));
 
-        newChildDescriptors.add(createChildParameter(
-                BpmnDiPackage.Literals.BPMN_DIAGRAM__LABEL_STYLE,
-                BpmnDiFactory.eINSTANCE.createBPMNLabelStyle()));
+        newChildDescriptors
+                .add(createChildParameter(BpmnDiPackage.Literals.BPMN_DIAGRAM__LABEL_STYLE,
+                        BpmnDiFactory.eINSTANCE.createBPMNLabelStyle()));
     }
 
     /**

@@ -98,8 +98,8 @@ public class CorrelationPropertyRetrievalExpressionItemProvider extends BaseElem
     public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures
-                    .add(Bpmn2Package.Literals.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_PATH);
+            childrenFeatures.add(
+                    Bpmn2Package.Literals.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_PATH);
         }
         return childrenFeatures;
     }
@@ -126,16 +126,22 @@ public class CorrelationPropertyRetrievalExpressionItemProvider extends BaseElem
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(
-                    object,
-                    getResourceLocator().getImage(
-                            "full/obj16/CorrelationPropertyRetrievalExpression.png"));
+            return overlayImage(object, getResourceLocator()
+                    .getImage("full/obj16/CorrelationPropertyRetrievalExpression.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(
-                    object,
-                    getResourceLocator().getImage(
-                            "full/obj16/CorrelationPropertyRetrievalExpression.gif"));
+            return overlayImage(object, getResourceLocator()
+                    .getImage("full/obj16/CorrelationPropertyRetrievalExpression.gif"));
         }
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
     }
 
     /**
@@ -147,7 +153,8 @@ public class CorrelationPropertyRetrievalExpressionItemProvider extends BaseElem
     @Override
     public String getText(Object object) {
         String label = ((CorrelationPropertyRetrievalExpression) object).getId();
-        return label == null || label.length() == 0 ? getString("_UI_CorrelationPropertyRetrievalExpression_type")
+        return label == null || label.length() == 0
+                ? getString("_UI_CorrelationPropertyRetrievalExpression_type")
                 : getString("_UI_CorrelationPropertyRetrievalExpression_type") + " " + label;
     }
 
@@ -164,8 +171,8 @@ public class CorrelationPropertyRetrievalExpressionItemProvider extends BaseElem
 
         switch (notification.getFeatureID(CorrelationPropertyRetrievalExpression.class)) {
         case Bpmn2Package.CORRELATION_PROPERTY_RETRIEVAL_EXPRESSION__MESSAGE_PATH:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    true, false));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -179,7 +186,8 @@ public class CorrelationPropertyRetrievalExpressionItemProvider extends BaseElem
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors,
+            Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
         newChildDescriptors.add(createChildParameter(

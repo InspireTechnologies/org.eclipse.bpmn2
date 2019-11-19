@@ -41,9 +41,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DocumentRootItemProvider extends ItemProviderAdapter implements
-        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
-        IItemLabelProvider, IItemPropertySource {
+public class DocumentRootItemProvider extends ItemProviderAdapter
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -113,12 +113,22 @@ public class DocumentRootItemProvider extends ItemProviderAdapter implements
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object, getResourceLocator()
-                    .getImage("full/obj16/DocumentRoot.png"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/DocumentRoot.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object, getResourceLocator()
-                    .getImage("full/obj16/DocumentRoot.gif"));
+            return overlayImage(object,
+                    getResourceLocator().getImage("full/obj16/DocumentRoot.gif"));
         }
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
     }
 
     /**
@@ -150,8 +160,8 @@ public class DocumentRootItemProvider extends ItemProviderAdapter implements
         case BpmnDiPackage.DOCUMENT_ROOT__BPMN_LABEL_STYLE:
         case BpmnDiPackage.DOCUMENT_ROOT__BPMN_PLANE:
         case BpmnDiPackage.DOCUMENT_ROOT__BPMN_SHAPE:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    true, false));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -165,32 +175,33 @@ public class DocumentRootItemProvider extends ItemProviderAdapter implements
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors,
+            Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(
-                BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_DIAGRAM,
-                BpmnDiFactory.eINSTANCE.createBPMNDiagram()));
+        newChildDescriptors
+                .add(createChildParameter(BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_DIAGRAM,
+                        BpmnDiFactory.eINSTANCE.createBPMNDiagram()));
 
-        newChildDescriptors.add(createChildParameter(
-                BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_EDGE,
-                BpmnDiFactory.eINSTANCE.createBPMNEdge()));
+        newChildDescriptors
+                .add(createChildParameter(BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_EDGE,
+                        BpmnDiFactory.eINSTANCE.createBPMNEdge()));
 
-        newChildDescriptors.add(createChildParameter(
-                BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_LABEL,
-                BpmnDiFactory.eINSTANCE.createBPMNLabel()));
+        newChildDescriptors
+                .add(createChildParameter(BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_LABEL,
+                        BpmnDiFactory.eINSTANCE.createBPMNLabel()));
 
-        newChildDescriptors.add(createChildParameter(
-                BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_LABEL_STYLE,
-                BpmnDiFactory.eINSTANCE.createBPMNLabelStyle()));
+        newChildDescriptors
+                .add(createChildParameter(BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_LABEL_STYLE,
+                        BpmnDiFactory.eINSTANCE.createBPMNLabelStyle()));
 
-        newChildDescriptors.add(createChildParameter(
-                BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_PLANE,
-                BpmnDiFactory.eINSTANCE.createBPMNPlane()));
+        newChildDescriptors
+                .add(createChildParameter(BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_PLANE,
+                        BpmnDiFactory.eINSTANCE.createBPMNPlane()));
 
-        newChildDescriptors.add(createChildParameter(
-                BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_SHAPE,
-                BpmnDiFactory.eINSTANCE.createBPMNShape()));
+        newChildDescriptors
+                .add(createChildParameter(BpmnDiPackage.Literals.DOCUMENT_ROOT__BPMN_SHAPE,
+                        BpmnDiFactory.eINSTANCE.createBPMNShape()));
     }
 
     /**

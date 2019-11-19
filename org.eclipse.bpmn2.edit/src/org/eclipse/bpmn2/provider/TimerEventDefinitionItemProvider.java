@@ -40,9 +40,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class TimerEventDefinitionItemProvider extends EventDefinitionItemProvider implements
-        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
-        IItemLabelProvider, IItemPropertySource {
+public class TimerEventDefinitionItemProvider extends EventDefinitionItemProvider
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -118,6 +118,16 @@ public class TimerEventDefinitionItemProvider extends EventDefinitionItemProvide
     }
 
     /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
+    }
+
+    /**
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -145,8 +155,8 @@ public class TimerEventDefinitionItemProvider extends EventDefinitionItemProvide
         case Bpmn2Package.TIMER_EVENT_DEFINITION__TIME_DATE:
         case Bpmn2Package.TIMER_EVENT_DEFINITION__TIME_DURATION:
         case Bpmn2Package.TIMER_EVENT_DEFINITION__TIME_CYCLE:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    true, false));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -160,32 +170,33 @@ public class TimerEventDefinitionItemProvider extends EventDefinitionItemProvide
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors,
+            Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(
-                Bpmn2Package.Literals.TIMER_EVENT_DEFINITION__TIME_DATE,
-                Bpmn2Factory.eINSTANCE.createExpression()));
+        newChildDescriptors
+                .add(createChildParameter(Bpmn2Package.Literals.TIMER_EVENT_DEFINITION__TIME_DATE,
+                        Bpmn2Factory.eINSTANCE.createExpression()));
 
-        newChildDescriptors.add(createChildParameter(
-                Bpmn2Package.Literals.TIMER_EVENT_DEFINITION__TIME_DATE,
-                Bpmn2Factory.eINSTANCE.createFormalExpression()));
+        newChildDescriptors
+                .add(createChildParameter(Bpmn2Package.Literals.TIMER_EVENT_DEFINITION__TIME_DATE,
+                        Bpmn2Factory.eINSTANCE.createFormalExpression()));
 
-        newChildDescriptors.add(createChildParameter(
-                Bpmn2Package.Literals.TIMER_EVENT_DEFINITION__TIME_DURATION,
-                Bpmn2Factory.eINSTANCE.createExpression()));
+        newChildDescriptors.add(
+                createChildParameter(Bpmn2Package.Literals.TIMER_EVENT_DEFINITION__TIME_DURATION,
+                        Bpmn2Factory.eINSTANCE.createExpression()));
 
-        newChildDescriptors.add(createChildParameter(
-                Bpmn2Package.Literals.TIMER_EVENT_DEFINITION__TIME_DURATION,
-                Bpmn2Factory.eINSTANCE.createFormalExpression()));
+        newChildDescriptors.add(
+                createChildParameter(Bpmn2Package.Literals.TIMER_EVENT_DEFINITION__TIME_DURATION,
+                        Bpmn2Factory.eINSTANCE.createFormalExpression()));
 
-        newChildDescriptors.add(createChildParameter(
-                Bpmn2Package.Literals.TIMER_EVENT_DEFINITION__TIME_CYCLE,
-                Bpmn2Factory.eINSTANCE.createExpression()));
+        newChildDescriptors
+                .add(createChildParameter(Bpmn2Package.Literals.TIMER_EVENT_DEFINITION__TIME_CYCLE,
+                        Bpmn2Factory.eINSTANCE.createExpression()));
 
-        newChildDescriptors.add(createChildParameter(
-                Bpmn2Package.Literals.TIMER_EVENT_DEFINITION__TIME_CYCLE,
-                Bpmn2Factory.eINSTANCE.createFormalExpression()));
+        newChildDescriptors
+                .add(createChildParameter(Bpmn2Package.Literals.TIMER_EVENT_DEFINITION__TIME_CYCLE,
+                        Bpmn2Factory.eINSTANCE.createFormalExpression()));
     }
 
     /**

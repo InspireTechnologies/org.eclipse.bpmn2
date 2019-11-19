@@ -26,8 +26,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.xml.type.XMLTypeFactory;
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
-import org.eclipse.emf.ecore.util.FeatureMap;
-import org.eclipse.emf.ecore.util.FeatureMapUtil;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -141,6 +139,16 @@ public class StandardLoopCharacteristicsItemProvider extends LoopCharacteristics
     }
 
     /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
+    }
+
+    /**
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -149,7 +157,8 @@ public class StandardLoopCharacteristicsItemProvider extends LoopCharacteristics
     @Override
     public String getText(Object object) {
         String label = ((StandardLoopCharacteristics) object).getId();
-        return label == null || label.length() == 0 ? getString("_UI_StandardLoopCharacteristics_type")
+        return label == null || label.length() == 0
+                ? getString("_UI_StandardLoopCharacteristics_type")
                 : getString("_UI_StandardLoopCharacteristics_type") + " " + label;
     }
 
@@ -166,13 +175,13 @@ public class StandardLoopCharacteristicsItemProvider extends LoopCharacteristics
 
         switch (notification.getFeatureID(StandardLoopCharacteristics.class)) {
         case Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__TEST_BEFORE:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    false, true));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
         case Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__LOOP_CONDITION:
         case Bpmn2Package.STANDARD_LOOP_CHARACTERISTICS__LOOP_MAXIMUM:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    true, false));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -186,7 +195,8 @@ public class StandardLoopCharacteristicsItemProvider extends LoopCharacteristics
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors,
+            Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
         newChildDescriptors.add(createChildParameter(

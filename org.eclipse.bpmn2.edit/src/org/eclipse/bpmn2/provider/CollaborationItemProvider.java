@@ -40,9 +40,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class CollaborationItemProvider extends RootElementItemProvider implements
-        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
-        IItemLabelProvider, IItemPropertySource {
+public class CollaborationItemProvider extends RootElementItemProvider
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -80,8 +80,7 @@ public class CollaborationItemProvider extends RootElementItemProvider implement
     protected void addChoreographyRefPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_Collaboration_choreographyRef_feature"),
+                getResourceLocator(), getString("_UI_Collaboration_choreographyRef_feature"),
                 getString("_UI_PropertyDescriptor_description",
                         "_UI_Collaboration_choreographyRef_feature", "_UI_Collaboration_type"),
                 Bpmn2Package.Literals.COLLABORATION__CHOREOGRAPHY_REF, true, false, true, null,
@@ -97,8 +96,7 @@ public class CollaborationItemProvider extends RootElementItemProvider implement
     protected void addIsClosedPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_Collaboration_isClosed_feature"),
+                getResourceLocator(), getString("_UI_Collaboration_isClosed_feature"),
                 getString("_UI_PropertyDescriptor_description",
                         "_UI_Collaboration_isClosed_feature", "_UI_Collaboration_type"),
                 Bpmn2Package.Literals.COLLABORATION__IS_CLOSED, true, false, false,
@@ -114,11 +112,11 @@ public class CollaborationItemProvider extends RootElementItemProvider implement
     protected void addNamePropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_Collaboration_name_feature"),
+                getResourceLocator(), getString("_UI_Collaboration_name_feature"),
                 getString("_UI_PropertyDescriptor_description", "_UI_Collaboration_name_feature",
-                        "_UI_Collaboration_type"), Bpmn2Package.Literals.COLLABORATION__NAME, true,
-                false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+                        "_UI_Collaboration_type"),
+                Bpmn2Package.Literals.COLLABORATION__NAME, true, false, false,
+                ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
     /**
@@ -177,6 +175,16 @@ public class CollaborationItemProvider extends RootElementItemProvider implement
     }
 
     /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
+    }
+
+    /**
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -203,8 +211,8 @@ public class CollaborationItemProvider extends RootElementItemProvider implement
         switch (notification.getFeatureID(Collaboration.class)) {
         case Bpmn2Package.COLLABORATION__IS_CLOSED:
         case Bpmn2Package.COLLABORATION__NAME:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    false, true));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
         case Bpmn2Package.COLLABORATION__PARTICIPANTS:
         case Bpmn2Package.COLLABORATION__MESSAGE_FLOWS:
@@ -215,8 +223,8 @@ public class CollaborationItemProvider extends RootElementItemProvider implement
         case Bpmn2Package.COLLABORATION__MESSAGE_FLOW_ASSOCIATIONS:
         case Bpmn2Package.COLLABORATION__CORRELATION_KEYS:
         case Bpmn2Package.COLLABORATION__CONVERSATION_LINKS:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    true, false));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -230,60 +238,58 @@ public class CollaborationItemProvider extends RootElementItemProvider implement
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors,
+            Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
-        newChildDescriptors.add(createChildParameter(
-                Bpmn2Package.Literals.COLLABORATION__PARTICIPANTS,
-                Bpmn2Factory.eINSTANCE.createParticipant()));
+        newChildDescriptors
+                .add(createChildParameter(Bpmn2Package.Literals.COLLABORATION__PARTICIPANTS,
+                        Bpmn2Factory.eINSTANCE.createParticipant()));
 
-        newChildDescriptors.add(createChildParameter(
-                Bpmn2Package.Literals.COLLABORATION__MESSAGE_FLOWS,
-                Bpmn2Factory.eINSTANCE.createMessageFlow()));
+        newChildDescriptors
+                .add(createChildParameter(Bpmn2Package.Literals.COLLABORATION__MESSAGE_FLOWS,
+                        Bpmn2Factory.eINSTANCE.createMessageFlow()));
 
-        newChildDescriptors.add(createChildParameter(
-                Bpmn2Package.Literals.COLLABORATION__ARTIFACTS,
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.COLLABORATION__ARTIFACTS,
                 Bpmn2Factory.eINSTANCE.createAssociation()));
 
-        newChildDescriptors.add(createChildParameter(
-                Bpmn2Package.Literals.COLLABORATION__ARTIFACTS,
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.COLLABORATION__ARTIFACTS,
                 Bpmn2Factory.eINSTANCE.createGroup()));
 
-        newChildDescriptors.add(createChildParameter(
-                Bpmn2Package.Literals.COLLABORATION__ARTIFACTS,
+        newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.COLLABORATION__ARTIFACTS,
                 Bpmn2Factory.eINSTANCE.createTextAnnotation()));
 
-        newChildDescriptors.add(createChildParameter(
-                Bpmn2Package.Literals.COLLABORATION__CONVERSATIONS,
-                Bpmn2Factory.eINSTANCE.createCallConversation()));
+        newChildDescriptors
+                .add(createChildParameter(Bpmn2Package.Literals.COLLABORATION__CONVERSATIONS,
+                        Bpmn2Factory.eINSTANCE.createCallConversation()));
 
-        newChildDescriptors.add(createChildParameter(
-                Bpmn2Package.Literals.COLLABORATION__CONVERSATIONS,
-                Bpmn2Factory.eINSTANCE.createConversation()));
+        newChildDescriptors
+                .add(createChildParameter(Bpmn2Package.Literals.COLLABORATION__CONVERSATIONS,
+                        Bpmn2Factory.eINSTANCE.createConversation()));
 
-        newChildDescriptors.add(createChildParameter(
-                Bpmn2Package.Literals.COLLABORATION__CONVERSATIONS,
-                Bpmn2Factory.eINSTANCE.createSubConversation()));
+        newChildDescriptors
+                .add(createChildParameter(Bpmn2Package.Literals.COLLABORATION__CONVERSATIONS,
+                        Bpmn2Factory.eINSTANCE.createSubConversation()));
 
-        newChildDescriptors.add(createChildParameter(
-                Bpmn2Package.Literals.COLLABORATION__CONVERSATION_ASSOCIATIONS,
-                Bpmn2Factory.eINSTANCE.createConversationAssociation()));
+        newChildDescriptors.add(
+                createChildParameter(Bpmn2Package.Literals.COLLABORATION__CONVERSATION_ASSOCIATIONS,
+                        Bpmn2Factory.eINSTANCE.createConversationAssociation()));
 
-        newChildDescriptors.add(createChildParameter(
-                Bpmn2Package.Literals.COLLABORATION__PARTICIPANT_ASSOCIATIONS,
-                Bpmn2Factory.eINSTANCE.createParticipantAssociation()));
+        newChildDescriptors.add(
+                createChildParameter(Bpmn2Package.Literals.COLLABORATION__PARTICIPANT_ASSOCIATIONS,
+                        Bpmn2Factory.eINSTANCE.createParticipantAssociation()));
 
-        newChildDescriptors.add(createChildParameter(
-                Bpmn2Package.Literals.COLLABORATION__MESSAGE_FLOW_ASSOCIATIONS,
-                Bpmn2Factory.eINSTANCE.createMessageFlowAssociation()));
+        newChildDescriptors.add(
+                createChildParameter(Bpmn2Package.Literals.COLLABORATION__MESSAGE_FLOW_ASSOCIATIONS,
+                        Bpmn2Factory.eINSTANCE.createMessageFlowAssociation()));
 
-        newChildDescriptors.add(createChildParameter(
-                Bpmn2Package.Literals.COLLABORATION__CORRELATION_KEYS,
-                Bpmn2Factory.eINSTANCE.createCorrelationKey()));
+        newChildDescriptors
+                .add(createChildParameter(Bpmn2Package.Literals.COLLABORATION__CORRELATION_KEYS,
+                        Bpmn2Factory.eINSTANCE.createCorrelationKey()));
 
-        newChildDescriptors.add(createChildParameter(
-                Bpmn2Package.Literals.COLLABORATION__CONVERSATION_LINKS,
-                Bpmn2Factory.eINSTANCE.createConversationLink()));
+        newChildDescriptors
+                .add(createChildParameter(Bpmn2Package.Literals.COLLABORATION__CONVERSATION_LINKS,
+                        Bpmn2Factory.eINSTANCE.createConversationLink()));
     }
 
 }

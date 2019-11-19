@@ -42,9 +42,9 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class LaneItemProvider extends BaseElementItemProvider implements
-        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
-        IItemLabelProvider, IItemPropertySource {
+public class LaneItemProvider extends BaseElementItemProvider
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -82,11 +82,10 @@ public class LaneItemProvider extends BaseElementItemProvider implements
     protected void addFlowNodeRefsPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_Lane_flowNodeRefs_feature"),
+                getResourceLocator(), getString("_UI_Lane_flowNodeRefs_feature"),
                 getString("_UI_PropertyDescriptor_description", "_UI_Lane_flowNodeRefs_feature",
-                        "_UI_Lane_type"), Bpmn2Package.Literals.LANE__FLOW_NODE_REFS, true, false,
-                true, null, null, null));
+                        "_UI_Lane_type"),
+                Bpmn2Package.Literals.LANE__FLOW_NODE_REFS, true, false, true, null, null, null));
     }
 
     /**
@@ -98,10 +97,10 @@ public class LaneItemProvider extends BaseElementItemProvider implements
     protected void addNamePropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_Lane_name_feature"),
+                getResourceLocator(), getString("_UI_Lane_name_feature"),
                 getString("_UI_PropertyDescriptor_description", "_UI_Lane_name_feature",
-                        "_UI_Lane_type"), Bpmn2Package.Literals.LANE__NAME, true, false, false,
+                        "_UI_Lane_type"),
+                Bpmn2Package.Literals.LANE__NAME, true, false, false,
                 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
     }
 
@@ -114,8 +113,7 @@ public class LaneItemProvider extends BaseElementItemProvider implements
     protected void addPartitionElementRefPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_Lane_partitionElementRef_feature"),
+                getResourceLocator(), getString("_UI_Lane_partitionElementRef_feature"),
                 getString("_UI_PropertyDescriptor_description",
                         "_UI_Lane_partitionElementRef_feature", "_UI_Lane_type"),
                 Bpmn2Package.Literals.LANE__PARTITION_ELEMENT_REF, true, false, true, null, null,
@@ -169,6 +167,16 @@ public class LaneItemProvider extends BaseElementItemProvider implements
     }
 
     /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
+    }
+
+    /**
      * This returns the label text for the adapted class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -194,13 +202,13 @@ public class LaneItemProvider extends BaseElementItemProvider implements
 
         switch (notification.getFeatureID(Lane.class)) {
         case Bpmn2Package.LANE__NAME:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    false, true));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
         case Bpmn2Package.LANE__PARTITION_ELEMENT:
         case Bpmn2Package.LANE__CHILD_LANE_SET:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    true, false));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -214,7 +222,8 @@ public class LaneItemProvider extends BaseElementItemProvider implements
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors,
+            Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
         newChildDescriptors.add(createChildParameter(Bpmn2Package.Literals.LANE__PARTITION_ELEMENT,

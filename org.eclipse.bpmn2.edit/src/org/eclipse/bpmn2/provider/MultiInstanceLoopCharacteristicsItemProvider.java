@@ -196,16 +196,16 @@ public class MultiInstanceLoopCharacteristicsItemProvider extends LoopCharacteri
     public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
         if (childrenFeatures == null) {
             super.getChildrenFeatures(object);
-            childrenFeatures
-                    .add(Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_CARDINALITY);
-            childrenFeatures
-                    .add(Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__INPUT_DATA_ITEM);
-            childrenFeatures
-                    .add(Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__OUTPUT_DATA_ITEM);
-            childrenFeatures
-                    .add(Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLEX_BEHAVIOR_DEFINITION);
-            childrenFeatures
-                    .add(Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLETION_CONDITION);
+            childrenFeatures.add(
+                    Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_CARDINALITY);
+            childrenFeatures.add(
+                    Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__INPUT_DATA_ITEM);
+            childrenFeatures.add(
+                    Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__OUTPUT_DATA_ITEM);
+            childrenFeatures.add(
+                    Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLEX_BEHAVIOR_DEFINITION);
+            childrenFeatures.add(
+                    Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLETION_CONDITION);
         }
         return childrenFeatures;
     }
@@ -232,14 +232,22 @@ public class MultiInstanceLoopCharacteristicsItemProvider extends LoopCharacteri
     @Override
     public Object getImage(Object object) {
         try {
-            return overlayImage(object,
-                    getResourceLocator()
-                            .getImage("full/obj16/MultiInstanceLoopCharacteristics.png"));
+            return overlayImage(object, getResourceLocator()
+                    .getImage("full/obj16/MultiInstanceLoopCharacteristics.png"));
         } catch (java.util.MissingResourceException e) {
-            return overlayImage(object,
-                    getResourceLocator()
-                            .getImage("full/obj16/MultiInstanceLoopCharacteristics.gif"));
+            return overlayImage(object, getResourceLocator()
+                    .getImage("full/obj16/MultiInstanceLoopCharacteristics.gif"));
         }
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
     }
 
     /**
@@ -251,7 +259,8 @@ public class MultiInstanceLoopCharacteristicsItemProvider extends LoopCharacteri
     @Override
     public String getText(Object object) {
         String label = ((MultiInstanceLoopCharacteristics) object).getId();
-        return label == null || label.length() == 0 ? getString("_UI_MultiInstanceLoopCharacteristics_type")
+        return label == null || label.length() == 0
+                ? getString("_UI_MultiInstanceLoopCharacteristics_type")
                 : getString("_UI_MultiInstanceLoopCharacteristics_type") + " " + label;
     }
 
@@ -269,16 +278,16 @@ public class MultiInstanceLoopCharacteristicsItemProvider extends LoopCharacteri
         switch (notification.getFeatureID(MultiInstanceLoopCharacteristics.class)) {
         case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__BEHAVIOR:
         case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__IS_SEQUENTIAL:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    false, true));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), false, true));
             return;
         case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__LOOP_CARDINALITY:
         case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__INPUT_DATA_ITEM:
         case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__OUTPUT_DATA_ITEM:
         case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLEX_BEHAVIOR_DEFINITION:
         case Bpmn2Package.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLETION_CONDITION:
-            fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(),
-                    true, false));
+            fireNotifyChanged(
+                    new ViewerNotification(notification, notification.getNotifier(), true, false));
             return;
         }
         super.notifyChanged(notification);
@@ -292,7 +301,8 @@ public class MultiInstanceLoopCharacteristicsItemProvider extends LoopCharacteri
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors,
+            Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
 
         newChildDescriptors.add(createChildParameter(
@@ -311,10 +321,9 @@ public class MultiInstanceLoopCharacteristicsItemProvider extends LoopCharacteri
                 Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__OUTPUT_DATA_ITEM,
                 Bpmn2Factory.eINSTANCE.createDataOutput()));
 
-        newChildDescriptors
-                .add(createChildParameter(
-                        Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLEX_BEHAVIOR_DEFINITION,
-                        Bpmn2Factory.eINSTANCE.createComplexBehaviorDefinition()));
+        newChildDescriptors.add(createChildParameter(
+                Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLEX_BEHAVIOR_DEFINITION,
+                Bpmn2Factory.eINSTANCE.createComplexBehaviorDefinition()));
 
         newChildDescriptors.add(createChildParameter(
                 Bpmn2Package.Literals.MULTI_INSTANCE_LOOP_CHARACTERISTICS__COMPLETION_CONDITION,

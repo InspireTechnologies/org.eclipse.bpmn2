@@ -36,9 +36,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class FlowNodeItemProvider extends FlowElementItemProvider implements
-        IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
-        IItemLabelProvider, IItemPropertySource {
+public class FlowNodeItemProvider extends FlowElementItemProvider
+        implements IEditingDomainItemProvider, IStructuredItemContentProvider,
+        ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
     /**
      * This constructs an instance from a factory and a notifier.
      * <!-- begin-user-doc -->
@@ -76,11 +76,10 @@ public class FlowNodeItemProvider extends FlowElementItemProvider implements
     protected void addIncomingPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_FlowNode_incoming_feature"),
+                getResourceLocator(), getString("_UI_FlowNode_incoming_feature"),
                 getString("_UI_PropertyDescriptor_description", "_UI_FlowNode_incoming_feature",
-                        "_UI_FlowNode_type"), Bpmn2Package.Literals.FLOW_NODE__INCOMING, true,
-                false, true, null, null, null));
+                        "_UI_FlowNode_type"),
+                Bpmn2Package.Literals.FLOW_NODE__INCOMING, true, false, true, null, null, null));
     }
 
     /**
@@ -92,11 +91,10 @@ public class FlowNodeItemProvider extends FlowElementItemProvider implements
     protected void addLanesPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_FlowNode_lanes_feature"),
+                getResourceLocator(), getString("_UI_FlowNode_lanes_feature"),
                 getString("_UI_PropertyDescriptor_description", "_UI_FlowNode_lanes_feature",
-                        "_UI_FlowNode_type"), Bpmn2Package.Literals.FLOW_NODE__LANES, true, false,
-                true, null, null, null));
+                        "_UI_FlowNode_type"),
+                Bpmn2Package.Literals.FLOW_NODE__LANES, true, false, true, null, null, null));
     }
 
     /**
@@ -108,11 +106,20 @@ public class FlowNodeItemProvider extends FlowElementItemProvider implements
     protected void addOutgoingPropertyDescriptor(Object object) {
         itemPropertyDescriptors.add(createItemPropertyDescriptor(
                 ((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-                getResourceLocator(),
-                getString("_UI_FlowNode_outgoing_feature"),
+                getResourceLocator(), getString("_UI_FlowNode_outgoing_feature"),
                 getString("_UI_PropertyDescriptor_description", "_UI_FlowNode_outgoing_feature",
-                        "_UI_FlowNode_type"), Bpmn2Package.Literals.FLOW_NODE__OUTGOING, true,
-                false, true, null, null, null));
+                        "_UI_FlowNode_type"),
+                Bpmn2Package.Literals.FLOW_NODE__OUTGOING, true, false, true, null, null, null));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    protected boolean shouldComposeCreationImage() {
+        return true;
     }
 
     /**
@@ -149,7 +156,8 @@ public class FlowNodeItemProvider extends FlowElementItemProvider implements
      * @generated
      */
     @Override
-    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+    protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors,
+            Object object) {
         super.collectNewChildDescriptors(newChildDescriptors, object);
     }
 

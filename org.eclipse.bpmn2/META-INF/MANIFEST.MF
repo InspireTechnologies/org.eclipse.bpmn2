@@ -2,12 +2,11 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.eclipse.bpmn2;singleton:=true
-Automatic-Module-Name: org.eclipse.bpmn2
 Bundle-Version: 1.5.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.eclipse.bpmn2,
  org.eclipse.bpmn2.di,
  org.eclipse.bpmn2.di.impl,

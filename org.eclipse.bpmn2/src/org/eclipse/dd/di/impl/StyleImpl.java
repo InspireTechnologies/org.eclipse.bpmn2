@@ -34,7 +34,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
-
+import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
  * <!-- begin-user-doc -->
@@ -50,214 +50,200 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * @author     Harald
  * @generated
  */
-public abstract class StyleImpl
-	extends EObjectImpl
-	implements Style
-{
-	//~ Constructors ...........................................................................................................................................................................................................................................
+public abstract class StyleImpl extends EObjectImpl implements Style {
+    //~ Constructors ...........................................................................................................................................................................................................................................
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected StyleImpl()
-	{
-		super();
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected StyleImpl() {
+        super();
+    }
 
-	//~ Methods ................................................................................................................................................................................................................................................
+    //~ Methods ................................................................................................................................................................................................................................................
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param      featureID  DOCUMENT ME!
-	 * @param      resolve    DOCUMENT ME!
-	 * @param      coreType   DOCUMENT ME!
-	 *
-	 * @return     DOCUMENT ME!
-	 *
-	 * @generated
-	 */
-	@Override public Object eGet( final int featureID, final boolean resolve, final boolean coreType )
-	{
-		switch( featureID )
-		{
-			case DiPackage.STYLE__ID :
-			{
-				return getId();
-			}
-		}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param      featureID  DOCUMENT ME!
+     * @param      resolve    DOCUMENT ME!
+     * @param      coreType   DOCUMENT ME!
+     *
+     * @return     DOCUMENT ME!
+     *
+     * @generated
+     */
+    @Override
+    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
+        switch (featureID) {
+        case DiPackage.STYLE__ID: {
+            return getId();
+        }
+        }
 
-		return super.eGet( featureID, resolve, coreType );
-	}
+        return super.eGet(featureID, resolve, coreType);
+    }
 
-	//~ ........................................................................................................................................................................................................................................................
+    //~ ........................................................................................................................................................................................................................................................
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param      featureID  DOCUMENT ME!
-	 *
-	 * @return     DOCUMENT ME!
-	 *
-	 * @generated
-	 */
-	@Override public boolean eIsSet( final int featureID )
-	{
-		switch( featureID )
-		{
-			case DiPackage.STYLE__ID :
-			{
-				return ( ID_EDEFAULT == null ) ? ( id != null ) : ( ! ID_EDEFAULT.equals( id ));
-			}
-		}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param      featureID  DOCUMENT ME!
+     *
+     * @return     DOCUMENT ME!
+     *
+     * @generated
+     */
+    @Override
+    public boolean eIsSet(final int featureID) {
+        switch (featureID) {
+        case DiPackage.STYLE__ID: {
+            return (ID_EDEFAULT == null) ? (id != null) : (!ID_EDEFAULT.equals(id));
+        }
+        }
 
-		return super.eIsSet( featureID );
-	}
+        return super.eIsSet(featureID);
+    }
 
-	//~ ........................................................................................................................................................................................................................................................
+    //~ ........................................................................................................................................................................................................................................................
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param      featureID  DOCUMENT ME!
-	 * @param      newValue   DOCUMENT ME!
-	 *
-	 * @generated
-	 */
-	@Override public void eSet( final int featureID, final Object newValue )
-	{
-		switch( featureID )
-		{
-			case DiPackage.STYLE__ID :
-			{
-				setId((String) newValue );
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param      featureID  DOCUMENT ME!
+     * @param      newValue   DOCUMENT ME!
+     *
+     * @generated
+     */
+    @Override
+    public void eSet(final int featureID, final Object newValue) {
+        switch (featureID) {
+        case DiPackage.STYLE__ID: {
+            setId((String) newValue);
 
-				return;
-			}
-		}
+            return;
+        }
+        }
 
-		super.eSet( featureID, newValue );
-	}
+        super.eSet(featureID, newValue);
+    }
 
-	//~ ........................................................................................................................................................................................................................................................
+    //~ ........................................................................................................................................................................................................................................................
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param      featureID  DOCUMENT ME!
-	 *
-	 * @generated
-	 */
-	@Override public void eUnset( final int featureID )
-	{
-		switch( featureID )
-		{
-			case DiPackage.STYLE__ID :
-			{
-				setId( ID_EDEFAULT );
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param      featureID  DOCUMENT ME!
+     *
+     * @generated
+     */
+    @Override
+    public void eUnset(final int featureID) {
+        switch (featureID) {
+        case DiPackage.STYLE__ID: {
+            setId(ID_EDEFAULT);
 
-				return;
-			}
-		}
+            return;
+        }
+        }
 
-		super.eUnset( featureID );
-	}
+        super.eUnset(featureID);
+    }
 
-	//~ ........................................................................................................................................................................................................................................................
+    //~ ........................................................................................................................................................................................................................................................
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return     DOCUMENT ME!
-	 *
-	 * @generated
-	 */
-	@Override public String getId()
-	{
-		return id;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return     DOCUMENT ME!
+     *
+     * @generated
+     */
+    @Override
+    public String getId() {
+        return id;
+    }
 
-	//~ ........................................................................................................................................................................................................................................................
+    //~ ........................................................................................................................................................................................................................................................
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param      newId  DOCUMENT ME!
-	 *
-	 * @generated
-	 */
-	@Override public void setId( final String newId )
-	{
-		final String oldId = id;
-		id = newId;
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param      newId  DOCUMENT ME!
+     *
+     * @generated
+     */
+    @Override
+    public void setId(final String newId) {
+        final String oldId = id;
+        id = newId;
 
-		if( eNotificationRequired())
-		{
-			eNotify( new ENotificationImpl( this, Notification.SET, DiPackage.STYLE__ID, oldId, id ));
-		}
-	}
+        if (eNotificationRequired()) {
+            eNotify(new ENotificationImpl(this, Notification.SET, DiPackage.STYLE__ID, oldId, id));
+        }
+    }
 
-	//~ ........................................................................................................................................................................................................................................................
+    //~ ........................................................................................................................................................................................................................................................
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return     DOCUMENT ME!
-	 *
-	 * @generated
-	 */
-	@Override public String toString()
-	{
-		if( eIsProxy())
-		{
-			return super.toString();
-		}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return     DOCUMENT ME!
+     *
+     * @generated
+     */
+    @Override
+    public String toString() {
+        if (eIsProxy()) {
+            return super.toString();
+        }
 
-		final StringBuilder result = new StringBuilder( super.toString());
-		result.append( " (id: " );
-		result.append( id );
-		result.append( ')' );
+        final StringBuilder result = new StringBuilder(super.toString());
+        result.append(" (id: ");
+        result.append(id);
+        result.append(')');
 
-		return result.toString();
-	}
+        return result.toString();
+    }
 
-	//~ ........................................................................................................................................................................................................................................................
+    //~ ........................................................................................................................................................................................................................................................
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return     DOCUMENT ME!
-	 *
-	 * @generated
-	 */
-	@Override protected EClass eStaticClass()
-	{
-		return DiPackage.Literals.STYLE;
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return     DOCUMENT ME!
+     *
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return DiPackage.Literals.STYLE;
+    }
 
-	//~ Instance variables .....................................................................................................................................................................................................................................
+    //~ Instance variables .....................................................................................................................................................................................................................................
 
-	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see        #getId()
-	 * @generated
-	 * @orderd
-	 */
-	protected String id = ID_EDEFAULT;
+    /**
+     * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see        #getId()
+     * @generated
+     * @orderd
+     */
+    protected String id = EcoreUtil.generateUUID();
 
-	//~ Static variables/initializers ..........................................................................................................................................................................................................................
+    //~ Static variables/initializers ..........................................................................................................................................................................................................................
 
-	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see        #getId()
-	 * @generated
-	 * @orderd
-	 */
-	protected static final String ID_EDEFAULT = null;
+    /**
+     * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see        #getId()
+     * @generated
+     * @orderd
+     */
+    protected static final String ID_EDEFAULT = null;
 } //StyleImpl

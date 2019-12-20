@@ -27,12 +27,14 @@
  */
 package org.eclipse.bpmn2.impl;
 
+import java.util.Collection;
+import java.util.List;
+
 import org.eclipse.bpmn2.BaseElement;
 import org.eclipse.bpmn2.Bpmn2Package;
 import org.eclipse.bpmn2.Documentation;
 import org.eclipse.bpmn2.ExtensionAttributeValue;
 import org.eclipse.bpmn2.ExtensionDefinition;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -43,12 +45,9 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.BasicFeatureMap;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.FeatureMap;
 import org.eclipse.emf.ecore.util.InternalEList;
-
-import java.util.Collection;
-import java.util.List;
-
 
 /**
  * <!-- begin-user-doc -->
@@ -68,474 +67,441 @@ import java.util.List;
  * @author     Harald
  * @generated
  */
-public class BaseElementImpl
-	extends EObjectImpl
-	implements BaseElement
-{
-	//~ Constructors ...........................................................................................................................................................................................................................................
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected BaseElementImpl()
-	{
-		super();
-	}
-
-	//~ Methods ................................................................................................................................................................................................................................................
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param      featureID  DOCUMENT ME!
-	 * @param      resolve    DOCUMENT ME!
-	 * @param      coreType   DOCUMENT ME!
-	 *
-	 * @return     DOCUMENT ME!
-	 *
-	 * @generated
-	 */
-	@Override public Object eGet( final int featureID, final boolean resolve, final boolean coreType )
-	{
-		switch( featureID )
-		{
-			case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES :
-			{
-				return getExtensionValues();
-			}
-
-			case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION :
-			{
-				return getDocumentation();
-			}
-
-			case Bpmn2Package.BASE_ELEMENT__EXTENSION_DEFINITIONS :
-			{
-				return getExtensionDefinitions();
-			}
-
-			case Bpmn2Package.BASE_ELEMENT__ID :
-			{
-				return getId();
-			}
-
-			case Bpmn2Package.BASE_ELEMENT__ANY_ATTRIBUTE :
-			{
-				if( coreType )
-				{
-					return getAnyAttribute();
-				}
-
-				return ((FeatureMap.Internal) getAnyAttribute()).getWrapper();
-			}
-		}
-
-		return super.eGet( featureID, resolve, coreType );
-	} // end method eGet
-
-	//~ ........................................................................................................................................................................................................................................................
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param      otherEnd   DOCUMENT ME!
-	 * @param      featureID  DOCUMENT ME!
-	 * @param      msgs       DOCUMENT ME!
-	 *
-	 * @return     DOCUMENT ME!
-	 *
-	 * @generated
-	 */
-	@Override public NotificationChain eInverseRemove( final InternalEObject otherEnd, final int featureID, final NotificationChain msgs )
-	{
-		switch( featureID )
-		{
-			case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES :
-			{
-				return ((InternalEList<?>) getExtensionValues()).basicRemove( otherEnd, msgs );
-			}
-
-			case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION :
-			{
-				return ((InternalEList<?>) getDocumentation()).basicRemove( otherEnd, msgs );
-			}
-
-			case Bpmn2Package.BASE_ELEMENT__ANY_ATTRIBUTE :
-			{
-				return ((InternalEList<?>) getAnyAttribute()).basicRemove( otherEnd, msgs );
-			}
-		}
-
-		return super.eInverseRemove( otherEnd, featureID, msgs );
-	}
-
-	//~ ........................................................................................................................................................................................................................................................
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param      featureID  DOCUMENT ME!
-	 *
-	 * @return     DOCUMENT ME!
-	 *
-	 * @generated
-	 */
-	@Override public boolean eIsSet( final int featureID )
-	{
-		switch( featureID )
-		{
-			case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES :
-			{
-				return ( extensionValues != null ) && ! extensionValues.isEmpty();
-			}
-
-			case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION :
-			{
-				return ( documentation != null ) && ! documentation.isEmpty();
-			}
-
-			case Bpmn2Package.BASE_ELEMENT__EXTENSION_DEFINITIONS :
-			{
-				return ( extensionDefinitions != null ) && ! extensionDefinitions.isEmpty();
-			}
-
-			case Bpmn2Package.BASE_ELEMENT__ID :
-			{
-				return ( ID_EDEFAULT == null ) ? ( id != null ) : ( ! ID_EDEFAULT.equals( id ));
-			}
-
-			case Bpmn2Package.BASE_ELEMENT__ANY_ATTRIBUTE :
-			{
-				return ( anyAttribute != null ) && ! anyAttribute.isEmpty();
-			}
-		}
-
-		return super.eIsSet( featureID );
-	} // end method eIsSet
-
-	//~ ........................................................................................................................................................................................................................................................
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param      featureID  DOCUMENT ME!
-	 * @param      newValue   DOCUMENT ME!
-	 *
-	 * @generated
-	 */
-	@Override
-	@SuppressWarnings( "unchecked" )
-	public void eSet( final int featureID, final Object newValue )
-	{
-		switch( featureID )
-		{
-			case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES :
-			{
-				getExtensionValues().clear();
-				getExtensionValues().addAll((Collection<? extends ExtensionAttributeValue>) newValue );
-
-				return;
-			}
-
-			case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION :
-			{
-				getDocumentation().clear();
-				getDocumentation().addAll((Collection<? extends Documentation>) newValue );
-
-				return;
-			}
-
-			case Bpmn2Package.BASE_ELEMENT__EXTENSION_DEFINITIONS :
-			{
-				getExtensionDefinitions().clear();
-				getExtensionDefinitions().addAll((Collection<? extends ExtensionDefinition>) newValue );
-
-				return;
-			}
-
-			case Bpmn2Package.BASE_ELEMENT__ID :
-			{
-				setId((String) newValue );
-
-				return;
-			}
-
-			case Bpmn2Package.BASE_ELEMENT__ANY_ATTRIBUTE :
-			{
-				((FeatureMap.Internal) getAnyAttribute()).set( newValue );
-
-				return;
-			}
-		}
-
-		super.eSet( featureID, newValue );
-	} // end method eSet
-
-	//~ ........................................................................................................................................................................................................................................................
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param      featureID  DOCUMENT ME!
-	 *
-	 * @generated
-	 */
-	@Override public void eUnset( final int featureID )
-	{
-		switch( featureID )
-		{
-			case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES :
-			{
-				getExtensionValues().clear();
-
-				return;
-			}
-
-			case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION :
-			{
-				getDocumentation().clear();
-
-				return;
-			}
-
-			case Bpmn2Package.BASE_ELEMENT__EXTENSION_DEFINITIONS :
-			{
-				getExtensionDefinitions().clear();
-
-				return;
-			}
-
-			case Bpmn2Package.BASE_ELEMENT__ID :
-			{
-				setId( ID_EDEFAULT );
-
-				return;
-			}
-
-			case Bpmn2Package.BASE_ELEMENT__ANY_ATTRIBUTE :
-			{
-				getAnyAttribute().clear();
-
-				return;
-			}
-		}
-
-		super.eUnset( featureID );
-	} // end method eUnset
-
-	//~ ........................................................................................................................................................................................................................................................
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return     DOCUMENT ME!
-	 *
-	 * @generated
-	 */
-	@Override public FeatureMap getAnyAttribute()
-	{
-		if( anyAttribute == null )
-		{
-			anyAttribute = new BasicFeatureMap( this, Bpmn2Package.BASE_ELEMENT__ANY_ATTRIBUTE );
-		}
-
-		return anyAttribute;
-	}
-
-	//~ ........................................................................................................................................................................................................................................................
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return     DOCUMENT ME!
-	 *
-	 * @generated
-	 */
-	@Override public List<Documentation> getDocumentation()
-	{
-		if( documentation == null )
-		{
-			documentation = new EObjectContainmentEList<Documentation>( Documentation.class, this, Bpmn2Package.BASE_ELEMENT__DOCUMENTATION );
-		}
-
-		return documentation;
-	}
-
-	//~ ........................................................................................................................................................................................................................................................
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return     DOCUMENT ME!
-	 *
-	 * @generated
-	 */
-	@Override public List<ExtensionDefinition> getExtensionDefinitions()
-	{
-		if( extensionDefinitions == null )
-		{
-			extensionDefinitions = new EObjectResolvingEList<ExtensionDefinition>( ExtensionDefinition.class, this, Bpmn2Package.BASE_ELEMENT__EXTENSION_DEFINITIONS );
-		}
-
-		return extensionDefinitions;
-	}
-
-	//~ ........................................................................................................................................................................................................................................................
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return     DOCUMENT ME!
-	 *
-	 * @generated
-	 */
-	@Override public List<ExtensionAttributeValue> getExtensionValues()
-	{
-		if( extensionValues == null )
-		{
-			extensionValues = new EObjectContainmentEList<ExtensionAttributeValue>( ExtensionAttributeValue.class, this, Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES );
-		}
-
-		return extensionValues;
-	}
-
-	//~ ........................................................................................................................................................................................................................................................
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return     DOCUMENT ME!
-	 *
-	 * @generated
-	 */
-	@Override public String getId()
-	{
-		return id;
-	}
-
-	//~ ........................................................................................................................................................................................................................................................
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param      newId  DOCUMENT ME!
-	 *
-	 * @generated
-	 */
-	@Override public void setId( final String newId )
-	{
-		final String oldId = id;
-		id = newId;
-
-		if( eNotificationRequired())
-		{
-			eNotify( new ENotificationImpl( this, Notification.SET, Bpmn2Package.BASE_ELEMENT__ID, oldId, id ));
-		}
-	}
-
-	//~ ........................................................................................................................................................................................................................................................
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return     DOCUMENT ME!
-	 *
-	 * @generated
-	 */
-	@Override public String toString()
-	{
-		if( eIsProxy())
-		{
-			return super.toString();
-		}
-
-		final StringBuilder result = new StringBuilder( super.toString());
-		result.append( " (id: " );
-		result.append( id );
-		result.append( ", anyAttribute: " );
-		result.append( anyAttribute );
-		result.append( ')' );
-
-		return result.toString();
-	}
-
-	//~ ........................................................................................................................................................................................................................................................
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return     DOCUMENT ME!
-	 *
-	 * @generated
-	 */
-	@Override protected EClass eStaticClass()
-	{
-		return Bpmn2Package.Literals.BASE_ELEMENT;
-	}
-
-	//~ Instance variables .....................................................................................................................................................................................................................................
-
-	/**
-	 * The cached value of the '{@link #getAnyAttribute() <em>Any Attribute</em>}' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see        #getAnyAttribute()
-	 * @generated
-	 * @orderd
-	 */
-	protected FeatureMap anyAttribute;
-
-	/**
-	 * The cached value of the '{@link #getDocumentation() <em>Documentation</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see        #getDocumentation()
-	 * @generated
-	 * @orderd
-	 */
-	protected EList<Documentation> documentation;
-
-	/**
-	 * The cached value of the '{@link #getExtensionDefinitions() <em>Extension Definitions</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see        #getExtensionDefinitions()
-	 * @generated
-	 * @orderd
-	 */
-	protected EList<ExtensionDefinition> extensionDefinitions;
-
-	/**
-	 * The cached value of the '{@link #getExtensionValues() <em>Extension Values</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see        #getExtensionValues()
-	 * @generated
-	 * @orderd
-	 */
-	protected EList<ExtensionAttributeValue> extensionValues;
-
-	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see        #getId()
-	 * @generated
-	 * @orderd
-	 */
-	protected String id = ID_EDEFAULT;
-
-	//~ Static variables/initializers ..........................................................................................................................................................................................................................
-
-	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see        #getId()
-	 * @generated
-	 * @orderd
-	 */
-	protected static final String ID_EDEFAULT = null;
+public class BaseElementImpl extends EObjectImpl implements BaseElement {
+    //~ Constructors ...........................................................................................................................................................................................................................................
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected BaseElementImpl() {
+        super();
+    }
+
+    //~ Methods ................................................................................................................................................................................................................................................
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param      featureID  DOCUMENT ME!
+     * @param      resolve    DOCUMENT ME!
+     * @param      coreType   DOCUMENT ME!
+     *
+     * @return     DOCUMENT ME!
+     *
+     * @generated
+     */
+    @Override
+    public Object eGet(final int featureID, final boolean resolve, final boolean coreType) {
+        switch (featureID) {
+        case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES: {
+            return getExtensionValues();
+        }
+
+        case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION: {
+            return getDocumentation();
+        }
+
+        case Bpmn2Package.BASE_ELEMENT__EXTENSION_DEFINITIONS: {
+            return getExtensionDefinitions();
+        }
+
+        case Bpmn2Package.BASE_ELEMENT__ID: {
+            return getId();
+        }
+
+        case Bpmn2Package.BASE_ELEMENT__ANY_ATTRIBUTE: {
+            if (coreType) {
+                return getAnyAttribute();
+            }
+
+            return ((FeatureMap.Internal) getAnyAttribute()).getWrapper();
+        }
+        }
+
+        return super.eGet(featureID, resolve, coreType);
+    } // end method eGet
+
+    //~ ........................................................................................................................................................................................................................................................
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param      otherEnd   DOCUMENT ME!
+     * @param      featureID  DOCUMENT ME!
+     * @param      msgs       DOCUMENT ME!
+     *
+     * @return     DOCUMENT ME!
+     *
+     * @generated
+     */
+    @Override
+    public NotificationChain eInverseRemove(final InternalEObject otherEnd, final int featureID,
+            final NotificationChain msgs) {
+        switch (featureID) {
+        case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES: {
+            return ((InternalEList<?>) getExtensionValues()).basicRemove(otherEnd, msgs);
+        }
+
+        case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION: {
+            return ((InternalEList<?>) getDocumentation()).basicRemove(otherEnd, msgs);
+        }
+
+        case Bpmn2Package.BASE_ELEMENT__ANY_ATTRIBUTE: {
+            return ((InternalEList<?>) getAnyAttribute()).basicRemove(otherEnd, msgs);
+        }
+        }
+
+        return super.eInverseRemove(otherEnd, featureID, msgs);
+    }
+
+    //~ ........................................................................................................................................................................................................................................................
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param      featureID  DOCUMENT ME!
+     *
+     * @return     DOCUMENT ME!
+     *
+     * @generated
+     */
+    @Override
+    public boolean eIsSet(final int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES: {
+            return (extensionValues != null) && !extensionValues.isEmpty();
+        }
+
+        case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION: {
+            return (documentation != null) && !documentation.isEmpty();
+        }
+
+        case Bpmn2Package.BASE_ELEMENT__EXTENSION_DEFINITIONS: {
+            return (extensionDefinitions != null) && !extensionDefinitions.isEmpty();
+        }
+
+        case Bpmn2Package.BASE_ELEMENT__ID: {
+            return (ID_EDEFAULT == null) ? (id != null) : (!ID_EDEFAULT.equals(id));
+        }
+
+        case Bpmn2Package.BASE_ELEMENT__ANY_ATTRIBUTE: {
+            return (anyAttribute != null) && !anyAttribute.isEmpty();
+        }
+        }
+
+        return super.eIsSet(featureID);
+    } // end method eIsSet
+
+    //~ ........................................................................................................................................................................................................................................................
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param      featureID  DOCUMENT ME!
+     * @param      newValue   DOCUMENT ME!
+     *
+     * @generated
+     */
+    @Override
+    @SuppressWarnings("unchecked")
+    public void eSet(final int featureID, final Object newValue) {
+        switch (featureID) {
+        case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES: {
+            getExtensionValues().clear();
+            getExtensionValues().addAll((Collection<? extends ExtensionAttributeValue>) newValue);
+
+            return;
+        }
+
+        case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION: {
+            getDocumentation().clear();
+            getDocumentation().addAll((Collection<? extends Documentation>) newValue);
+
+            return;
+        }
+
+        case Bpmn2Package.BASE_ELEMENT__EXTENSION_DEFINITIONS: {
+            getExtensionDefinitions().clear();
+            getExtensionDefinitions().addAll((Collection<? extends ExtensionDefinition>) newValue);
+
+            return;
+        }
+
+        case Bpmn2Package.BASE_ELEMENT__ID: {
+            setId((String) newValue);
+
+            return;
+        }
+
+        case Bpmn2Package.BASE_ELEMENT__ANY_ATTRIBUTE: {
+            ((FeatureMap.Internal) getAnyAttribute()).set(newValue);
+
+            return;
+        }
+        }
+
+        super.eSet(featureID, newValue);
+    } // end method eSet
+
+    //~ ........................................................................................................................................................................................................................................................
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param      featureID  DOCUMENT ME!
+     *
+     * @generated
+     */
+    @Override
+    public void eUnset(final int featureID) {
+        switch (featureID) {
+        case Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES: {
+            getExtensionValues().clear();
+
+            return;
+        }
+
+        case Bpmn2Package.BASE_ELEMENT__DOCUMENTATION: {
+            getDocumentation().clear();
+
+            return;
+        }
+
+        case Bpmn2Package.BASE_ELEMENT__EXTENSION_DEFINITIONS: {
+            getExtensionDefinitions().clear();
+
+            return;
+        }
+
+        case Bpmn2Package.BASE_ELEMENT__ID: {
+            setId(ID_EDEFAULT);
+
+            return;
+        }
+
+        case Bpmn2Package.BASE_ELEMENT__ANY_ATTRIBUTE: {
+            getAnyAttribute().clear();
+
+            return;
+        }
+        }
+
+        super.eUnset(featureID);
+    } // end method eUnset
+
+    //~ ........................................................................................................................................................................................................................................................
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return     DOCUMENT ME!
+     *
+     * @generated
+     */
+    @Override
+    public FeatureMap getAnyAttribute() {
+        if (anyAttribute == null) {
+            anyAttribute = new BasicFeatureMap(this, Bpmn2Package.BASE_ELEMENT__ANY_ATTRIBUTE);
+        }
+
+        return anyAttribute;
+    }
+
+    //~ ........................................................................................................................................................................................................................................................
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return     DOCUMENT ME!
+     *
+     * @generated
+     */
+    @Override
+    public List<Documentation> getDocumentation() {
+        if (documentation == null) {
+            documentation = new EObjectContainmentEList<Documentation>(Documentation.class, this,
+                    Bpmn2Package.BASE_ELEMENT__DOCUMENTATION);
+        }
+
+        return documentation;
+    }
+
+    //~ ........................................................................................................................................................................................................................................................
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return     DOCUMENT ME!
+     *
+     * @generated
+     */
+    @Override
+    public List<ExtensionDefinition> getExtensionDefinitions() {
+        if (extensionDefinitions == null) {
+            extensionDefinitions = new EObjectResolvingEList<ExtensionDefinition>(
+                    ExtensionDefinition.class, this,
+                    Bpmn2Package.BASE_ELEMENT__EXTENSION_DEFINITIONS);
+        }
+
+        return extensionDefinitions;
+    }
+
+    //~ ........................................................................................................................................................................................................................................................
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return     DOCUMENT ME!
+     *
+     * @generated
+     */
+    @Override
+    public List<ExtensionAttributeValue> getExtensionValues() {
+        if (extensionValues == null) {
+            extensionValues = new EObjectContainmentEList<ExtensionAttributeValue>(
+                    ExtensionAttributeValue.class, this,
+                    Bpmn2Package.BASE_ELEMENT__EXTENSION_VALUES);
+        }
+
+        return extensionValues;
+    }
+
+    //~ ........................................................................................................................................................................................................................................................
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return     DOCUMENT ME!
+     *
+     * @generated
+     */
+    @Override
+    public String getId() {
+        return id;
+    }
+
+    //~ ........................................................................................................................................................................................................................................................
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param      newId  DOCUMENT ME!
+     *
+     * @generated
+     */
+    @Override
+    public void setId(final String newId) {
+        final String oldId = id;
+        id = newId;
+
+        if (eNotificationRequired()) {
+            eNotify(new ENotificationImpl(this, Notification.SET, Bpmn2Package.BASE_ELEMENT__ID,
+                    oldId, id));
+        }
+    }
+
+    //~ ........................................................................................................................................................................................................................................................
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return     DOCUMENT ME!
+     *
+     * @generated
+     */
+    @Override
+    public String toString() {
+        if (eIsProxy()) {
+            return super.toString();
+        }
+
+        final StringBuilder result = new StringBuilder(super.toString());
+        result.append(" (id: ");
+        result.append(id);
+        result.append(", anyAttribute: ");
+        result.append(anyAttribute);
+        result.append(')');
+
+        return result.toString();
+    }
+
+    //~ ........................................................................................................................................................................................................................................................
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return     DOCUMENT ME!
+     *
+     * @generated
+     */
+    @Override
+    protected EClass eStaticClass() {
+        return Bpmn2Package.Literals.BASE_ELEMENT;
+    }
+
+    //~ Instance variables .....................................................................................................................................................................................................................................
+
+    /**
+     * The cached value of the '{@link #getAnyAttribute() <em>Any Attribute</em>}' attribute list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see        #getAnyAttribute()
+     * @generated
+     * @orderd
+     */
+    protected FeatureMap anyAttribute;
+
+    /**
+     * The cached value of the '{@link #getDocumentation() <em>Documentation</em>}' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see        #getDocumentation()
+     * @generated
+     * @orderd
+     */
+    protected EList<Documentation> documentation;
+
+    /**
+     * The cached value of the '{@link #getExtensionDefinitions() <em>Extension Definitions</em>}' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see        #getExtensionDefinitions()
+     * @generated
+     * @orderd
+     */
+    protected EList<ExtensionDefinition> extensionDefinitions;
+
+    /**
+     * The cached value of the '{@link #getExtensionValues() <em>Extension Values</em>}' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see        #getExtensionValues()
+     * @generated
+     * @orderd
+     */
+    protected EList<ExtensionAttributeValue> extensionValues;
+
+    /**
+     * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see        #getId()
+     * @generated
+     * @orderd
+     */
+    protected String id = EcoreUtil.generateUUID();
+
+    //~ Static variables/initializers ..........................................................................................................................................................................................................................
+
+    /**
+     * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see        #getId()
+     * @generated
+     * @orderd
+     */
+    protected static final String ID_EDEFAULT = null;
 } //BaseElementImpl

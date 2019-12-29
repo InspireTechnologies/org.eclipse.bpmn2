@@ -37,7 +37,7 @@
 	<properties>
 		<tycho-version>1.4.0</tycho-version>
 		<tycho-extras-version>${tycho-version}</tycho-extras-version>
-		<BUILD_ALIAS>inspire-4</BUILD_ALIAS>
+		<BUILD_ALIAS>inspire-5</BUILD_ALIAS>
 	</properties>
 
 	<profiles>
@@ -198,7 +198,7 @@
 							</execution>
 						</executions>
 					</plugin>
-		
+
 					<plugin>
 						<groupId>org.eclipse.cbi.maven.plugins</groupId>
 						<artifactId>eclipse-jarsigner-plugin</artifactId>
@@ -213,7 +213,7 @@
 							</execution>
 						</executions>
 					</plugin>
-		
+
 					<plugin>
 						<groupId>org.eclipse.tycho.extras</groupId>
 						<artifactId>tycho-pack200b-plugin</artifactId>
@@ -254,17 +254,17 @@
 			<id>repo.eclipse.org.cbi-releases</id>
 			<url>https://repo.eclipse.org/content/repositories/cbi-releases/</url>
 		</pluginRepository>
-	
+
 		<pluginRepository>
 			<id>maven-central</id>
 			<url>http://repo1.maven.org/maven2/</url>
 		</pluginRepository>
-		
+
 		<pluginRepository>
 			<id>eclipse-nexus-central</id>
 			<url>http://maven.eclipse.org/nexus/content/groups/central/</url>
 		</pluginRepository>
-		
+
 		<pluginRepository>
 			<id>eclipse-nexus-public</id>
 			<url>http://maven.eclipse.org/nexus/content/groups/public/</url>

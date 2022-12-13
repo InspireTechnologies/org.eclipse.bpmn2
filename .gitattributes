@@ -1,0 +1,7 @@
+* text=auto
+
+*.css text
+*.html text
+*.xml text
+
+*.jar binary
